@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【目的地】N 日游攻略｜YYYY.MM.DD - MM.DD</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Code block */
+  .email-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Step list */
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 28px; height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>🏳️ 【目的地】N 日游</h1>
+  <div class="subtitle">城市A · 城市B · 城市C</div>
+  <div class="meta">
+    <span>📅 YYYY年MM月DD日 — MM月DD日</span>
+    <span>👥 N 人（X对情侣 / X家庭）</span>
+    <span>✈️ 出发地 往返</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心原则</strong>：把最重要的原则写在这里，比如"上午游览 + 中午坐车 + 傍晚到达"。</div>
+
+  <div class="transport-list">
+    <!-- 国际航班 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">航班号 · 出发地 → 目的地</div>
+        <div class="schedule">出发 <span class="time">HH:MM</span> → 到达 <span class="time">HH:MM（+N天）</span></div>
+        <div class="meta-line">航空公司 · 机型 · 价格</div>
+      </div>
+    </div>
+
+    <!-- 火车 -->
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">高铁</span></div>
+      <div class="transport-content">
+        <div class="route">车次 · 城市A → 城市B</div>
+        <div class="schedule">出发 <span class="time">HH:MM</span> → 到达 <span class="time">HH:MM</span></div>
+        <div class="meta-line">票价 · 座位类型</div>
+        <div class="why"><strong>选这班的原因：</strong>说明为何选这个时间/班次</div>
+      </div>
+    </div>
+
+    <!-- 国内航班 -->
+    <div class="transport-item flight-dom">
+      <div class="transport-icon">✈️<span class="label">国内</span></div>
+      <div class="transport-content">
+        <div class="route">航班号 · 城市B → 出发地</div>
+        <div class="schedule">出发 <span class="time">HH:MM</span> → 到达 <span class="time">HH:MM</span></div>
+        <div class="meta-line">航空公司 · 价格</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>🗺️ 城市游览顺序</h3>
+  <ul>
+    <li>Day 0：出发地 → 城市A（落地后休息）</li>
+    <li>Day 1：城市A 半日游 + 下午出发城市B</li>
+    <li>Day 2：城市B 全天</li>
+    <li>Day 3：城市B 上午 → 城市C</li>
+    <li>Day 4：城市C → 返回出发地</li>
+  </ul>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section>
+  <h2>📅 每日行程</h2>
+
+  <!-- Day 0 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 0 · 出发 + 落地</span>
+      <span class="day-date">MM月DD日 周X</span>
+    </div>
+    <div class="tip">💡 今晚落地后直接休息，明早开始游览。</div>
+    <div class="time-block">
+      <div class="time">HH:MM</div>
+      <div class="activity">✈️ 起飞</div>
+    </div>
+    <div class="time-block">
+      <div class="time">HH:MM（当地时间）</div>
+      <div class="activity">🛬 落地，出关 → 打车到酒店 → 休息</div>
+    </div>
+  </div>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 城市A 半日 + 出发城市B</span>
+      <span class="day-date">MM月DD日 周X</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏛️ 景点1（说明为什么要去）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00</div>
+      <div class="activity">🍽️ 景点附近吃午饭（推荐餐厅或菜品）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:00</div>
+      <div class="activity">🚄 <strong>车次 · 城市A → 城市B</strong></div>
+    </div>
+    <div class="time-block">
+      <div class="time">HH:MM</div>
+      <div class="activity">🏨 到达城市B，check-in 酒店</div>
+    </div>
+  </div>
+
+  <!-- 继续添加 Day 2, 3, 4... -->
+
+</section>
+
+<!-- ===== 酒店推荐 ===== -->
+<section>
+  <h2>🏨 酒店推荐</h2>
+  <p>💰 预算参考：XXX美金/晚（2间双人房）</p>
+
+  <h3>城市A（X晚）</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">酒店名称 <span class="badge">推荐</span></div>
+      <div class="price">约 $XX / 晚</div>
+      <div class="desc">位置、特点、推荐理由。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 餐饮推荐</h2>
+
+  <h3>城市A</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">餐厅/菜品名称</div>
+      <div class="price">人均约 $X</div>
+      <div class="desc">特色、推荐菜、位置。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 交通指南 ===== -->
+<section>
+  <h2>🚆 交通订票指南</h2>
+
+  <h3>城市间交通</h3>
+  <div class="info">ℹ️ 订票平台：xxx.com / App 名称</div>
+
+  <h4>订票步骤</h4>
+  <ol class="steps">
+    <li>步骤1</li>
+    <li>步骤2</li>
+    <li>步骤3</li>
+  </ol>
+
+  <h3>备选班次对比</h3>
+  <table>
+    <tr><th>时间</th><th>车次/航班</th><th>类型</th><th>票价</th><th>备注</th></tr>
+    <tr><td>HH:MM → HH:MM</td><td>车次号</td><td>高铁/慢车</td><td>$XX</td><td>备注</td></tr>
+  </table>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+
+  <h3>货币与支付</h3>
+  <ul>
+    <li>货币：XXX（汇率参考：1 USD ≈ XXXX XXX）</li>
+    <li>取现：推荐在 XXX 取现，手续费较低</li>
+    <li>刷卡：大酒店可刷 Visa/MasterCard，景区和小店多现金</li>
+  </ul>
+
+  <h3>通讯</h3>
+  <ul>
+    <li>当地 SIM 卡：机场有售，XXX 运营商套餐推荐</li>
+    <li>网络：酒店 WiFi 通常可用，大景区偶有盲区</li>
+  </ul>
+
+  <h3>天气与穿着</h3>
+  <ul>
+    <li>X月气温：白天 XX°C，早晚 XX°C</li>
+    <li>建议：轻薄防晒长袖 + 帽子 + 防晒霜</li>
+  </ul>
+
+  <h3>城市内交通</h3>
+  <ul>
+    <li>打车：推荐用 XXX App（类似滴滴），价格透明</li>
+    <li>景点间距：老城景点步行 5-15 分钟可达</li>
+  </ul>
+</section>
+
+<!-- ===== 出行准备清单 ===== -->
+<section>
+  <h2>✅ 出行前准备清单</h2>
+
+  <h3>📋 必做事项</h3>
+  <ul class="checklist">
+    <li>签证办理（提前 X 周申请，材料：XXX）</li>
+    <li>订购城间火车票（提前 45 天开售，旺季早抢）</li>
+    <li>预订酒店（附上备注：预计 HH:MM 晚到）</li>
+    <li>准备现金（建议带 XXX 约 $XXX 等值）</li>
+    <li>购买旅行保险</li>
+  </ul>
+
+  <h3>🎒 行李建议</h3>
+  <ul class="checklist">
+    <li>防晒霜（当地阳光强烈，重要！）</li>
+    <li>充电宝（景点间距离较远）</li>
+    <li>轻便行李箱（城市间有火车，大箱不方便）</li>
+  </ul>
+</section>
+
+<!-- ===== 决策记录（可选）===== -->
+<section>
+  <h2>📝 行程决策记录</h2>
+  <p style="font-size:13px;color:#888;margin-bottom:14px;">规划过程中的取舍记录，供参考或日后调整。</p>
+
+  <h3>为什么选这个交通方式</h3>
+  <table>
+    <tr><th>时间</th><th>班次</th><th>类型</th><th>不选原因 / 选择原因</th></tr>
+    <tr><td>HH:MM → HH:MM</td><td>车次</td><td>类型</td><td>✅ 选：理由</td></tr>
+    <tr><td>HH:MM → HH:MM</td><td>车次</td><td>类型</td><td>❌ 不选：理由</td></tr>
+  </table>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 YYYY-MM-DD · 数据来源：携程问道 + 官方售票网站
+</footer>
+
+</div>
+</body>
+</html>

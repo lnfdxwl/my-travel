@@ -1,0 +1,6 @@
+skill-manifest-version: 1
+skill-id: 3f9b6f4debe425832fef878565a942507688f67eeacbd58fadb244767ee9865f
+
+files:
+  6647b30d84bada4c30ada20b7f233c8b51f10efc83ef90a57ed3216fdfa22ef0  SKILL.md
+  55d9b70e3ef92e480f00c345005fa94136e521fd51016b692b828457d53802e5  scripts/wendao_query.js
