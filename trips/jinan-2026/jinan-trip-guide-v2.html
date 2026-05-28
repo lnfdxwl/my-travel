@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>济南 3 日游攻略 v2 (明水古城专项)｜2026.05.30 - 06.01</title>
+<style>
+  /* 此处省略 CSS 样式，保持与 v1 一致 */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>泉城济南 v2｜明水古城专题</h1>
+  <div class="subtitle">清照故里 · 墨泉涌动 · 梦回明水</div>
+  <div class="meta">
+    <span>📅 2026年05月30日 — 06月01日</span>
+    <span>👥 2 人（女朋友 + 阿姨）</span>
+    <span>🚄 济南西站 往返</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心变更</strong>：应要求取消千佛山与博物馆，增加章丘 **明水古城**。建议第一晚入住古城内，完美避开长途往返，深度体验夜景非遗表演。</div>
+
+  <div class="transport-list">
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">转乘</span></div>
+      <div class="transport-content">
+        <div class="route">高铁 · 济南西 → 章丘站</div>
+        <div class="schedule">耗时约 <span class="time">20-25 分钟</span></div>
+        <div class="why"><strong>策略：</strong>出站后打车 10 分钟直达古城，比从市区打车省时 1 小时且更舒适。</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>🗺️ 游览顺序</h3>
+  <ul>
+    <li>Day 1：抵济 → 高铁至章丘 → 明水古城（夜景/打铁花/住城内）</li>
+    <li>Day 2：古城早酒集 → 回济南市区 → 趵突泉 → 黑虎泉游船</li>
+    <li>Day 3：大明湖游船 → 返程</li>
+  </ul>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section>
+  <h2>📅 每日行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 梦回明水，非遗震撼</span>
+      <span class="day-date">05月30日 周六</span>
+    </div>
+    <div class="warn">⚠️ 第一晚建议入住古城内酒店，方便看夜景且避开深夜打车回市区的疲累。</div>
+    <div class="time-block">
+      <div class="time">11:07</div>
+      <div class="activity">🚄 抵达济南西站，站内换乘高铁前往章丘站（或打车前往章丘）。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30</div>
+      <div class="activity">🏮 <strong>明水古城</strong> <a href="https://maps.google.com/?q=36.720833,117.536111" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。入住城内酒店。游览墨泉（涌动如轮）、李清照故居，体验词人的清照泉韵。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:00</div>
+      <div class="activity">🍽️ <strong>晚餐：古城美食街</strong>。必点章丘大葱系列菜品、泉水豆腐脑。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:30</div>
+      <div class="activity">🔥 <strong>非遗打铁花 & 泉秀</strong>。明水古城的重头戏！铁水流星在夜空炸开，阿姨坐着就能看，视觉效果极佳。</div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 早酒市井，寻泉之旅</span>
+      <span class="day-date">05月31日 周日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">07:30</div>
+      <div class="activity">🥘 <strong>早酒集</strong>。体验章丘地道早市。喝碗羊汤，配个吊炉烧饼，感受最真实的市井烟火。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00</div>
+      <div class="activity">🚕 打车/高铁返回济南市区酒店。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:30</div>
+      <div class="activity">🍽️ <strong>午餐：闫府私房菜</strong>。品尝非遗爆炒腰花，口感脆嫩。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00</div>
+      <div class="activity">🌊 <strong>趵突泉景区</strong> <a href="https://maps.google.com/?q=36.661642,117.014524" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。游览“天下第一泉”。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:30</div>
+      <div class="activity">🚤 <strong>黑虎泉游船</strong> <a href="https://maps.google.com/?q=36.663529,117.032655" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。从黑虎泉码头乘船，护城河画舫巡游，凉爽省力。</div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 明湖泛舟，舒心返程</span>
+      <span class="day-date">06月01日 周一</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30</div>
+      <div class="activity">🎋 <strong>大明湖景区</strong> <a href="https://maps.google.com/?q=36.674844,117.018944" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。乘坐游船，看超然楼，欣赏“四面荷花三面柳”。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:30</div>
+      <div class="activity">🍽️ <strong>午餐：便宜坊锅贴</strong>。百年老店，焦香酥脆。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:34</div>
+      <div class="activity">🚄 济南西站返程。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 必吃榜推荐 (v2)</h2>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">章丘早酒集 (明水古城内) <span class="badge">地道体验</span></div>
+      <div class="desc">羊肉汤配吊炉烧饼、泉水豆腐脑、油旋。早晨的古城最具烟火气。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">闫府私房菜 <span class="badge">鲁菜大师</span></div>
+      <div class="desc">必点：爆炒腰花、闫府第一福（鸡蛋豆腐，软嫩适合长辈）。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">便宜坊锅贴 <span class="badge">百年老店</span></div>
+      <div class="desc">始创于1933年，锅贴底部金黄酥脆，汁水浓郁。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+  <h3>🚕 打车/高铁建议</h3>
+  <ul>
+    <li>济南西站 ↔ 章丘站：高铁 25 分钟，票价 ¥17。适合追求效率的旅行。</li>
+    <li>济南市区 ↔ 明水古城：打车约 1-1.5 小时，费用约 ¥150-200。适合带行李且不想折腾换乘的情况。</li>
+  </ul>
+  <div class="warn">❗ 明水古城较大，建议租用园内的电瓶车或乘坐摇橹船，减少长距离步行，保护阿姨膝盖。</div>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 2026-05-28 · 数据来源：明水古城官方 + 用户反馈
+</footer>
+
+</div>
+</body>
+</html>
