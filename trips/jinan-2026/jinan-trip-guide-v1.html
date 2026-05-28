@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>济南 3 日游攻略｜2026.05.30 - 06.01</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Code block */
+  .email-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Step list */
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 28px; height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>泉城济南 3 日游攻略</h1>
+  <div class="subtitle">天下第一泉 · 大明湖畔 · 齐鲁文博</div>
+  <div class="meta">
+    <span>📅 2026年05月30日 — 06月01日</span>
+    <span>👥 2 人（女朋友 + 阿姨）</span>
+    <span>🚄 驻马店西 往返</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心原则</strong>：阿姨体力较好，行程紧凑丰富，不安排专门午休。餐饮锁定“必吃榜”，利用索道和游船减少步行。</div>
+
+  <div class="transport-list">
+    <!-- 去程高铁 -->
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">去程</span></div>
+      <div class="transport-content">
+        <div class="route">G3484 · 驻马店西 → 济南西</div>
+        <div class="schedule">出发 <span class="time">07:49</span> → 到达 <span class="time">11:07</span></div>
+        <div class="meta-line">票价：¥289 · 二等座 07车 03D</div>
+        <div class="why"><strong>选这班的原因：</strong>上午到达，不耽误下午游览。</div>
+      </div>
+    </div>
+
+    <!-- 返程高铁 -->
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">返程</span></div>
+      <div class="transport-content">
+        <div class="route">G3617 · 济南西 → 驻马店西</div>
+        <div class="schedule">出发 <span class="time">13:34</span> → 到达 <span class="time">16:32</span></div>
+        <div class="meta-line">票价：¥347 · 二等座 05车 13C</div>
+        <div class="why"><strong>选这班的原因：</strong>中午返程，到家时间适中，不劳累。</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>🗺️ 游览顺序</h3>
+  <ul>
+    <li>Day 1：抵达济南 → 千佛山（登高远眺） → 泉城广场（音乐喷泉）</li>
+    <li>Day 2：趵突泉（天下第一泉） → 山东博物馆（文博之旅） → 黑虎泉游船（护城河画舫）</li>
+    <li>Day 3：大明湖（泛舟湖上） → 返程</li>
+  </ul>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section>
+  <h2>📅 每日行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 登高远眺，泉城初见</span>
+      <span class="day-date">05月30日 周六</span>
+    </div>
+    <div class="time-block">
+      <div class="time">11:07</div>
+      <div class="activity">🚄 抵达济南西站，打车前往酒店。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:30</div>
+      <div class="activity">🍽️ <strong>午餐：城南往事</strong>（恒隆广场店）<a href="https://maps.google.com/?q=36.662584,117.026367" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。必吃榜鲁菜，距离酒店和景点都很近。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00</div>
+      <div class="activity">🚠 <strong>千佛山景区</strong> <a href="https://maps.google.com/?q=36.643936,117.030508" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。建议从北门进，直接乘坐索道上山，俯瞰泉城全景。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:30</div>
+      <div class="activity">⛲ <strong>泉城广场</strong> <a href="https://maps.google.com/?q=36.661705,117.022986" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。散步至此，等待 20:00 的音乐喷泉（视季节和天气可能调整时间）。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:30</div>
+      <div class="activity">🍽️ <strong>晚餐：老胖串店</strong>。济南特色烧烤，必吃榜餐厅。</div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 寻泉探秘，齐鲁文博</span>
+      <span class="day-date">05月31日 周日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30</div>
+      <div class="activity">🌊 <strong>趵突泉景区</strong> <a href="https://maps.google.com/?q=36.661642,117.014524" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。名副其实的“天下第一泉”，清晨游览体验更佳。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00</div>
+      <div class="activity">🍽️ <strong>午餐：闫府私房菜</strong>。必吃榜餐厅，推荐鲁菜酥锅、闫府第一包。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00</div>
+      <div class="activity">🏛️ <strong>山东博物馆</strong> <a href="https://maps.google.com/?q=36.650893,117.093439" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。打车前往，馆内有电梯且可借轮椅。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:00</div>
+      <div class="activity">🚤 <strong>黑虎泉 & 护城河游船</strong> <a href="https://maps.google.com/?q=36.663529,117.032655" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。从黑虎泉码头乘船，体验“人在画中游”。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:30</div>
+      <div class="activity">🍽️ <strong>晚餐：宽厚里</strong>。逛逛夜市，根据喜好自行选择小吃或正餐。</div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 漫步明湖，舒心返程</span>
+      <span class="day-date">06月01日 周一</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30</div>
+      <div class="activity">🎋 <strong>大明湖景区</strong> <a href="https://maps.google.com/?q=36.674844,117.018944" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。乘坐游船至历下亭或超然楼，欣赏“四面荷花三面柳”。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00</div>
+      <div class="activity">🍽️ <strong>午餐：简餐</strong>。餐后打车前往济南西站。</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:34</div>
+      <div class="activity">🚄 乘坐 G3617 返回驻马店。</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== 酒店推荐 ===== -->
+<section>
+  <h2>🏨 酒店信息</h2>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">济南怡豪大饭店(泉城广场大明湖店) <span class="badge">已订</span></div>
+      <div class="desc">地址：历下区泺源大街66号。位于核心商圈，步行至泉城广场、恒隆广场极其方便。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 必吃榜打卡</h2>
+
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">城南往事 (泉城广场店) <span class="badge">必吃榜</span></div>
+      <div class="desc">鲁菜翘楚。必点：糖醋鲤鱼（造型独特，口味酸甜）、泉水老豆腐、九转大肠。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">闫府私房菜 (恒隆广场店) <span class="badge">必吃榜</span></div>
+      <div class="desc">老字号私房菜。必点：闫府第一包（皮薄馅大）、老济南酥锅（软糯入味）。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">老胖串店 <span class="badge">必吃榜</span></div>
+      <div class="desc">济南必吃榜烧烤。必点：羊肉串、蒜瓣肉、特色扎啤。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+
+  <h3>天气与穿着</h3>
+  <ul>
+    <li>5月底6月初：气温约 20°C - 30°C，白天微热，注意防晒。</li>
+    <li>建议：穿着轻便透气的夏季服装，带一件薄外套备用。</li>
+  </ul>
+
+  <h3>🚕 济南打车指南</h3>
+  <div class="info">
+    济南推荐使用 <strong>滴滴出行</strong> 或 <strong>高德打车</strong>。景点之间打车非常便利，通常 15-20 元即可到达。
+  </div>
+
+  <h4>💰 打车费用参考</h4>
+  <table>
+    <tr><th>路线</th><th>约距离</th><th>约价格</th></tr>
+    <tr><td>济南西站 ↔ 怡豪大饭店</td><td>15 km</td><td>¥40 - 50</td></tr>
+    <tr><td>酒店 ↔ 山东博物馆</td><td>7 km</td><td>¥20 - 25</td></tr>
+    <tr><td>酒店 ↔ 千佛山</td><td>4 km</td><td>¥12 - 15</td></tr>
+  </table>
+
+  <h4>⚠️ 注意事项</h4>
+  <ul>
+    <li><strong>官方约车</strong>：尽量使用手机 App 叫车，不建议在路边拦“黑车”。</li>
+    <li><strong>高峰避让</strong>：下午 17:00 - 18:30 是市区高峰期，建议预留充足时间或提前出发。</li>
+  </ul>
+</section>
+
+<!-- ===== 出行准备清单 ===== -->
+<section>
+  <h2>✅ 出行前准备</h2>
+  <ul class="checklist">
+    <li><strong>预约门票</strong>：山东博物馆（务必在公众号提前预约）。</li>
+    <li><strong>酒店确认</strong>：提前确认酒店是否可提前入住（如果到达较早）。</li>
+    <li><strong>舒适鞋履</strong>：虽然行程紧凑且利用了交通工具，但核心景点仍需步行，请为阿姨准备舒适的运动鞋。</li>
+  </ul>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 2026-05-28 · 数据来源：大众点评必吃榜 + 用户反馈
+</footer>
+
+</div>
+</body>
+</html>

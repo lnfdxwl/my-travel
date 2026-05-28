@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "skills": {
+    "feishu-doc-manager": {
+      "name": "📄 Feishu Doc Manager | 飞书文档管理器",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=feishu-doc-manager",
+      "source": "community",
+      "version": "1.0.0",
+      "installedAt": "2026-05-25T02:01:40Z"
+    },
+    "feishu-doc": {
+      "name": "Feishu Doc",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=feishu-doc",
+      "source": "community",
+      "version": "1.2.7",
+      "installedAt": "2026-05-25T02:01:42Z"
+    },
+    "feishu-common": {
+      "name": "Feishu Common",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=feishu-common",
+      "source": "community",
+      "version": "1.0.1",
+      "installedAt": "2026-05-25T02:08:15Z"
+    }
+  }
+}
