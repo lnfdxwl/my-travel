@@ -7,58 +7,43 @@
 ```
 my-travel/
 ├── trips/
-│   └── {目的地}-{年份}/        # 每次旅行一个文件夹，如 uzbekistan-2026
-│       └── {目的地}-trip-guide.html   # 攻略主文件（HTML）
+│   └── {目的地}-{年份}/
+│       └── {目的地}-trip-guide-v1.html   # 攻略，带版本号
 ├── templates/
-│   └── trip-guide-template.html      # 攻略 HTML 模板（沿用固定风格）
+│   └── trip-guide-template.html          # 通用 HTML 模板
+├── docs/                                  # 按需加载的参考文档
+│   ├── guide-spec.md                      # 攻略规范、版本规则、HTML 结构
+│   ├── tools.md                           # 工具使用（携程问道等）
+│   └── planning-principles.md            # 行程规划原则
 └── CLAUDE.md
 ```
 
-## 攻略规范
+## Skill 安装规则
 
-- **格式**：统一用 HTML，风格沿用 `templates/trip-guide-template.html`
-- **命名**：文件夹 `{目的地拼音/英文}-{年份}`，攻略文件 `{目的地}-trip-guide.html`
-- **内容结构**（参考模板）：
-  1. Hero 头图（目的地、日期、人数）
-  2. 行程概览（交通时刻卡片 + 城市顺序）
-  3. 每日行程（按 Day 分块，含时间轴）
-  4. 酒店推荐
-  5. 餐饮推荐
-  6. 交通订票指南（含订票步骤 + 备选班次对比）
-  7. 实用信息（货币、通讯、天气、打车）
-  8. 出行前准备清单
-  9. 决策记录（可选，记录行程取舍过程）
+在此目录下安装 skill 一律安装到**当前项目目录**（`.claude/skills/`），不安装到全局：
+- skillhub.cn：`skillhub install <name> --dir .claude/skills`
+- 美团 mtskills：`mtskills i <name>`（省略 `-g`）
 
-## 已有行程
+## 版本规则（核心）
 
-| 目的地 | 日期 | 人数 | 攻略文件 |
-|--------|------|------|----------|
-| 乌兹别克斯坦（塔什干·撒马尔罕·布哈拉） | 2026.06.18–06.22 | 4人（2对情侣） | `trips/uzbekistan-2026/uzbekistan-trip-guide.html` |
+- 攻略文件名格式：`{目的地}-trip-guide-v{N}.html`
+- **不确定是否升版本时，主动问主人**，不自作主张
+- 详细规则见 `docs/guide-spec.md`
 
-## 常用工具
+## 发布攻略
 
-### 查实时航班/火车/酒店
-使用 `/ctrip-wendao` skill（携程问道 API）：
+攻略完成后 push 到 GitHub，自动发布到 GitHub Pages：
+
 ```bash
-cd /Users/zhaozeyang/my-travel/trips/uzbekistan-2026/.claude/skills/ctrip-wendao/scripts
-WENDAO_API_KEY="a22b18cd04124d5289fb7376ca283e15" node wendao_query.js "你的查询"
+git add . && git commit -m "更新攻略" && git push
 ```
 
-**Wendao 可信度说明**：
-- ✅ 可信：Afrosiyob 高铁、国际航班、国内航班、热门酒店
-- ❌ 不可信：境内慢车/包厢车（如乌兹别克 Express 系列）、冷门景点门票
-- 重要票务决策前必须到官方网站（如 eticket.railway.uz）核实余票
+1-2 分钟后即可访问：`https://lnfdxwl.github.io/my-travel/trips/{目的地}-{年份}/{文件}.html`
 
-### 新建行程
-1. 复制 `templates/trip-guide-template.html`
-2. 在 `trips/` 下新建 `{目的地}-{年份}/` 文件夹
-3. 粘贴模板并按行程内容填写
-4. 用 `/ctrip-wendao` 查实时交通数据补充到攻略里
+## 按需加载文档
 
-## 规划原则（从乌兹别克行程沉淀）
-
-- **酷热目的地**：景点游览安排在 07:00–11:00 和 17:00–21:00，11:00–16:00 坐车或午休
-- **城市间交通**：优先选中午出发的班次（避暑 + 下午到达可立即游览）
-- **晚开放景点**：清真寺、广场夜景通常开放到 22:00+，安排到晚间
-- **行程松紧**：4-5天行程最多覆盖 3 个城市，不要贪多
-- **订票时机**：火车票提前 45 天开售，旺季（6-8月）应提前抢
+| 文档 | 加载时机 |
+|------|---------|
+| `docs/guide-spec.md` | 新建行程、修改攻略结构时 |
+| `docs/tools.md` | 需要查实时航班/火车/酒店时 |
+| `docs/planning-principles.md` | 开始规划新行程时 |
