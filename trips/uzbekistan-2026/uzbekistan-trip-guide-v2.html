@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>乌兹别克斯坦 5 日游攻略｜2026.06.18 - 06.22</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 18px;
+    color: #34495e;
+    margin: 20px 0 12px;
+  }
+  h4 {
+    font-size: 15px;
+    color: #2563a8;
+    margin: 14px 0 8px;
+  }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .transport-icon .label {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  .transport-content .route {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+  }
+  .transport-content .schedule {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  .transport-content .schedule .time {
+    color: #c0392b;
+    font-weight: 600;
+  }
+  .transport-content .meta-line {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .transport-content .confirmed {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day {
+    background: #faf7f0;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 16px 0;
+    border: 1px solid #e8dfc8;
+  }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  th {
+    background: #f8f9fc;
+    color: #2563a8;
+    font-weight: 600;
+  }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip {
+    background: #fef9e7;
+    border-left: 4px solid #f1c40f;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .warn {
+    background: #fdedec;
+    border-left: 4px solid #e74c3c;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .info {
+    background: #eaf4fb;
+    border-left: 4px solid #2563a8;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .success {
+    background: #eafaf1;
+    border-left: 4px solid #27ae60;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /* Hotel & restaurant cards */
+  .card-grid {
+    display: grid;
+    gap: 14px;
+    margin: 14px 0;
+  }
+  .place-card {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .place-card.booked {
+    border: 2px solid #27ae60;
+    background: #f0faf4;
+  }
+  .place-card .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 6px;
+  }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .name .badge-booked {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price {
+    color: #c0392b;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Code/email block */
+  .email-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Step list */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    margin-left: 0;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 14px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    border-bottom: 1px dashed #eee;
+  }
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #2563a8;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .checklist li.done::before {
+    content: "✅";
+    font-size: 16px;
+    top: 10px;
+  }
+  .checklist li.done {
+    color: #95a5a6;
+    text-decoration: line-through;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 25px;
+    color: #95a5a6;
+    font-size: 13px;
+    background: #f5f1e8;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <h1>🇺🇿 乌兹别克斯坦 5 日游</h1>
+  <div class="subtitle">塔什干 · 撒马尔罕 · 布哈拉</div>
+  <div class="meta">
+    <span>📅 2026.06.18 - 06.22</span>
+    <span>👥 4 人 / 2 对情侣</span>
+    <span>🌡️ 35-40°C 高温</span>
+  </div>
+</div>
+
+<!-- 订票/订房确认总览 -->
+<section>
+  <h2>✅ 已订确认清单</h2>
+  <div class="success">
+    所有票和酒店已全部订好，以下是确认信息汇总。
+  </div>
+  <table>
+    <tr><th>类型</th><th>内容</th><th>时间</th><th>状态</th></tr>
+    <tr><td>✈️ 国际去程</td><td>CZ6027 北京大兴 → 塔什干 T2</td><td>6/18 17:10 → 20:40</td><td>✅ 已购</td></tr>
+    <tr><td>🏨 塔什干</td><td>乌兹别克斯坦酒店（Hotel Uzbekistan）<br><small style="color:#888;">Mirzamakhmud Musakhanov St 45 · 标准双人房 × 2 · 禁烟</small></td><td>6/18 - 6/19（1晚）</td><td>✅ 已订，到店付 ¥856.06</td></tr>
+    <tr><td>🚄 塔什干→撒马尔罕</td><td>Express 054ФА · Car 07 Lux 1Л · 座位 013/016<br><small style="color:#888;">订单号 74265435674705 · 赵泽扬 + 康燕龙</small></td><td>6/19 16:00 → 20:14</td><td>✅ 已订</td></tr>
+    <tr><td>🏨 撒马尔罕</td><td>Shohjahon 宫殿酒店（Shohjahon Palace Hotel &amp; Spa）<br><small style="color:#888;">Suzangaron St 110 · 花园景豪华双 + 豪华双 × 2间</small></td><td>6/19 - 6/21（2晚）</td><td>✅ 已订，在线付 ¥1469.36 + ¥1368.48</td></tr>
+    <tr><td>🚄 撒马尔罕→布哈拉</td><td>Afrosiyob 770ФА · Car 02 Сид 2Е · 座位 001/002<br><small style="color:#888;">订单号 74315435682501 · 赵泽扬 + 康燕龙</small></td><td>6/21 10:59 → 12:36</td><td>✅ 已订</td></tr>
+    <tr><td>🏨 布哈拉</td><td>伊曼酒店（Hotel Iman）<br><small style="color:#888;">B. Naqshband St · 14:00 后入住 · 12:00 前离店</small></td><td>6/21 - 6/22（1晚）</td><td>✅ 已订，在线付 ¥715.34 + 到店付 US$13.72</td></tr>
+    <tr><td>✈️ 布哈拉→塔什干</td><td>Silk Avia UH804 布哈拉 BHK → 塔什干 TAS<br><small style="color:#888;">ATR 72 · 经济舱 · 无餐食 · 订单号 1128148219473913</small></td><td>6/22 16:10 → 17:30</td><td>✅ 已购 ¥2244（4人）</td></tr>
+    <tr><td>✈️ 国际回程</td><td>CZ6028 塔什干 T2 → 北京大兴</td><td>6/22 22:40 → 次日 06:55</td><td>✅ 已购</td></tr>
+  </table>
+
+  <div class="warn" style="margin-top:14px;">
+    ⚠️ <strong>布哈拉酒店取消政策</strong>：酒店当地时间 <strong>6月19日 18:00 前</strong>可免费取消；18:00 后不可取消/修改。已过期，无需担心。
+  </div>
+</section>
+
+<!-- 行程概览 -->
+<section>
+  <h2>🧭 行程概览</h2>
+
+  <h3>全程交通时刻表（按时间顺序）</h3>
+  <p style="font-size:13px;color:#888;margin-bottom:14px;">本表覆盖整趟旅行 5 段交通：往返国际航班 + 2 段乌兹别克高铁/快车 + 1 段乌兹别克国内航班。</p>
+
+  <div class="transport-list">
+
+    <!-- 国际去程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">CZ6027 · 北京大兴 → 塔什干 T2 <span class="confirmed">✅ 已购</span></div>
+        <div class="schedule"><span class="time">6/18 周四 17:10</span> → <span class="time">20:40</span>（当地）</div>
+        <div class="meta-line">南方航空 · 含 23kg 托运</div>
+      </div>
+    </div>
+
+    <!-- Day 1 火车 -->
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">快车</span></div>
+      <div class="transport-content">
+        <div class="route">Express 054ФА · 塔什干 → 撒马尔罕 <span class="confirmed">✅ 已订</span></div>
+        <div class="schedule"><span class="time">6/19 周五 16:00</span> → <span class="time">20:14</span> · 用时 4h14min</div>
+        <div class="meta-line">Car 07 · Lux 1Л（豪华双床包厢）· 赵泽扬 座位013 · 康燕龙 座位016 · 另2人同车厢 · ≈ 320,060 sum/人<br>
+        ⚠️ 进站需提前 30 分钟完成旅客登记（票面注明）</div>
+      </div>
+    </div>
+
+    <!-- Day 3 火车 -->
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">高铁</span></div>
+      <div class="transport-content">
+        <div class="route">Afrosiyob 770ФА · 撒马尔罕 → 布哈拉 <span class="confirmed">✅ 已订</span></div>
+        <div class="schedule"><span class="time">6/21 周日 10:59</span> → <span class="time">12:36</span> · 用时 1h37min</div>
+        <div class="meta-line">Car 02 · Сид 2Е（经济对号座）· 赵泽扬 座位001 · 康燕龙 座位002 · ≈ 225,000 sum/人<br>
+        ⚠️ 进站需提前 30 分钟完成旅客登记</div>
+      </div>
+    </div>
+
+    <!-- Day 4 国内航班 -->
+    <div class="transport-item flight-dom">
+      <div class="transport-icon">✈️<span class="label">国内</span></div>
+      <div class="transport-content">
+        <div class="route">Silk Avia UH804 · 布哈拉 BHK → 塔什干 TAS <span class="confirmed">✅ 已购</span></div>
+        <div class="schedule"><span class="time">6/22 周一 16:10</span> → <span class="time">17:30</span> · 用时 1h20min</div>
+        <div class="meta-line">ATR 72 涡桨支线机 · 经济舱 · 无餐食 · 携程订单号 1128148219473913 · 4 人共 ¥2244</div>
+      </div>
+    </div>
+
+    <!-- 国际回程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">CZ6028 · 塔什干 T2 → 北京大兴 <span class="confirmed">✅ 已购</span></div>
+        <div class="schedule"><span class="time">6/22 周一 22:40</span> → <span class="time">06:55+1</span></div>
+        <div class="meta-line">南方航空</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3>核心策略</h3>
+  <ul>
+    <li>🌅 <strong>清晨 6:00-10:00 + 夜晚 19:00-23:00</strong> 主攻景点</li>
+    <li>🚄 <strong>中午 11:00-15:00 暴晒时段</strong>用高铁/休息躲开 40°C</li>
+    <li>🎯 <strong>取舍：塔什干半天（Day 1 上午精选体验）+ 撒马尔罕 1.5 天 + 布哈拉 1 天</strong>。Day 1 下午用快车包厢赶路躲暴晒</li>
+  </ul>
+
+</section>
+
+<!-- 详细行程 -->
+<section>
+  <h2>📅 详细行程</h2>
+
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 0 · 抵达塔什干</span>
+      <span class="day-date">6/18 周四</span>
+    </div>
+    <div class="time-block">
+      <div class="time">20:40</div>
+      <div class="activity">CZ6027 落地 Tashkent T2</div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:40 - 21:30</div>
+      <div class="activity">过关 + ATM 取苏姆 + 买电话卡（Beeline 或 Ucell，机场柜台）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:30 - 22:00</div>
+      <div class="activity">Yandex Go 打车到<strong>乌兹别克斯坦酒店（Hotel Uzbekistan）</strong>，Mirzamakhmud Musakhanov St 45（约 15-20 分钟，酒店在市中心，离地铁 Amir Temur 站步行 5 分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">22:00</div>
+      <div class="activity">入住，可以去 <strong>17 楼顶层酒吧</strong>喝一杯俯瞰塔什干夜景（营业至深夜）。明天上午在塔什干玩半天，不用早起。</div>
+    </div>
+    <div class="info">
+      ✅ 明日 Day 1 是<strong>塔什干半日游 + 下午 16:00 火车去撒马尔罕</strong>，可以正常睡到 7-8 点。<br>
+      落地后顺手做的事：ATM 取苏姆 / 买电话卡（Beeline 或 Ucell，机场柜台 24 小时）/ Yandex Go 打车 App 装好。<br>
+      🏨 <strong>Hotel Uzbekistan</strong>：苏联时期地标建筑，16 层，酒店本身就是打卡点。顶层酒吧可俯瞰全城，值得深夜打卡一次。
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 塔什干半日 + 黄昏抵撒马尔罕</span>
+      <span class="day-date">6/19 周五</span>
+    </div>
+    <div class="time-block">
+      <div class="time">07:30 - 08:30</div>
+      <div class="activity">睡到自然醒，酒店早餐（Hotel Uzbekistan 早餐 07:00-10:00）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00 - 11:00</div>
+      <div class="activity">⭐ <strong>Khast Imam 建筑群</strong>：塔什干老城精华，藏着世界最古老的《奥斯曼古兰经》（公元 7 世纪原稿）。早晨清凉、人少、出片</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00 - 13:00</div>
+      <div class="activity">⭐ <strong>Central Asian Plov Center</strong> 午餐：乌兹别克国菜抓饭的圣地，每天中午 12 点出锅，晚去就没了。这是塔什干唯一一个不可替代的体验</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00 - 14:30</div>
+      <div class="activity">⭐ <strong>塔什干地铁打卡</strong>：苏联时期的地下宫殿，每站不一样的吊灯/壁画/马赛克。推荐 Kosmonavtlar（宇航员站，深蓝色宇宙主题）→ Alisher Navoi（白色蘑菇柱）→ Pakhtakor。地铁里有空调，正好躲暴晒</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30 - 15:20</div>
+      <div class="activity">回酒店取行李 → Yandex Go 去 <strong>Tashkent South 南站（Toshkent Janubiy）</strong>（约 20-30 分钟）。⚠️ 不是中央站！打车输 "Toshkent Janubiy" 或 "Tashkent South Railway Station"</div>
+    </div>
+    <div class="time-block">
+      <div class="time">15:30 - 16:00</div>
+      <div class="activity">⚠️ 票面注明登记截止为 <strong>出发前 30 分钟（即 15:30）</strong>，两道安检（行李扫描 + 人身），尽量 15:20 就在站内</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:00 - 20:14</div>
+      <div class="activity">🚄 <strong>Express 054ФА · Car 07 Lux 1Л 包厢</strong>：塔什干 → 撒马尔罕。Lux 包厢是每节车厢最好的包厢，两人一间（分2间），可以关门私密空间。窗外是中亚草原日落，暴晒时段刚好坐车</div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:30 - 21:00</div>
+      <div class="activity">打车到 <strong>Shohjahon Palace Hotel &amp; Spa</strong>，Suzangaron St 110（约 10-15 分钟，≈ 35,000 sum），入住放行李</div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:00 - 22:30</div>
+      <div class="activity">酒店附近晚餐（Bibi-Khanym 清真寺周边有多家餐厅，步行可达）+ 顺路看一眼夜色下的 <strong>Bibi-Khanym 清真寺</strong>（打灯很美）</div>
+    </div>
+    <div class="info">
+      💡 Day 1 没有看 Registan 灯光秀，<strong>已挪到 Day 2 晚上</strong>（Day 2 在撒马尔罕整天，时间充裕）<br>
+      🏨 <strong>Shohjahon Palace</strong>：步行到 Registan 约 10-15 分钟，到 Bibi-Khanym 约 11 分钟。有 SPA、游泳池、屋顶露台。<strong>注意：没有电梯</strong>，行李较多时可让前台协助搬运。
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 撒马尔罕一整天</span>
+      <span class="day-date">6/20 周六</span>
+    </div>
+    <div class="time-block">
+      <div class="time">07:00 - 08:30</div>
+      <div class="activity"><strong>Gur-e-Amir 帖木儿陵</strong>：开门即进，步行约 11 分钟，避开人群</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00 - 10:30</div>
+      <div class="activity">⭐ <strong>Shah-i-Zinda 陵墓群</strong>：必去！蓝瓷长廊，上午光线最佳出片（步行约 17 分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:30 - 11:30</div>
+      <div class="activity"><strong>Hazrat Khizr Mosque</strong>：旁边就是 Shah-i-Zinda 出口，俯瞰撒马尔罕的最佳点</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:30 - 16:00</div>
+      <div class="activity">🌡️ <strong>暴晒时段：回酒店午餐 + 泳池/午睡</strong>。Shohjahon Palace 有泳池，下午正好利用！或去 Afrosiab 历史博物馆（有空调）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:30 - 18:00</div>
+      <div class="activity"><strong>Registan 白天版</strong>：进三座神学院内部参观（白天和晚上是两种感觉），步行 10-15 分钟</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:00 - 19:30</div>
+      <div class="activity"><strong>Ulugh Beg 天文台</strong>：15 世纪的天文观测台遗址</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:30 - 21:00</div>
+      <div class="activity">Platan Restaurant 晚餐（林荫大道露台，本城最佳，人均约 150 元）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:00 - 22:30</div>
+      <div class="activity">⭐ <strong>Registan 广场灯光秀</strong>：撒马尔罕的灵魂时刻，三座神学院打灯。每晚 21:00 / 22:00 各一场（旺季），饭后散步过去刚好</div>
+    </div>
+    <div class="tip">
+      💡 Shohjahon Palace 有屋顶露台，如果不想出去晚餐，也可以回酒店屋顶喝一杯俯瞰全城。注意酒店评价提到信用卡有时支付失败，建议备现金。
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 中午赶赴布哈拉</span>
+      <span class="day-date">6/21 周日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">07:00 - 09:00</div>
+      <div class="activity">补漏：Siab Bazaar 买干果带回路上吃，或在 Shohjahon Palace 屋顶露台享用早餐（绝佳视角）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00 - 09:30</div>
+      <div class="activity">退房，整理行李。前台可能提供免费火车站接送，出发前确认一下</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30 - 10:25</div>
+      <div class="activity">打车去撒马尔罕火车站（约 20-30 分钟，≈ 35,000 sum）。⚠️ 登记截止 <strong>10:29</strong>，务必早出发</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:25 - 10:55</div>
+      <div class="activity">车站安检 + 等车</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:59 - 12:36</div>
+      <div class="activity">🚄 <strong>Afrosiyob 770ФА · Car 02 经济对号座</strong>：撒马尔罕 → 布哈拉（车上吃零食：之前在 Siab Bazaar 买的干果）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00 - 13:30</div>
+      <div class="activity">打车从布哈拉火车站到老城（约 15 km，30-40 分钟，约 5-7 美金），入住 <strong>Hotel Iman</strong>，B. Naqshband St · 14:00 后入住，可先寄存行李游玩</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:30 - 18:00</div>
+      <div class="activity">🌡️ 入住/寄存行李后休息避暑。Hotel Iman 环境非常好，庭院适合发呆；待 14:00 正式 check-in 后午睡 1-2 小时</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:30 - 20:00</div>
+      <div class="activity"><strong>Lyabi-Hauz 古水池广场</strong>：核心地标，傍晚当地人聚集，水池边坐坐（步行约 5-10 分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00 - 21:30</div>
+      <div class="activity">⭐ <strong>Po-i-Kalyan 周边晚餐</strong>：老城中的餐厅选择，推荐 Lyabi-Hauz 广场边露天茶馆或 Silk Road Spices 餐厅</div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:30 - 23:00</div>
+      <div class="activity">⭐ <strong>Po-i-Kalyan 建筑群</strong> + <strong>Trading Domes</strong> 夜游：晚上打灯比白天还震撼（步行约 10-15 分钟）</div>
+    </div>
+    <div class="info">
+      🏨 <strong>Hotel Iman</strong>（4.7 星，口碑极佳）：传统乌兹别克建筑风格，工作人员服务非常热情，评价几乎全是 5 星。离 Lyabi-Hauz 步行 5-10 分钟，离 Ark 古堡约 10-15 分钟。<strong>温馨提示</strong>：此酒店取消政策已过（6/19 18:00）。
+    </div>
+    <div class="warn">
+      ⚠️ 原攻略推荐的 Minzifa Restaurant 屋顶餐厅需要住在 Hotel Minzifa 才最方便预订。<strong>现住 Hotel Iman</strong>，附近同样有很多好餐厅，不用担心。布哈拉老城餐厅都可步行到达。
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 4 · 布哈拉早晨 → 飞回塔什干 → 回国</span>
+      <span class="day-date">6/22 周一</span>
+    </div>
+    <div class="time-block">
+      <div class="time">06:00 - 07:00</div>
+      <div class="activity">起床，Hotel Iman 早餐（评价非常好，有咖啡），凉爽时段的老城散步（再去一次 Lyabi-Hauz）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00 - 10:30</div>
+      <div class="activity">⭐ <strong>Ark of Bukhara 雅克古堡</strong>：开门即进，登顶看全景（步行约 10-15 分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:30 - 11:30</div>
+      <div class="activity"><strong>Bolo Haouz 40 柱清真寺</strong>（Ark 对面）+ <strong>Chor Minor 四塔</strong>（拍照打卡）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:30 - 12:00</div>
+      <div class="activity">回 Hotel Iman 退房（12:00 前），整理行李。酒店可能有小礼物赠送（见客人评价）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00 - 13:00</div>
+      <div class="activity">在老城最后一顿午餐（推荐 Old Bukhara Restaurant）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00 - 13:30</div>
+      <div class="activity">Yandex Go 去布哈拉机场 BHK（约 5 公里，15 分钟，机场离市区很近）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:30 - 16:10</div>
+      <div class="activity">机场值机 + 安检 + 候机（机场较小，没有太多设施，建议带瓶水）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:10 - 17:30</div>
+      <div class="activity">✈️ <strong>Silk Avia UH804</strong>：BHK → TAS（ATR 72 螺旋桨，1h20min，无餐食，自备零食）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:30 - 18:00</div>
+      <div class="activity">落地塔什干<strong> T3 国内航站楼</strong>，取行李</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:00 - 18:30</div>
+      <div class="activity">⚠️ <strong>跨航站楼转场到 T2 国际航站楼</strong>（机场免费摆渡车，或打车 5 分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:30 - 19:30</div>
+      <div class="activity">T2 内找餐厅吃晚饭（距起飞还有 4 小时，时间充裕）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:40</div>
+      <div class="activity">T2 国际航班值机柜台办理（CZ6028 建议提前 3 小时，19:40 左右开始）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:40 - 22:00</div>
+      <div class="activity">过关 + 安检 + 免税店逛逛</div>
+    </div>
+    <div class="time-block">
+      <div class="time">22:40</div>
+      <div class="activity">✈️ CZ6028 起飞回北京</div>
+    </div>
+
+    <div class="warn">
+      ⚠️ <strong>Tashkent 机场航站楼转场</strong>：T2（国际）和 T3（国内）是<strong>分开的两个航站楼</strong>。落地 T3 后必须到 T2 重新值机国际航班，不能联运。机场内有摆渡车（约每 15 分钟一班，免费），高峰期可能等车，所以预留 30-45 分钟。如担心时间，直接打 Yandex Go 跨楼，约 2-3 美金。<br>
+      ✅ 本次 16:10 飞布哈拉，17:30 落地，国际航班 22:40，留有 <strong>5h10min</strong> 缓冲，非常充裕。
+    </div>
+  </div>
+</section>
+
+<!-- 酒店信息（已订） -->
+<section>
+  <h2>🏨 已订酒店详情</h2>
+  <div class="success">
+    三城酒店均已订好，以下为实际住宿信息。
+  </div>
+
+  <h3>塔什干（6/18 一晚）</h3>
+  <div class="card-grid">
+    <div class="place-card booked">
+      <div class="name">乌兹别克斯坦酒店（Hotel Uzbekistan）<span class="badge-booked">✅ 已订</span></div>
+      <div class="price">到店付 ¥856.06（2间）· 标准双人房 × 2 · 禁烟</div>
+      <div class="desc">
+        📍 Mirzamakhmud Musakhanov St 45，离地铁 Amir Temur 站步行 5 分钟<br>
+        🌟 苏联时期地标性建筑（1974年），16 层高楼，城市地标。<strong>17 楼顶层酒吧</strong>可俯瞰全城，即使只住一晚也值得晚上上去喝一杯。<br>
+        ⭐ Google 3.8/5（2490 条评价）· 早餐 07:00-10:00<br>
+        💡 塔什干只是过渡一晚，酒店本身就是景点——苏联建筑 + 顶层夜景两不误
+      </div>
+    </div>
+  </div>
+
+  <h3>撒马尔罕（6/19、6/20 两晚）</h3>
+  <div class="card-grid">
+    <div class="place-card booked">
+      <div class="name">Shohjahon 宫殿（Shohjahon Palace Hotel &amp; Spa）<span class="badge-booked">✅ 已订</span></div>
+      <div class="price">在线已付 ¥1469.36 + ¥1368.48（2间：花园景豪华双 + 豪华双）</div>
+      <div class="desc">
+        📍 Suzangaron St 110，步行到 Registan 约 10-15 分钟，到 Bibi-Khanym 约 11 分钟，到 Gur-e-Amir 约 11 分钟<br>
+        🌟 历史外观 + 现代内装。有 <strong>SPA、土耳其浴室、游泳池、按摩浴缸</strong>，Day 2 中午暴晒时段可以泡泳池！还有<strong>屋顶露台</strong>可俯瞰撒马尔罕。<br>
+        ⭐ Google 4.3/5（83 条评价）· 工作人员热情，可提供免费火车站接送（出发前确认）<br>
+        ⚠️ 注意事项：没有电梯；信用卡有时支付失败，建议备现金；部分底层房间有街道噪音
+      </div>
+    </div>
+  </div>
+
+  <h3>布哈拉（6/21 一晚）</h3>
+  <div class="card-grid">
+    <div class="place-card booked">
+      <div class="name">伊曼酒店（Hotel Iman）<span class="badge-booked">✅ 已订</span></div>
+      <div class="price">在线已付 ¥715.34 + 到店付 US$13.72（约 ¥93）</div>
+      <div class="desc">
+        📍 B. Naqshband St，老城边缘，步行到 Lyabi-Hauz 约 5-10 分钟，到 Ark 古堡约 10-15 分钟，到 Chor Minor 约 5-10 分钟<br>
+        🌟 传统乌兹别克建筑风格，前厅售卖当地手工艺品。<strong>早餐口碑极佳</strong>（评价：美味+有咖啡）。工作人员热情，据说离店时会赠送小礼物。<br>
+        ⭐⭐⭐ Google 4.7/5（48 条评价）· 本次三城酒店中口碑最好！<br>
+        🕐 入住 14:00 后，离店 12:00 前。提前到达可寄存行李先去游玩
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 餐厅推荐 -->
+<section>
+  <h2>🍽️ 餐厅推荐</h2>
+
+  <h3>塔什干</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Central Asian Plov Center <span class="badge">⭐ 必去</span></div>
+      <div class="price">人均约 50-80 元</div>
+      <div class="desc">国菜抓饭圣地。每天中午 12 点大锅出锅，去晚了真的没了。Day 1 午餐的不可替代体验，全塔什干最好吃的抓饭。</div>
+    </div>
+  </div>
+  <div class="tip">💡 塔什干 Day 0 晚到酒店后建议直接休息，或去 Hotel Uzbekistan 17 楼顶层酒吧喝一杯，机场附近/酒店简餐即可。</div>
+
+  <h3>撒马尔罕</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Platan Restaurant <span class="badge">推荐</span></div>
+      <div class="price">人均约 150 元</div>
+      <div class="desc">当地最受好评的餐厅，林荫大道上的露台。烤肉拼盘 + 本地红酒，氛围特别好。建议 Day 2 晚餐（灯光秀前）。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Bibikhanum Teahouse</div>
+      <div class="price">人均约 80 元</div>
+      <div class="desc">就在 Bibi-Khanym 清真寺旁，露天院子。当地家庭聚餐的地方，性价比高。Day 1 晚上在附近游览后吃这里很方便。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Shohjahon Palace 屋顶露台</div>
+      <div class="price">视酒店套餐</div>
+      <div class="desc">不想出门的话，酒店屋顶露台本身就是好地方，俯瞰撒马尔罕，喝一杯看夜色。</div>
+    </div>
+  </div>
+
+  <h3>布哈拉</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Lyabi-Hauz 广场周边露天茶馆 <span class="badge">推荐</span></div>
+      <div class="price">人均约 80-120 元</div>
+      <div class="desc">古水池边的露天茶馆，傍晚坐这里看当地人生活最有感觉。Day 3 傍晚散步后吃晚饭。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Minzifa Restaurant <span class="badge" style="background:#95a5a6;">可尝试</span></div>
+      <div class="price">人均约 130 元</div>
+      <div class="desc">屋顶餐厅，俯瞰布哈拉老城 + Po-i-Kalyan 尖塔，日落时段很美。虽然不住 Minzifa 酒店，外来客也可以去（建议提前电话预订）。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Old Bukhara Restaurant</div>
+      <div class="price">人均约 100 元</div>
+      <div class="desc">当地老牌，传统乌兹别克菜，羊排和马肉都有名。Day 4 中午退房后最后一顿。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 实用信息 -->
+<section>
+  <h2>🛠️ 实用信息</h2>
+
+  <h3>💵 钱</h3>
+  <ul>
+    <li>当地货币：<strong>苏姆 (UZS)</strong>，1 美金 ≈ 12,500 苏姆</li>
+    <li>落地塔什干机场就换钱，机场汇率不算坑</li>
+    <li>当地 ATM 取现最划算，<strong>Visa 卡能直接取</strong>（机场就有）</li>
+    <li>现金为主，但大酒店、Yandex Go 能刷国际卡</li>
+    <li>建议每人带 500 美金现金 + 一张 Visa/Mastercard</li>
+    <li>⚠️ Shohjahon Palace 评价提到信用卡有时支付失败，到店付现金保险</li>
+  </ul>
+
+  <h3>📱 网络</h3>
+  <ul>
+    <li>落地机场买 <strong>Beeline 或 Ucell</strong> 电话卡，约 30 元/张，含 10GB 流量 + 本地号码</li>
+    <li>当地 4G 速度还行，但景点 wifi 普遍很差，<strong>必须有流量卡</strong></li>
+    <li>必备 App：<strong>Yandex Go</strong>（打车）、<strong>Yandex Maps</strong>（导航，比 Google Maps 准）、<strong>Google Translate</strong>（离线英俄）</li>
+  </ul>
+
+  <h3>🛂 签证</h3>
+  <ul>
+    <li><strong>30 天免签</strong>（2024 年起对中国免签）</li>
+    <li>护照有效期 6 个月以上即可</li>
+    <li>不需要邀请函、不需要财产证明</li>
+  </ul>
+
+  <h3>👗 着装</h3>
+  <ul>
+    <li>6 月白天 35-40°C，必备<strong>防晒霜 + 宽檐帽 + 太阳镜</strong></li>
+    <li>女士进清真寺需<strong>头巾 + 遮膝盖 + 遮肩</strong>（围巾就行，不用专门买长袍）</li>
+    <li>男士<strong>短裤进不了</strong>核心宗教景点，建议带轻薄长裤</li>
+    <li>当地清晨较凉（25°C），早起出门带件薄外套</li>
+  </ul>
+
+  <h3>🌡️ 6 月温度参考</h3>
+  <table>
+    <tr><th>时段</th><th>温度</th><th>体感</th><th>建议</th></tr>
+    <tr><td>06:00 - 10:00</td><td>25-30°C</td><td>最舒服</td><td>主攻景点</td></tr>
+    <tr><td>12:00 - 17:00</td><td>38-42°C</td><td>会中暑</td><td>室内 / 坐车 / 午睡 / 泳池</td></tr>
+    <tr><td>19:00 - 23:00</td><td>28-32°C</td><td>凉爽</td><td>夜游灯光景点</td></tr>
+  </table>
+
+  <h3>🚖 城市内交通</h3>
+  <ul>
+    <li>撒马尔罕、布哈拉老城都<strong>步行可达</strong>所有景点（5-15 分钟）</li>
+    <li>从酒店去火车站用 <strong>Yandex Go</strong>，撒马尔罕约 5-8 美金，布哈拉约 5-7 美金</li>
+    <li><strong>布哈拉火车站离老城较远</strong>（约 15 公里），打车 30-40 分钟，预留时间</li>
+    <li><strong>布哈拉机场离老城近</strong>（约 5 公里），打车 15 分钟</li>
+    <li><strong>塔什干 T2/T3 跨航站楼</strong>：免费摆渡车 15 分钟一班，或打 Yandex Go 跨楼 2-3 美金</li>
+    <li>Shohjahon Palace 可能提供免费火车站接送，入住时确认</li>
+  </ul>
+
+  <h3>🍴 必尝食物</h3>
+  <ul>
+    <li><strong>Plov（抓饭）</strong>：国菜，每个城市做法不同，撒马尔罕版最经典</li>
+    <li><strong>Shashlik（烤肉串）</strong>：羊肉/牛肉/鸡肉，必点</li>
+    <li><strong>Manti（蒸饺）</strong>：羊肉馅，类似中国包子</li>
+    <li><strong>Lagman（拉条子）</strong>：维吾尔风格的拉面</li>
+    <li><strong>Non（馕）</strong>：每个城市花纹不同，撒马尔罕的最大最圆</li>
+    <li><strong>Chak-chak</strong>：蜂蜜炸面团，甜点</li>
+    <li><strong>当地红酒</strong>：撒马尔罕产，价格便宜，质量不错</li>
+  </ul>
+</section>
+
+<!-- 行动清单 -->
+<section>
+  <h2>📋 出发前行动清单</h2>
+
+  <h3>已完成 ✅（5 月初）</h3>
+  <ul class="checklist">
+    <li class="done">抢 Express 054ФА · Car 07 Lux 1Л：6/19 Tashkent → Samarkand 16:00 ✅</li>
+    <li class="done">抢 Afrosiyob 770ФА · Car 02 Сид 2Е：6/21 Samarkand → Bukhara 10:59 ✅</li>
+    <li class="done">订 Hotel Uzbekistan 塔什干（6/18 一晚）✅</li>
+    <li class="done">订 Shohjahon Palace 撒马尔罕（6/19、6/20 两晚）✅</li>
+    <li class="done">订 Hotel Iman 布哈拉（6/21 一晚）✅</li>
+    <li class="done">携程订 Silk Avia UH804 BHK→TAS 16:10（4人）✅</li>
+    <li class="done">购买旅游保险（如已购，划掉）</li>
+  </ul>
+
+  <h3>出发前一周</h3>
+  <ul class="checklist">
+    <li>兑换 500 美金/人 现金（带够现金，信用卡有时刷不了）</li>
+    <li>打印 <strong>2 张火车票 PDF</strong>（054ФА + 770ФА）+ 机票凭证 + 3 张酒店确认单</li>
+    <li>准备防晒霜（SPF50+）、宽檐帽、太阳镜、薄长裤</li>
+    <li>女士准备头巾（清真寺用）</li>
+    <li>准备转换插头（乌兹别克用欧标 C/F 型，圆头双脚）</li>
+    <li>常备药品：藿香正气、止泻药、感冒药、创可贴</li>
+    <li>下载 App：Yandex Go、Yandex Maps、Google Translate（离线英俄包）</li>
+  </ul>
+
+  <h3>出发当天</h3>
+  <ul class="checklist">
+    <li>护照 × 4（有效期 6 个月以上）</li>
+    <li>国际机票 CZ6027/CZ6028 凭证</li>
+    <li>火车票 PDF 打印件（054ФА + 770ФА，各 2 张对应人名）</li>
+    <li>Silk Avia 机票电子凭证（携程 App 截图备用）</li>
+    <li>3 张酒店预订单打印件</li>
+    <li>美金现金 + Visa 卡</li>
+    <li>充电宝（&lt; 100Wh，可带上飞机）</li>
+  </ul>
+
+  <h3>6 月初（尚可做）</h3>
+  <ul class="checklist">
+    <li>联系 Shohjahon Palace 确认免费火车站接送（6/21 撒马尔罕火车站送行）</li>
+    <li>可选：致电 Minzifa Restaurant 预订屋顶晚餐（如想尝试，虽不住那里）</li>
+    <li>确认 Hotel Iman 已收到预订确认函（携程已显示"已为您保留房间"）</li>
+  </ul>
+</section>
+
+<!-- 附录：交通取舍 -->
+<section>
+  <h2>📖 附录：交通班次取舍说明</h2>
+  <p style="font-size:13px;color:#888;margin-bottom:14px;">本行程涉及 3 段乌兹别克境内交通（2 段火车 + 1 段国内航班），每段都有多个候选班次。国际航班 CZ6027/6028 是固定的不展开。</p>
+
+  <h3>🚄 6/19 塔什干 → 撒马尔罕｜为什么选 Express 054ФА Lux 包厢 (16:00 → 20:14)</h3>
+  <table>
+    <tr><th>时间</th><th>车次</th><th>类型</th><th>判断</th></tr>
+    <tr><td>06:10 → 08:23</td><td>Afrosiyob 778Ф</td><td>高铁</td><td>太早，4:30 起床过于痛苦</td></tr>
+    <tr><td>07:30 → 09:43</td><td>Afrosiyob 766Ф</td><td>高铁</td><td>放弃塔什干所有景点</td></tr>
+    <tr><td>08:00 → 10:25</td><td>Afrosiyob 768Ф</td><td>高铁</td><td>同上</td></tr>
+    <tr><td>08:30 → 10:49</td><td>Afrosiyob 770Ф</td><td>高铁</td><td>同上</td></tr>
+    <tr><td><strong>16:00 → 20:14</strong></td><td><strong>Express 054ФА · Lux</strong></td><td><strong>快车包厢</strong></td><td><strong>✅ 选这个：保住塔什干上午 + 暴晒时段坐车</strong></td></tr>
+    <tr><td>21:45 / 22:35</td><td>Passenger</td><td>夜班卧铺</td><td>凌晨到达，不可用</td></tr>
+  </table>
+  <p><strong>结论</strong>：下午 16:00 快车，上午从容玩塔什干三大不可替代体验：Khast Imam 古兰经 · Plov Center 国菜 · 苏联地铁宫殿。Lux 包厢是最好的舱位等级，两人一间私密性好。</p>
+
+  <h3>🚄 6/21 撒马尔罕 → 布哈拉｜为什么选 Afrosiyob 770ФА (10:59 → 12:36)</h3>
+  <table>
+    <tr><th>时间</th><th>车次</th><th>类型</th><th>判断</th></tr>
+    <tr><td>00:02 / 02:02 / 03:00</td><td>各车次</td><td>夜班</td><td>凌晨发车，不可用</td></tr>
+    <tr><td>08:33 → 10:10</td><td>Afrosiyob 778Ф</td><td>高铁</td><td>太早，浪费撒马尔罕早晨</td></tr>
+    <tr><td>09:53 → 11:39</td><td>Afrosiyob 766Ф</td><td>高铁</td><td>稍早，浪费撒马尔罕早晨</td></tr>
+    <tr><td><strong>10:59 → 12:36</strong></td><td><strong>Afrosiyob 770ФА</strong></td><td><strong>高铁</strong></td><td><strong>✅ 选这个：中午赶路避暑，上午还能在撒马尔罕活动</strong></td></tr>
+    <tr><td>20:36</td><td>Express</td><td>夜班</td><td>到达太晚，浪费布哈拉一晚</td></tr>
+  </table>
+
+  <h3>✈️ 6/22 布哈拉 → 塔什干｜为什么必须坐飞机</h3>
+  <p>当日布哈拉→塔什干没有合理时段的高铁：最晚高铁 16:22 抵达 20:30，离 22:40 国际航班只剩 2h10min，一旦晚点必误机。飞机是唯一可靠方案。</p>
+  <table>
+    <tr><th>时间</th><th>价格</th><th>判断</th></tr>
+    <tr><td>08:30 → 09:50</td><td>¥421/人</td><td>6:30 离开布哈拉，放弃早晨游览</td></tr>
+    <tr><td><strong>16:10 → 17:30</strong></td><td><strong>¥561/人</strong></td><td><strong>✅ 选这个：保留布哈拉早晨 + 5h+ 缓冲国际航班</strong></td></tr>
+    <tr><td>20:35 → 21:55</td><td>¥421/人</td><td><span style="color:#c0392b;font-weight:600;">❌ 绝对不行！落地距国际航班仅 45 分钟，必误机</span></td></tr>
+  </table>
+
+  <div class="warn" style="margin-top:18px;">
+    <strong>📌 万一 16:10 班机临时取消怎么办</strong><br>
+    <ol style="margin-top:6px;">
+      <li>改签 Silk Avia 当日 08:30 班次（牺牲布哈拉早晨）</li>
+      <li>改 Uzbekistan Airways 同向其他航班</li>
+      <li>实在没飞机：当日 03:34 Afrosiyob 高铁（提前一晚不睡，凌晨 2 点出发）</li>
+      <li>最坏：直接打车去塔什干（约 600 km，6-7 小时，4 人包车约 200-300 美金）</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 应急联系 -->
+<section>
+  <h2>🆘 应急联系</h2>
+  <table>
+    <tr><th>单位</th><th>电话</th></tr>
+    <tr><td>中国驻乌兹别克斯坦大使馆</td><td>+998 71 286 7474（24小时领事保护）</td></tr>
+    <tr><td>乌兹别克紧急电话</td><td>112（综合）/ 102（警察）/ 103（医疗）</td></tr>
+    <tr><td>南方航空乌兹别克办事处</td><td>+998 71 120 7575</td></tr>
+    <tr><td>外交部全球领事保护</td><td>+86 10 12308</td></tr>
+  </table>
+</section>
+
+</div>
+
+<footer>
+  本攻略 v2 由 Claude 生成 · 2026/05/28 · 票和酒店已全部确认 · 一路顺风 ✈️
+</footer>
+
+</body>
+</html>
