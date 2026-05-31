@@ -21,6 +21,13 @@
       "source": "community",
       "version": "1.0.1",
       "installedAt": "2026-05-25T02:08:15Z"
+    },
+    "google-maps-grounding-lite-mcp": {
+      "name": "Google Maps Grounding MCP",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=google-maps-grounding-lite-mcp",
+      "source": "community",
+      "version": "1.0.0",
+      "installedAt": "2026-05-28T16:03:18Z"
     }
   }
 }

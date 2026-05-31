@@ -1,4 +1,4 @@
-# Gemini CLI - My Travel Project Instructions
+# QClaw Agent Instructions — my-travel
 
 Personal travel guide repository. Uses AI to plan trips, query real-time transportation, and generate beautifully formatted HTML guide pages.
 
@@ -7,10 +7,10 @@ Personal travel guide repository. Uses AI to plan trips, query real-time transpo
 1. Copy `.env.example` to `.env` and fill in your API keys:
    ```bash
    cp .env.example .env
-   # Edit .env and set WENDAO_API_KEY and GOOGLE_MAPS_API_KEY
+   # Edit .env: set WENDAO_API_KEY and GOOGLE_MAPS_API_KEY
    ```
 
-2. Install Node.js (v18+) if not already installed.
+2. Node.js v18+ is required for skill scripts.
 
 3. Install Google Maps MCP (`mcporter`) for geocoding and map links:
    ```bash
@@ -32,7 +32,7 @@ my-travel/
 │   ├── guide-spec.md                 # Load when creating/editing guides
 │   ├── tools.md                      # Load when querying transportation
 │   └── planning-principles.md        # Load when starting new trip plan
-├── .claude/skills/                   # Local skills (never install globally)
+├── .claude/skills/                   # Local skills
 │   ├── ctrip-wendao/                 # Real-time travel data
 │   ├── google-maps-grounding-lite-mcp/  # Maps MCP (needs mcporter)
 │   └── travel-manager/               # Trip planning framework
@@ -81,7 +81,6 @@ Query flights, trains, hotels with live data. Load `docs/tools.md` for full usag
 **Trigger**: flights, trains, hotels, ticket prices, departure/arrival times, 航班/火车/高铁/酒店
 
 ```bash
-# Load API key from .env, then run:
 source .env
 node .claude/skills/ctrip-wendao/scripts/wendao_query.js "2026年6月1日北京到成都的高铁"
 ```
@@ -109,21 +108,14 @@ Get coordinates, search places, check routes. Requires `mcporter` installed and 
 **Trigger**: 地图链接, 坐标, 导航, geocode, map link
 
 ```bash
-# Search places
 mcporter call grounding-lite.search_places textQuery="成都宽窄巷子"
-
-# Batch geocode (use for adding map links to guides)
 mcporter call grounding-lite.maps_batch_geocode addresses='["峨眉山金顶","成都双流国际机场"]'
-
-# Weather
 mcporter call grounding-lite.lookup_weather location='{"address":"成都,四川"}'
-
-# Routes
 mcporter call grounding-lite.compute_routes origin="成都火车站" destination="峨眉山"
 ```
 
 ### Travel Manager — Trip Planning Framework
-Comprehensive planning skill for international trips, multi-destination itineraries, family travel.
+Comprehensive planning for international trips, multi-destination itineraries, family travel.
 
 **Trigger**: plan a trip, itinerary, multi-destination, family travel, 规划行程, 旅行计划
 
@@ -140,9 +132,9 @@ References in `.claude/skills/travel-manager/references/`:
 
 ### Culinary Depth (餐饮深度)
 Every restaurant must include:
-1. Cultural background / specialty (e.g., century-old brand, Sichuan master chef)
-2. Ordering logic (e.g., one meat + one vegetable + one staple)
-3. Taste details (e.g., mapo tofu's numbing-spicy contrast, crispy bottom of pot stickers)
+1. Cultural background / specialty
+2. Ordering logic
+3. Taste details
 
 ## Publishing
 
