@@ -49,15 +49,50 @@ git add . && git commit -m "更新攻略" && git push
 
 **链接格式**（统一样式）：
 ```html
-<a href="https://maps.google.com/?q={纬度},{经度}" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+<a href="https://maps.google.com/?q={地点名称+城市}" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
 ```
 
-**坐标获取方式**：用谷歌地图 MCP（`maps_batch_geocode`）批量获取，一次最多 50 个地点。
+⚠️ **必须用地点名称，不能用坐标**：`?q=lat,lng` 格式在地图上只会显示经纬度数字，不显示地点名称；`?q=Registan+Samarkand` 格式会直接搜索并显示景点名称。
+
+示例：
+```html
+<!-- ✅ 正确 -->
+<a href="https://maps.google.com/?q=Registan+Samarkand" ...>📍地图</a>
+<a href="https://maps.google.com/?q=Shah-i-Zinda+Samarkand" ...>📍地图</a>
+<a href="https://maps.google.com/?q=Ark+of+Bukhara" ...>📍地图</a>
+
+<!-- ❌ 错误 -->
+<a href="https://maps.google.com/?q=39.6546466,66.9757669" ...>📍地图</a>
+```
 
 **加链接的位置**：
 - 每日行程的 `.activity` 里，紧跟地点名称后
 - 酒店详情卡片的 `.name` 里
 - 实用信息的交通章节里
+
+## 景点开放时间规范
+
+每个景点活动后必须标注开放时间，**必须从谷歌地图实时查询，禁止凭记忆估算**。
+
+**格式**（绿色小字，放在景点描述末尾）：
+```html
+<br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：9:00–18:00（每日）</small>
+```
+
+特殊情况写法：
+```html
+<!-- 周一休息 -->
+<br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：7:00–19:00（周一休息）</small>
+<!-- 工作日/周末不同 -->
+<br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：7:00–22:00（周一至五），9:00–22:00（周六日）</small>
+<!-- 开放式广场/全天 -->
+<br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：8:00–24:00（每日至午夜，开放式广场）</small>
+```
+
+**查询流程**（使用 `google-maps` MCP，见 `docs/tools.md`）：
+1. `maps_search_places` — 用景点名称搜索，获取 `place_id`
+2. `maps_place_details` — 用 `place_id` 获取 `opening_hours.weekday_text`
+3. 将每天的时间写入攻略；如各天一致写"每日"，如有例外逐一标注
 
 ## 打车指南规范
 
