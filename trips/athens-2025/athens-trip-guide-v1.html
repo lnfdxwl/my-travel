@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅典9日游攻略｜2025.10.03 - 10.12</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Code block */
+  .email-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Step list */
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 28px; height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>🏛️ 雅典9日游</h1>
+  <div class="subtitle">雅典 · 埃皮达鲁斯 · 纳夫普利奥</div>
+  <div class="meta">
+    <span>📅 2025年10月3日 — 10月12日</span>
+    <span>👥 2人（1对情侣）</span>
+    <span>✈️ 北京首都 往返</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心原则</strong>：节奏适中不过于特种兵，每天1-2个主要景点，傍晚可逛街或享用美食。雅典市区公共交通便捷，一日游景点建议跟团或自行前往。</div>
+
+  <div class="transport-list">
+    <!-- 国际航班 去程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">航班号待确认 · 北京首都 → 雅典</div>
+        <div class="schedule">出发 <span class="time">02:30</span> → 到达 <span class="time">08:55</span>（+0天）</div>
+        <div class="meta-line">约10小时25分钟 · 直飞</div>
+      </div>
+    </div>
+
+    <!-- 国际航班 返程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">航班号待确认 · 雅典 → 北京首都</div>
+        <div class="schedule">出发 <span class="time">14:15</span> → 到达 <span class="time">05:05</span>（+1天）</div>
+        <div class="meta-line">约10小时50分钟 · 直飞</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>🗺️ 城市游览顺序</h3>
+  <ul>
+    <li>Day 1（10月3日）：抵达日 · 宪法广场附近休整</li>
+    <li>Day 2（10月4日）：雅典卫城 + 卫城博物馆</li>
+    <li>Day 3（10月5日）：古市场群 + 菲洛帕波斯山日落</li>
+    <li>Day 4（10月6日）：国家考古博物馆 + 拜占庭博物馆</li>
+    <li>Day 5（10月7日）：迈锡尼遗址一日游（自选）</li>
+    <li>Day 6（10月8日）：埃皮达鲁斯 + 纳夫普利奥</li>
+    <li>Day 7（10月9日）：贝纳基博物馆 + 利卡维多斯山</li>
+    <li>Day 8（10月10日）：中央市场 + 蒙纳斯提拉齐购物</li>
+    <li>Day 9（10月11日）：最后休整 + 返程</li>
+  </ul>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section>
+  <h2>📅 每日行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 抵达日</span>
+      <span class="day-date">10月3日 周五</span>
+    </div>
+    <div class="tip">💡 今晚落地后直接休息，明早开始游览。上午航班到达，精力充沛可直接开始游览。</div>
+    <div class="time-block">
+      <div class="time">02:30</div>
+      <div class="activity">✈️ 北京首都T3起飞</div>
+    </div>
+    <div class="time-block">
+      <div class="time">08:55</div>
+      <div class="activity">🛬 抵达雅典国际机场（ATH），出关</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30-10:30</div>
+      <div class="activity">🚇 机场地铁X95到宪法广场（约40分钟，€10/人）
+        <br><a href="https://maps.google.com/?q=Syntagma+Square+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00</div>
+      <div class="activity">🏨 入住酒店（建议普拉卡或蒙纳斯提拉齐区域）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00-14:00</div>
+      <div class="activity">🍽️ 午餐：蒙纳斯提拉齐区域，品尝Gyros（希腊烤肉卷）
+        <br><a href="https://maps.google.com/?q=Kostas+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍推荐Kostas</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30-17:00</div>
+      <div class="activity">🏛️ <strong>宪法广场 (Syntagma Square)</strong>
+        <a href="https://maps.google.com/?q=Syntagma+Square+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>观看士兵换岗仪式（每小时整点），漫步埃尔莫街
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放（广场）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:00</div>
+      <div class="activity">🍽️ 晚餐：普拉卡区传统希腊餐厅</div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 雅典卫城探秘</span>
+      <span class="day-date">10月4日 周六</span>
+    </div>
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🏛️ <strong>雅典卫城 (Acropolis)</strong>
+        <a href="https://maps.google.com/?q=Acropolis+of+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>世界文化遗产，希腊最著名的古建筑群
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00（每日）</small>
+        <br><small style="color:#888;">🚶 从酒店步行约15分钟</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00-12:30</div>
+      <div class="activity">🏛️ <strong>卫城博物馆 (Acropolis Museum)</strong>
+        <a href="https://maps.google.com/?q=Acropolis+Museum+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>距卫城步行5分钟，馆藏丰富的古希腊文物
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-17:00（周一至周五），08:00-20:00（周五）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€15，卫城通票€20可参观多个景点</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00</div>
+      <div class="activity">🍽️ 午餐：卫城博物馆附近餐厅</div>
+    </div>
+    <div class="time-block">
+      <div class="time">15:00-18:00</div>
+      <div class="activity">🚶 漫步普拉卡(Plaka)老城区，逛纪念品店
+        <br><a href="https://maps.google.com/?q=Plaka+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:30</div>
+      <div class="activity">🍽️ 晚餐：推荐Saita传统希腊菜
+        <br><a href="https://maps.google.com/?q=Saita+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 古希腊文明深度游</span>
+      <span class="day-date">10月5日 周日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">08:30</div>
+      <div class="activity">🏛️ <strong>古代市场 (Ancient Agora)</strong>
+        <a href="https://maps.google.com/?q=Ancient+Agora+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>苏格拉底时期的精神中心，希腊政治与商业心脏
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00（每日）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：已包含在卫城通票€20中</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:30</div>
+      <div class="activity">🏛️ <strong>罗马市场 (Roman Agora)</strong>
+        <a href="https://maps.google.com/?q=Roman+Agora+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>含风之塔(Tower of the Winds)，古代天文奇迹
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00（每日）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:30</div>
+      <div class="activity">🍽️ 午餐：蒙纳斯提拉齐区域</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00-17:00</div>
+      <div class="activity">🏛️ <strong>宙斯神庙 (Temple of Olympian Zeus)</strong>
+        <a href="https://maps.google.com/?q=Temple+of+Olympian+Zeus+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>雅典最大的神庙遗迹
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00（每日）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:30-19:30</div>
+      <div class="activity">🌅 <strong>菲洛帕波斯山 (Filopappou Hill)</strong> 日落
+        <a href="https://maps.google.com/?q=Filopappou+Hill+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>免费入场，日落时俯瞰卫城全景绝佳位置
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放</small>
+        <br><small style="color:#888;">🚶 步行约15分钟上山</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00</div>
+      <div class="activity">🍽️ 晚餐：Strofi屋顶餐厅，看卫城夜景
+        <br><a href="https://maps.google.com/?q=Strofi+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 4 · 博物馆深度游</span>
+      <span class="day-date">10月6日 周一</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏛️ <strong>国家考古博物馆 (National Archaeological Museum)</strong>
+        <a href="https://maps.google.com/?q=National+Archaeological+Museum+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>希腊最大最古老的考古博物馆，建议游览3-4小时
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€15</small>
+        <br><small style="color:#888;">🚇 乘坐地铁1号线到Omonoia站，步行约5分钟</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00</div>
+      <div class="activity">🍽️ 午餐：博物馆附近</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30-17:00</div>
+      <div class="activity">🏛️ <strong>拜占庭博物馆 (Byzantine Museum)</strong>
+        <a href="https://maps.google.com/?q=Byzantine+Museum+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>了解拜占庭艺术与东正教历史
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-16:00（周一至周五）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€8</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:00</div>
+      <div class="activity">🍽️ 晚餐：Brettos百年酿酒厂餐厅
+        <br><a href="https://maps.google.com/?q=Brettos+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 5 · 迈锡尼遗址一日游（自选）</span>
+      <span class="day-date">10月7日 周二</span>
+    </div>
+    <div class="warn">⚠️ 此日为自选行程，如不参加一日游，可选择在雅典市区休闲逛或去滨海小镇。</div>
+    <div class="time-block">
+      <div class="time">07:00</div>
+      <div class="activity">🚐 参加迈锡尼遗址一日游团（需提前报名）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30-12:00</div>
+      <div class="activity">🏛️ <strong>迈锡尼遗址 (Mycenae)</strong>
+        <a href="https://maps.google.com/?q=Mycenae+Greece" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>UNESCO世界遗产，荷马史诗中的黄金之城
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€12，一日游团已含</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00</div>
+      <div class="activity">🍽️ 午餐：伯罗奔尼撒半岛当地餐厅</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00-18:00</div>
+      <div class="activity">🌊 前往<strong>纳夫普利奥 (Nafplio)</strong>或返回雅典</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:00</div>
+      <div class="activity">🍽️ 晚餐：返回雅典</div>
+    </div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 6 · 埃皮达鲁斯 + 纳夫普利奥</span>
+      <span class="day-date">10月8日 周三</span>
+    </div>
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🚐 出发前往埃皮达鲁斯（建议参加一日游或自驾）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:00-12:00</div>
+      <div class="activity">🏛️ <strong>埃皮达鲁斯古剧场 (Epidaurus)</strong>
+        <a href="https://maps.google.com/?q=Ancient+Theatre+of+Epidaurus" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>古代最完美的音响效果剧场，一根针掉落前台都能听见
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-20:00</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€12</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00</div>
+      <div class="activity">🍽️ 午餐：纳夫普利奥小镇</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00-17:00</div>
+      <div class="activity">🏰 <strong>纳夫普利奥 (Nafplio)</strong>
+        <a href="https://maps.google.com/?q=Nafplio+Greece" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>希腊最浪漫的小城之一，漫步老城区，Palamidi城堡
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:00</div>
+      <div class="activity">🚐 返回雅典（约1.5小时车程）</div>
+    </div>
+  </div>
+
+  <!-- Day 7 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 7 · 艺术与购物日</span>
+      <span class="day-date">10月9日 周四</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏛️ <strong>贝纳基博物馆 (Benaki Museum)</strong>
+        <a href="https://maps.google.com/?q=Benaki+Museum+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>希腊艺术与文化综合博物馆
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-17:00（周一至三、五），09:00-24:00（周四），10:00-18:00（周末）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：€15</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00</div>
+      <div class="activity">🍽️ 午餐：科隆纳基区(Kolonaki)高端餐厅</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00-17:00</div>
+      <div class="activity">🛍️ 科隆纳基区高端购物，或利卡维多斯山缆车
+        <br><a href="https://maps.google.com/?q=Lycabettus+Hill+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 缆车：08:00-00:00（周末至02:00）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:30-19:30</div>
+      <div class="activity">🌅 利卡维多斯山日落，俯瞰雅典全景
+        <br><small style="color:#c0392b;font-size:12px;">🎫 缆车往返：€10</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00</div>
+      <div class="activity">🍽️ 晚餐：Nice n Easy现代希腊菜
+        <br><a href="https://maps.google.com/?q=Nice+n+Easy+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 8 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 8 · 购物与告别</span>
+      <span class="day-date">10月10日 周五</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🛒 <strong>中央广场 (Central Market)</strong>
+        <a href="https://maps.google.com/?q=Athens+Central+Market" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>体验当地生活，购买纪念品（橄榄油、蜂蜜、葡萄酒）
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：07:00-15:00（周一至六）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00-14:00</div>
+      <div class="activity">🛍️ <strong>蒙纳斯提拉齐跳蚤市场</strong>
+        <a href="https://maps.google.com/?q=Monastiraki+Flea+Market+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>每周日最热闹，淘复古物品
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-14:00（周日）</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:00</div>
+      <div class="activity">🍽️ 告别午餐：Spondi米其林二星（需提前预约）
+        <br><a href="https://maps.google.com/?q=Spondi+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br><small style="color:#c0392b;font-size:12px;">⚠️ 建议提前1周预约</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:00</div>
+      <div class="activity">🏨 返回酒店，收拾行李，休息</div>
+    </div>
+  </div>
+
+  <!-- Day 9 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 9 · 返程日</span>
+      <span class="day-date">10月11日 周六</span>
+    </div>
+    <div class="tip">💡 根据航班时间灵活安排。返程航班14:15，建议提前3小时到机场（11:00左右出发）。</div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">最后漫步普拉卡老街，购买最后纪念品</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00</div>
+      <div class="activity">🚇 退房，乘坐地铁X95前往机场
+        <br><small style="color:#888;">约40分钟到机场</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00-14:00</div>
+      <div class="activity">🛃 机场退税、办理登机手续</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:15</div>
+      <div class="activity">✈️ 雅典起飞，返回北京</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== 酒店推荐 ===== -->
+<section>
+  <h2>🏨 酒店推荐</h2>
+  <p>💰 预算参考：€100-150/晚（9晚约€900-1350双人房）</p>
+  <p>💡 建议选择普拉卡(Plaka)或蒙纳斯提拉齐(Monastiraki)区域，交通餐饮便利。</p>
+
+  <h3>普拉卡/蒙纳斯提拉齐区域（推荐）</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Plaka Hotel <span class="badge">推荐</span></div>
+      <div class="price">约 €120-150 / 晚</div>
+      <div class="desc">位置极佳，步行5分钟到卫城入口、宪法广场。屋顶可看卫城景观。建议提前预订。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Hotel Hermitage Athens</div>
+      <div class="price">约 €100-130 / 晚</div>
+      <div class="desc">蒙纳斯提拉齐区，性价比高，周边餐厅和商店密集。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Athens Key Hotel</div>
+      <div class="price">约 €110-140 / 晚</div>
+      <div class="desc">现代装修，位置便利，适合情侣入住。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 餐饮推荐</h2>
+
+  <h3>蒙纳斯提拉齐/普拉卡区域</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Kostas <span class="badge">当地人推荐</span></div>
+      <div class="price">人均 €8-12</div>
+      <div class="desc">传统Gyros（希腊烤肉卷）快餐店，当地人经常光顾。必尝Gyros和Souvlaki。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Saita</div>
+      <div class="price">人均 €15-20</div>
+      <div class="desc">传统希腊菜，家庭经营，推荐Moussaka和Souvlaki。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Strofi</div>
+      <div class="price">人均 €20-25</div>
+      <div class="desc">屋顶餐厅，可观赏卫城夜景。需提前预约窗边座位。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Brettos</div>
+      <div class="price">人均 €18-25</div>
+      <div class="desc">百年酿酒厂改建餐厅，氛围独特，希腊葡萄酒种类丰富。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Nice n Easy</div>
+      <div class="price">人均 €25-30</div>
+      <div class="desc">现代希腊创意料理，适合追求新口味的游客。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Spondi <span class="badge">米其林二星</span></div>
+      <div class="price">人均 €80-120</div>
+      <div class="desc">雅典顶级餐厅，需提前至少1周预约。正式餐饮体验。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 交通指南 ===== -->
+<section>
+  <h2>🚆 交通订票指南</h2>
+
+  <h3>雅典市内交通</h3>
+  <div class="info">ℹ️ 雅典地铁：1号线（绿）、2号线（红）、3号线（蓝）。可在地铁站购买单程票或5日通票。</div>
+
+  <h4>地铁票种</h4>
+  <table>
+    <tr><th>票种</th><th>价格</th><th>有效期</th><th>备注</th></tr>
+    <tr><td>单程票</td><td>€1.20</td><td>90分钟</td><td>可换乘公交</td></tr>
+    <tr><td>5日通票</td><td>€15</td><td>5天</td><td>推荐游客</td></tr>
+    <tr><td>机场单程</td><td>€10</td><td>单程</td><td>X95/X93线</td></tr>
+  </table>
+
+  <h3>机场交通</h3>
+  <table>
+    <tr><th>方式</th><th>价格</th><th>时间</th><th>备注</th></tr>
+    <tr><td>地铁X95</td><td>€10/人</td><td>约40分钟</td><td>到宪法广场，最方便</td></tr>
+    <tr><td>公交X93</td><td>€6/人</td><td>约50分钟</td><td>到Kifisia</td></tr>
+    <tr><td>出租车</td><td>€40-50</td><td>约30分钟</td><td>议价或用App</td></tr>
+  </table>
+
+  <h3>一日游交通</h3>
+  <div class="info">ℹ️ 迈锡尼、埃皮达鲁斯一日游建议通过 GetYourGuide、Klook 或当地旅行社报名，含交通和门票。</div>
+
+  <h4>推荐一日游（可选）</h4>
+  <table>
+    <tr><th>行程</th><th>价格/人</th><th>出发时间</th><th>备注</th></tr>
+    <tr><td>迈锡尼遗址</td><td>€50-70</td><td>约07:00</td><td>含门票</td></tr>
+    <tr><td>埃皮达鲁斯+纳夫普利奥</td><td>€60-80</td><td>约07:30</td><td>含门票</td></tr>
+  </table>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+
+  <h3>货币与支付</h3>
+  <ul>
+    <li>货币：欧元 (EUR)，汇率参考：1欧元 ≈ 7.8人民币</li>
+    <li>取现：雅典市区ATM较多，建议取现一次备 €200-300</li>
+    <li>刷卡：大部分餐厅、商店可刷Visa/MasterCard，小店和景区多收现金</li>
+    <li>小费：餐厅通常留 €1-2 或四舍五入</li>
+  </ul>
+
+  <h3>通讯</h3>
+  <ul>
+    <li>当地SIM卡：机场可买，Cosmote、Vodafone、Wind运营商，约€10-20含流量</li>
+    <li>网络：酒店WiFi通常可用，4G覆盖良好</li>
+    <li>建议：出发前在国内上网购欧洲通用电话卡（如Telcel、3UK）</li>
+  </ul>
+
+  <h3>天气与穿着</h3>
+  <ul>
+    <li>10月气温：白天18-25°C，早晚12-15°C</li>
+    <li>建议：轻薄长袖 + 舒适步行鞋 + 帽子 + 防晒霜</li>
+    <li>备选：薄外套（早晚凉）</li>
+  </ul>
+
+  <h3>城市内交通</h3>
+  <ul>
+    <li>景点间距：老城景点步行5-15分钟可达</li>
+    <li>建议购买5日通票，覆盖地铁公交</li>
+  </ul>
+
+  <h3>🚕 打车指南：雅典可用 App</h3>
+  <div class="info">
+    雅典打车推荐使用 <strong>Bolt</strong> 或 <strong>Uber</strong>，价格透明。明码实价，避免被宰。
+  </div>
+
+  <h4>📲 出发前在国内安装</h4>
+  <ol class="steps">
+    <li><strong>iOS 用户</strong>：App Store直接搜索 "Bolt" 或 "Uber" 下载</li>
+    <li><strong>安卓用户</strong>：Google Play搜索下载，或下载APK</li>
+    <li><strong>注册账号</strong>：用中国+86手机号注册，可绑定国际信用卡或现金付款</li>
+  </ol>
+
+  <h4>💰 本行程打车费用参考</h4>
+  <table>
+    <tr><th>路线</th><th>距离</th><th>约价格</th></tr>
+    <tr><td>机场 → 市区酒店</td><td>约35km</td><td>€40-50</td></tr>
+    <tr><td>酒店 → 卫城</td><td>约2km</td><td>€5-8</td></tr>
+    <tr><td>市区内短途</td><td>约2-5km</td><td>€5-10</td></tr>
+  </table>
+
+  <h4>⚠️ 注意事项</h4>
+  <ul>
+    <li><strong>网络先行</strong>：落地后先买电话卡，有网才能用打车App</li>
+    <li><strong>备用现金</strong>：偏远景点偶尔叫不到车，备€20-50现金</li>
+    <li><strong>核对车牌</strong>：上车前核对App显示的车牌号</li>
+    <li><strong>机场打车</strong>：建议提前预约或用App，价格更透明</li>
+  </ul>
+</section>
+
+<!-- ===== 出行准备清单 ===== -->
+<section>
+  <h2>✅ 出行前准备清单</h2>
+
+  <h3>📋 必做事项</h3>
+  <ul class="checklist">
+    <li>签证办理：希腊为申根国，需办理申根签证（提前1-2个月申请）</li>
+    <li>航班确认：联系航空公司确认航班号和行李额</li>
+    <li>预订酒店：10月旺季，建议提前1个月预订</li>
+    <li>购买电话卡：欧洲通用电话卡或抵达后机场购买</li>
+    <li>准备现金：建议带€500-800欧元或等值人民币</li>
+    <li>购买旅行保险：申根签证必需</li>
+    <li>预约餐厅：Spondi等热门餐厅需提前预约</li>
+  </ul>
+
+  <h3>🎒 行李建议</h3>
+  <ul class="checklist">
+    <li>舒适的步行鞋（卫城是石头路，建议运动鞋）</li>
+    <li>防晒霜和帽子（10月阳光仍然强烈）</li>
+    <li>薄外套（早晚温差大）</li>
+    <li>欧标转换插头（圆孔插头）</li>
+    <li>充电宝（景点间距离较远）</li>
+    <li>轻便行李箱（城市交通以地铁为主）</li>
+    <li>常用药品（感冒药、肠胃药、创可贴）</li>
+  </ul>
+
+  <h3>📱 App推荐</h3>
+  <ul>
+    <li><strong>交通</strong>：Bolt、Uber（打车）、Google Maps（导航）</li>
+    <li><strong>景点</strong>：GetYourGuide、Klook（一日游预订）</li>
+    <li><strong>美食</strong>：TripAdvisor、The Fork（餐厅预约）</li>
+    <li><strong>翻译</strong>：Google Translate（离线包很有用）</li>
+  </ul>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 2025-07-14 · 数据来源：官方售票网站 + 旅行平台
+</footer>
+
+</div>
+</body>
+</html>
