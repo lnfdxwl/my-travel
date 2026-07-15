@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>希腊9日游攻略（扎金索斯版）｜2026.10.03-10.12</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.7; color: #2c3e50; background: #f5f1e8; padding: 0; }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+  .hero { background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%); color: white; padding: 50px 60px; text-align: center; }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 { font-size: 22px; color: #2563a8; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #d4a574; display: inline-block; }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+  .transport-list { margin: 16px 0; }
+  .transport-item { background: #fff; border: 1px solid #e8dfc8; border-left: 5px solid #2563a8; border-radius: 8px; padding: 16px 20px; margin: 12px 0; display: grid; grid-template-columns: 60px 1fr; gap: 14px; align-items: start; }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.dom-flight { border-left-color: #d4a574; }
+  .transport-item.ferry { border-left-color: #27ae60; }
+  .transport-item.car { border-left-color: #8e44ad; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why { background: #f8f9fc; border-left: 3px solid #d4a574; padding: 8px 12px; margin-top: 10px; font-size: 13px; color: #555; border-radius: 4px; }
+  .transport-content .why strong { color: #2563a8; }
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px dashed #d4a574; }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+  .bg { font-size: 13px; color: #6b5a3f; background: #fbf6ec; border-left: 3px solid #d4a574; padding: 8px 12px; margin: 6px 0; border-radius: 4px; line-height: 1.7; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .success { background: #eafaf1; border-left: 4px solid #27ae60; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge { display: inline-block; background: #d4a574; color: white; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 28px; height: 28px; background: #2563a8; color: white; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 600; font-size: 13px; }
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+  @media (max-width: 640px) { section { padding: 25px 20px; } .hero { padding: 40px 25px; } .hero h1 { font-size: 24px; } table { font-size: 13px; } th, td { padding: 8px; } .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; } .transport-icon { font-size: 22px; } }
+  @media print { body { background: white; } .container { box-shadow: none; } section { page-break-inside: avoid; } }
+  .attraction-img { width: 100%; max-width: 600px; height: 280px; object-fit: cover; border-radius: 8px; margin: 10px 0; display: block; }
+  .attraction-img-caption { font-size: 12px; color: #999; margin: -4px 0 10px; }
+  .attraction-img-placeholder { width: 100%; max-width: 600px; height: 200px; background: linear-gradient(135deg, #e8dfc8 0%, #d4a574 100%); border-radius: 8px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; text-align: center; padding: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>🏛️ 希腊9日游（扎金索斯版）</h1>
+  <div class="subtitle">雅典 · 扎金索斯 · 圣托里尼</div>
+  <div class="meta">
+    <span>📅 2026年10月3日 — 10月12日</span>
+    <span>👥 2人（1对情侣）</span>
+    <span>✈️ 北京首都 往返</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心原则</strong>：参考了一份希腊旅行社的专车司导团行程（雅典+扎金索斯+圣托里尼），改编成2人独立旅行版本——雅典到扎金索斯这段山路+跨海路程较远且路线复杂，安排了一天私人专车代驾（不用自己开车），其余时间自由活动。</div>
+  <div class="transport-list">
+    <!-- 去程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">HO1254 北京大兴→上海 + HO1657 上海→雅典</div>
+        <div class="schedule">出发 <span class="time">21:25</span> → 到达 <span class="time">07:55</span>（+1天）</div>
+        <div class="meta-line">总耗时约15小时30分钟 · 吉祥航空经上海中转 · 往返合计约¥7741/人</div>
+        <div class="why"><strong>提醒</strong>：北京没有直飞雅典的航班，需经上海中转，去程选夜班机在飞机上休息，减少浪费白天时间。</div>
+      </div>
+    </div>
+    <!-- 雅典→迈锡尼→基利尼 -->
+    <div class="transport-item car">
+      <div class="transport-icon">🚗<span class="label">专车</span></div>
+      <div class="transport-content">
+        <div class="route">私人专车 · 雅典酒店 → 迈锡尼 → 基利尼港（Kyllini）</div>
+        <div class="schedule">全程车程约 <span class="time">4-5小时</span>（含迈锡尼1.5-2小时游览，建议预留10小时服务时长）</div>
+        <div class="meta-line">5座轿车英文司机约€360-420/天（≈¥2800-3300），中文司兼导约€410-480/天（≈¥3200-3750）</div>
+        <div class="why"><strong>为什么选专车而不是自驾</strong>：这段路全程约300公里，跨越伯罗奔尼撒半岛，虽然希腊高速路况好、靠右行驶和国内一致，但如果平时开车频率不高，长途+陌生路况+还要赶轮渡时间，自驾压力和风险都不小。包一天专车比自驾贵，但司机全程开车、灵活停靠迈锡尼拍照休息，全程零驾驶压力，性价比对不常开车的人来说更高。想省钱也可以选择自驾租车（希腊高速右侧通行，收费站电子支付为主）作为备选方案。</div>
+      </div>
+    </div>
+    <!-- 基利尼→扎金索斯 -->
+    <div class="transport-item ferry">
+      <div class="transport-icon">⛴️<span class="label">渡轮</span></div>
+      <div class="transport-content">
+        <div class="route">Levante Ferries · 基利尼港（Kyllini）→ 扎金索斯</div>
+        <div class="schedule">出发 <span class="time">17:15</span>（约1小时15分钟）</div>
+        <div class="meta-line">行人票约€13.5/人（线上预订价），全程27公里，无快慢船区分</div>
+      </div>
+    </div>
+    <!-- 扎金索斯→基利尼→雅典机场 -->
+    <div class="transport-item car">
+      <div class="transport-icon">🚗<span class="label">专车</span></div>
+      <div class="transport-content">
+        <div class="route">Levante Ferries渡轮 + 私人专车 · 扎金索斯 → 基利尼 → 科林斯运河 → 雅典机场</div>
+        <div class="schedule">渡轮07:45发船（约1小时15分钟）→ 专车约3.5-4小时（含科林斯运河停留）</div>
+        <div class="meta-line">专车价格与去程一致，约€360-480/天</div>
+      </div>
+    </div>
+    <!-- 雅典→圣托里尼 -->
+    <div class="transport-item dom-flight">
+      <div class="transport-icon">✈️<span class="label">国内</span></div>
+      <div class="transport-content">
+        <div class="route">FR6922 瑞安航空 · 雅典 → 圣托里尼</div>
+        <div class="schedule">出发 <span class="time">18:40</span> → 到达 <span class="time">19:30</span></div>
+        <div class="meta-line">飞行约50分钟 · 约¥334/人</div>
+      </div>
+    </div>
+    <!-- 圣托里尼→雅典 -->
+    <div class="transport-item dom-flight">
+      <div class="transport-icon">✈️<span class="label">国内</span></div>
+      <div class="transport-content">
+        <div class="route">A3361 爱琴海航空 · 圣托里尼 → 雅典</div>
+        <div class="schedule">出发 <span class="time">22:00</span> → 到达 <span class="time">22:50</span></div>
+        <div class="meta-line">飞行约50分钟 · 约¥1103/人 · 看完伊亚日落和晚饭后再出发，时间刚好</div>
+      </div>
+    </div>
+    <!-- 返程 -->
+    <div class="transport-item intl">
+      <div class="transport-icon">✈️<span class="label">国际</span></div>
+      <div class="transport-content">
+        <div class="route">HO1658 雅典→上海 + HO1257 上海→北京大兴</div>
+        <div class="schedule">出发 <span class="time">14:20</span> → 到达 <span class="time">10:35</span>（+1天）</div>
+        <div class="meta-line">总耗时约15小时15分钟 · 已含在往返总价¥7741内</div>
+      </div>
+    </div>
+  </div>
+  <h3>🗺️ 城市游览顺序</h3>
+  <ul>
+    <li><strong>Day 1</strong>（10月3日）：抵达雅典 → 宪法广场、酒店入住</li>
+    <li><strong>Day 2</strong>（10月4日）：雅典卫城 + 卫城博物馆</li>
+    <li><strong>Day 3</strong>（10月5日）：专车 雅典 → 迈锡尼 → 基利尼港 → 渡轮 → 扎金索斯</li>
+    <li><strong>Day 4</strong>（10月6日）：扎金索斯蓝洞+沉船湾快艇出海 → 拉加纳斯海滩</li>
+    <li><strong>Day 5</strong>（10月7日）：渡轮回基利尼 → 专车经科林斯运河 → 雅典机场 → 飞圣托里尼</li>
+    <li><strong>Day 6</strong>（10月8日）：圣托里尼费拉小镇 + 蓝顶教堂 + 日落帆船之旅</li>
+    <li><strong>Day 7</strong>（10月9日）：圣托里尼伊亚小镇 + 伊亚城堡日落 → 晚班机飞回雅典</li>
+    <li><strong>Day 8</strong>（10月10日）：雅典 → 国际航班回国</li>
+    <li><strong>Day 9</strong>（10月11-12日）：抵达国内</li>
+  </ul>
+</section>
+
+<!-- ===== 详细行程 ===== -->
+<section>
+  <h2>📅 详细行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 抵达雅典</span>
+      <span class="day-date">10月3日 周六</span>
+    </div>
+    <div class="time-block">
+      <div class="time">21:25（10月3日）</div>
+      <div class="activity">✈️ 北京大兴起飞（HO1254），经上海中转接HO1657飞雅典</div>
+    </div>
+    <div class="time-block">
+      <div class="time">07:55（10月4日）</div>
+      <div class="activity">🛬 抵达雅典埃勒弗瑟里奥斯·韦尼泽罗斯国际机场（ATH），出关</div>
+    </div>
+    <div class="time-block">
+      <div class="time">08:30-09:30</div>
+      <div class="activity">🚇 机场地铁X95到宪法广场（约40分钟，¥80/人）
+        <br><a href="https://maps.google.com/?q=Syntagma+Square+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:00</div>
+      <div class="activity">🏨 入住酒店（普拉卡或蒙纳斯提拉齐区域）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00-14:00</div>
+      <div class="activity">🍽️ 午餐：蒙纳斯提拉齐Gyros快餐
+        <br><a href="https://maps.google.com/?q=Kostas+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍推荐Kostas</a> · 人均约¥64-96
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30-17:00</div>
+      <div class="activity">🏛️ <strong>宪法广场 (Syntagma Square)</strong>
+        <a href="https://maps.google.com/?q=Syntagma+Square+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：广场东侧的希腊国会大厦最初是奥托一世的王宫，1843年一场市民起义后，奥托被迫在此签署希腊第一部宪法，"宪法广场"由此得名。广场前的无名烈士纪念碑由总统卫队（Evzones）24小时守卫，士兵的百褶裙短裙脱胎自希腊独立战争时期山地游击队的传统服饰。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放（广场）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：换岗仪式每小时整点进行，持续约15分钟；每周日11点为盛装版换岗，规模更大、乐队伴奏。</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:30-19:00</div>
+      <div class="activity">🚶 漫步埃尔莫街(Ermou)购物街 + 普拉卡老城区
+        <br><a href="https://maps.google.com/?q=Plaka+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:30</div>
+      <div class="activity">🍽️ 晚餐：普拉卡区传统希腊餐厅
+        <br><a href="https://maps.google.com/?q=Saita+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍Saita</a> · 人均约¥120-160
+      </div>
+    </div>
+    <div class="info">💡 <strong>今日重点</strong>：长途飞行+中转后抵达，下午简单逛宪法广场和普拉卡，先倒时差，为明天的卫城暴走留体力。</div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 雅典卫城探秘</span>
+      <span class="day-date">10月4日 周日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🏨 酒店早餐</div>
+    </div>
+    <div class="time-block">
+      <div class="time">08:30-11:30</div>
+      <div class="activity">🏛️ <strong>雅典卫城 (Acropolis)</strong>
+        <a href="https://maps.google.com/?q=Acropolis+of+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：雅典卫城矗立在市中心一座150米高的石灰岩山丘上。公元前480年被波斯军队焚毁后，伯里克利于公元前447年主持了史上最大规模的重建，短短几十年间造就了帕特农神庙、伊瑞克提翁神庙等古典建筑巅峰之作，代表雅典民主"黄金时代"的顶峰。1687年威尼斯军队炮击卫城，储存火药的帕特农神庙被炸毁大半，此后又历经拜占庭教堂、奥斯曼清真寺乃至火药库的多重身份变迁。1987年列入世界文化遗产。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-17:00（每日，10月为冬季时刻，建议出发前再核实）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：¥160（通票，含古代Agora等多处景点）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：从卫城南坡入口进，先看阿迪库斯剧场，再沿主路上山到帕特农神庙。开门后第一小时人最少，务必早去。沿途会经过胜利女神庙和伊瑞克提翁神庙的女像柱门廊，都值得驻足细看。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjA3nWD5dbtjXBQqee6brDrPL-C57GishrPT3aLJdVtVCTNOTBuu5Nhg3QlW5BQ5Wper76VpuSseiaPZALqo4B3bCSbChFH1c9jsmIj5FykShuPJSfWPfEuGiTB57zedogcxf2GygNUXEAjt0Wr_3bBR5Q=s4800-w800" alt="雅典卫城">
+    <div class="attraction-img-caption">📷 雅典卫城全景（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">11:30-13:00</div>
+      <div class="activity">🏛️ <strong>卫城博物馆 (Acropolis Museum)</strong>
+        <a href="https://maps.google.com/?q=Acropolis+Museum+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：博物馆2009年建成，馆址下方就是古雅典居民区遗址，建筑一层采用悬空玻璃地板直接俯瞰考古现场。顶层的帕特农画廊按神庙原始1:1尺寸复原了全部浮雕排列顺序，透过落地玻璃窗正对着山上真正的帕特农神庙。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-17:00（周一），09:00-20:00（周二至周四、周六周日），09:00-22:00（周五）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：¥120</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：必看：3楼帕特农神庙浮雕展区、1楼玻璃地板下的史前遗址、伊瑞克提翁神庙女像柱真品（现场看到的是复制品）。约1.5-2小时。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjAXN3g1o-uLFKChXP7gxvTRMQVFYTkMxIrqHrvmDQLSzICFygiEkCEYvXoRCV9YaR43q4AhmLspIIy_GyYwCeEnciZNs1_30GKC1OHNLqm3KFbkRWy_PQwuUdEqEizr2pH6-FQKhfamnRuvcyg=s4800-w800" alt="卫城博物馆">
+    <div class="attraction-img-caption">📷 卫城博物馆（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">13:00-14:30</div>
+      <div class="activity">🍽️ 午餐：卫城附近餐厅
+        <br>推荐：<a href="https://maps.google.com/?q=Strofi+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">Strofi</a>（屋顶看卫城）· 人均约¥160-200
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30-17:00</div>
+      <div class="activity">🏛️ <strong>古代市场 + 赫菲斯托斯神庙</strong>
+        <a href="https://maps.google.com/?q=Ancient+Agora+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：古代市集是古雅典的政治、商业与社交中心，苏格拉底常年在此与人辩论哲学。市集北侧的赫菲斯托斯神庙建于公元前449年，因拜占庭时期被改造为教堂使用而躲过历史上多次损毁，是古希腊本土保存最完整的神庙。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00-19:30（每日）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：必看赫菲斯托斯神庙，还有Stoa of Attalos带顶柱廊内的小型博物馆。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjD_MgnnkAyovEpcrxPbnej1EofKIljde7Pm3qzMjH-W96EelkCPrIa8Pwmfb2L6R_V4N8J80E4j1tRtjOXySZqTFf6VwJ2cKb9mEDY740x1Z2mspxmkg2pDf8g_UOKSYQS75CWzHwgfiRcsLQ=s4800-w800" alt="赫菲斯托斯神庙">
+    <div class="attraction-img-caption">📷 赫菲斯托斯神庙——雅典保存最完整的古希腊神庙（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">17:30-19:30</div>
+      <div class="activity">🌅 <strong>菲洛帕波斯山 (Filopappou Hill)</strong> 日落
+        <a href="https://maps.google.com/?q=Filopappou+Hill+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：从 Ancient Agora 西南侧上山，步行约15分钟。日落前40-50分钟到，山顶可以俯瞰整个雅典城和卫城全景。</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00</div>
+      <div class="activity">🍽️ 晚餐： Brettos百年酿酒厂
+        <br><a href="https://maps.google.com/?q=Brettos+Athens" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a> · 人均约¥144-200
+      </div>
+    </div>
+    <div class="warn">⚠️ 明天是全天专车赶路日（雅典→迈锡尼→基利尼→渡轮），建议今晚早点休息。</div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 雅典 → 迈锡尼 → 基利尼港 → 扎金索斯</span>
+      <span class="day-date">10月5日 周一</span>
+    </div>
+    <div class="time-block">
+      <div class="time">07:30</div>
+      <div class="activity">🏨 酒店早餐，退房，专车司机酒店门口接</div>
+    </div>
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🚗 专车出发，前往迈锡尼（约1.5-2小时车程，120km）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:45-11:45</div>
+      <div class="activity">🏛️ <strong>迈锡尼遗址 (Archaeological Site of Mycenae)</strong>
+        <a href="https://maps.google.com/?q=Archaeological+site+of+Mycenae" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍荷马史诗传说中亚该亚人的都城，希腊青铜时代文明中心
+        <div class="bg">🏺 <strong>背景</strong>：迈锡尼是希腊青铜时代晚期文明（约公元前1600-1100年）的中心城市，荷马史诗中记载它由珀耳修斯建立，特洛伊战争时期由国王阿伽门农统治。1876年德国考古学家海因里希·施里曼在此发掘出大量黄金面具与随葬品，其中一件金面具他误以为是阿伽门农本人的，因此得名"阿伽门农的黄金面具"（现藏雅典国家考古博物馆），实际年代比荷马史诗描述的特洛伊战争还要早几个世纪。遗址入口处著名的"狮子门"是欧洲现存最古老的纪念性雕刻之一。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30-15:30（每日，冬季时刻）</small>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 门票：约€20/人</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：进门先看"狮子门"（两只狮子拱卫石柱的浮雕，公元前1250年），然后沿坡道登上卫城顶部俯瞰阿尔戈斯平原，山下不远处的"阿特柔斯宝库"（传说中的阿伽门农墓，蜂窝状穹顶墓）也非常值得单独走一趟，是工程奇迹。全程约1.5-2小时，夏季几乎没有遮荫，务必备水和防晒。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjD4Umhmxg0btJJpeNmygIYNRsMSWIcHuvyGKi_wjydu-2OsaMILZx5jz7BKBIrQVGtqQD2ik1sq1s_VEVdVpsuwg0K_nQ5MZuTqCqNiKGQHmnre2egCPGXrY0W-uNtCyYa1ilmggvK3KRlBtD4=s4800-w800" alt="迈锡尼遗址">
+    <div class="attraction-img-caption">📷 迈锡尼遗址——狮子门与阿尔戈斯平原（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">12:00-13:00</div>
+      <div class="activity">🍽️ 午餐：迈锡尼村附近乡村餐厅（司机推荐）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00-16:00</div>
+      <div class="activity">🚗 专车继续前往基利尼港（约2.5-3小时，175km，跨越伯罗奔尼撒半岛西段）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:15-18:30</div>
+      <div class="activity">⛴️ Levante Ferries · 基利尼港 → 扎金索斯（约1小时15分钟）
+        <br>票价：约€13.5/人（线上预订价）
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:30</div>
+      <div class="activity">🏨 抵达扎金索斯镇，入住酒店</div>
+    </div>
+    <div class="time-block">
+      <div class="time">19:00-20:00</div>
+      <div class="activity">🚶 <strong>索洛莫斯广场 (Solomos Square)</strong>
+        <a href="https://maps.google.com/?q=Solomos+Square+Zakynthos" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：广场以民族诗人狄奥尼西奥斯·索洛莫斯命名，扎金索斯镇正是他的故乡，他创作了希腊国歌《自由颂》的歌词。广场中央有他的雕像，周边遍布咖啡馆和商店，是感受本地生活的好去处。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：广场紧邻港口，傍晚很多本地人在这里散步聊天，找家临海咖啡馆坐下喝一杯，感受小岛的松弛感。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjDJE3blww4BnphiGFMMJVjzLEmkBIf22wckBprHragASnynfMGVlfR-RcSCYmEdgeD2CcKkm6cQrFISgB6SnClIrb88UqBBJpnpnk-KLv2gXngmrLJujrQR7Oj2WOf8kiOTGeIdilS1E47QXQ=s4800-w800" alt="索洛莫斯广场">
+    <div class="attraction-img-caption">📷 索洛莫斯广场（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">20:30</div>
+      <div class="activity">🍽️ 晚餐：扎金索斯镇港口海鲜餐厅</div>
+    </div>
+    <div class="warn">⚠️ 全天赶路日，专车全程约4-5小时纯车程+渡轮1小时15分钟，建议穿舒适衣服，中途可随时让司机停车休息、上厕所、拍照。</div>
+    <div class="tip">💡 <strong>威尼斯人城堡(Bochali)+拜占庭博物馆提示</strong>：这两处都周二休息（正好是Day4），今天傍晚抵达时也已过它们15:00-15:30的关门时间，这趟行程日期上刚好错过开放时段。如果很想看，可以在Bochali山顶（免费公共区域，不进收费的城堡遗址）看免费的港口全景日落，效果也不错。</div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 4 · 扎金索斯：蓝洞 + 沉船湾 + 拉加纳斯海滩</span>
+      <span class="day-date">10月6日 周二</span>
+    </div>
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🏨 酒店早餐，出海一日游大巴接送（通常酒店门口集合）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00-13:00</div>
+      <div class="activity">⛵ <strong>蓝洞 (Blue Caves) + 沉船湾 (Navagio) 快艇出海</strong>
+        <a href="https://maps.google.com/?q=Blue+Caves+Zakynthos" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍蓝洞地图</a>
+        <br>📍扎金索斯两大招牌景观，只能从海上抵达
+        <div class="bg">🏺 <strong>背景</strong>：蓝洞是沿扎金索斯岛北部东岸海岸线天然形成的一排溶洞，阳光折射进入海水后呈现出幽蓝荧光般的效果，是岛上最具代表性的地质奇观之一。沉船湾则因1980年一艘走私船在此触礁搁浅得名，锈迹斑斑的船体静静躺在纯白沙滩上，四周被高耸的石灰岩悬崖环绕，因韩剧《太阳的后裔》取景而在国内游客中广为人知；2026年当地出于崖壁安全管控，沉船湾沙滩已暂停登陆，游船只能近海巡游和浮潜。</div>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 拼团一日游：约€35-80/人（含酒店接送，价位取决于是否含午餐/白沙滩）；码头直接买票的蓝洞+沉船湾联票约€38/人</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：上午9-11点的班次阳光直射角度最好，蓝洞海水的荧光蓝效果最明显；船会在蓝洞停留30-45分钟，可以跳下水游泳（水温偏凉），沉船湾一带巡游浮潜约1小时。记得穿好泳衣上船，浪花会打湿衣物，手机用防水袋装好。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjAhL5qczKzdy0i122IICUgVCU7I2J-OoCpp8rMF6RWNXBalPysmn4C9Fqu59a5GobOPCdovmhGaIG-K37kHNS4nG4s5p2sl3HCS27yVQzbUh1Xj1Q8fRMbWTa9N8rfHg9hLi8_LIdnLELtk8047pxmy=s4800-w800" alt="蓝洞">
+    <div class="attraction-img-caption">📷 蓝洞——幽蓝荧光般的海水（图源 Google 地图）</div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjDfgxRdoetf8v7zjLkhB6b1IfhDvadKLEBWFueK_x0o_hMb05XEhxX9gqWA0KCEy_J6p0iaMjVw5IdzGSScBW3RCYPtAtED42sU3isN9SCJTApVMHxd0UMVx77HNkTotOaSdmEem_ZQhr6h5FQ=s4800-w800" alt="沉船湾观景台">
+    <div class="attraction-img-caption">📷 沉船湾——悬崖之下的搁浅船只（图源 Google 地图，图为陆上观景台视角）</div>
+
+    <div class="time-block">
+      <div class="time">13:00-14:00</div>
+      <div class="activity">🍽️ 午餐：出海团返程后镇上简餐</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:30-18:00</div>
+      <div class="activity">🏖️ <strong>拉加纳斯海滩 (Laganas Beach)</strong>
+        <a href="https://maps.google.com/?q=Laganas+Beach+Zakynthos" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍扎金索斯最繁华的国际化沙滩
+        <div class="bg">🏺 <strong>背景</strong>：拉加纳斯湾同时也是濒危物种凯莱特海龟（Caretta caretta）的重要产卵地，整个海湾被划为国家海洋公园保护区，沙滩东段人声鼎沸的酒吧区与西段安静的保护区并存，是扎金索斯最具反差感的一片海岸。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：全天开放</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：沙滩绵长平缓、下水很浅，适合不擅长游泳的人。沿岸酒吧和餐厅密集，租两把躺椅+遮阳伞约€10起。傍晚人少下来，很适合安静散步看夕阳。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjDli1ton695GXh2ec6XwKemjopiiPOR4xXldAjdtAHkkOWVk0IHJmYAS2D7Ggziv2_yNlPAnh2iVZLybvXp1dk9oPImDE0vP0nZ53_nlTD7uwnpC3p_kVv0rnmw2gj_4V1uN9fb3aQySFxb=s4800-w800" alt="拉加纳斯海滩">
+    <div class="attraction-img-caption">📷 拉加纳斯海滩（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">19:30</div>
+      <div class="activity">🍽️ 晚餐：拉加纳斯海边餐厅或返回镇上</div>
+    </div>
+    <div class="success">✅ Day 4 重点：扎金索斯两大标志性景观（蓝洞+沉船湾）+ 悠闲海滩时光，是本次行程最放松的一天。</div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 5 · 扎金索斯 → 基利尼 → 科林斯运河 → 雅典 → 圣托里尼</span>
+      <span class="day-date">10月7日 周三</span>
+    </div>
+    <div class="time-block">
+      <div class="time">06:30</div>
+      <div class="activity">🏨 酒店早餐（或打包），退房</div>
+    </div>
+    <div class="time-block">
+      <div class="time">07:45-09:00</div>
+      <div class="activity">⛴️ Levante Ferries · 扎金索斯 → 基利尼港（约1小时15分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">09:15</div>
+      <div class="activity">🚗 专车接站，出发前往科林斯运河（约2.5-3小时，175km）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">12:00-12:45</div>
+      <div class="activity">🌊 <strong>科林斯运河 (Corinth Canal)</strong>
+        <a href="https://maps.google.com/?q=Corinth+Canal" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍连通爱奥尼亚海与爱琴海的世界最深切割运河之一
+        <div class="bg">🏺 <strong>背景</strong>：科林斯运河穿过连接伯罗奔尼撒半岛与希腊大陆的科林斯地峡，全长仅6.3公里，却是世界上开凿最深、也是最少数在坚硬石灰岩中直接开凿而成的运河之一。开凿运河、连通两海的构想早在古代就已提出，尼禄皇帝于公元67年曾亲自挥锹动工，但工程直到19世纪末（1893年）才借助现代炸药和蒸汽机械最终完成。从桥上俯瞰，两侧近90米高的垂直岩壁与狭窄水道形成极强的视觉冲击。</div>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：在旧桥（Isthmia或Corinth老桥）上俯瞰运河，运气好能碰到船只通过，两侧还有蹦极台可以体验高空蹦极（胆大可以试试）。停留15-20分钟拍照即可，也是长途车程中很好的休息点。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjD8TsohzmD751vyM_SgJDYWI9eE4nxsz2_7zsWFWVLdeeRy-ZFBaSbOX2J4OfpR5GjgBBTyjWpdTQfhs6PwI8chVlVEokZRw3XQ2L3rXAZX3t7TTyO16Zy7oP5eUEtSl_DWZDo4cd2F8vxY=s4800-w800" alt="科林斯运河">
+    <div class="attraction-img-caption">📷 科林斯运河——世界最深切割运河之一（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">13:00-14:30</div>
+      <div class="activity">🚗 专车继续前往雅典机场（约1-1.5小时）
+        <br>途中简单午餐（三明治或服务区）
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">15:00-18:00</div>
+      <div class="activity">🛃 雅典机场办理值机，候机休息</div>
+    </div>
+    <div class="time-block">
+      <div class="time">18:40-19:30</div>
+      <div class="activity">✈️ FR6922 瑞安航空 · 雅典 → 圣托里尼（飞行约50分钟，约¥334/人）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00-20:30</div>
+      <div class="activity">🚌 机场 → 费拉镇（Fira）酒店（约10分钟车程）
+        <br><a href="https://maps.google.com/?q=Fira+Santorini" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍费拉镇</a>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:00</div>
+      <div class="activity">🏨 入住圣托里尼酒店（连住2晚）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">21:30</div>
+      <div class="activity">🍽️ 晚餐：费拉镇餐厅，人均约¥160-240</div>
+    </div>
+    <div class="info">💡 <strong>今日重点</strong>：全天转场日（渡轮+专车+飞机），路上顺路打卡科林斯运河，晚上抵达圣托里尼，正式进入岛屿悠闲模式。</div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 6 · 圣托里尼：费拉小镇 + 日落帆船</span>
+      <span class="day-date">10月8日 周四</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:30</div>
+      <div class="activity">🏨 酒店早餐（可以睡到自然醒，昨天太累了）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:30-13:00</div>
+      <div class="activity">🚶 <strong>费拉小镇 (Fira)</strong>
+        <a href="https://maps.google.com/?q=Fira+Santorini" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍圣托里尼岛的首府，建在400米高的火山口边缘
+        <div class="bg">🏺 <strong>背景</strong>：费拉建在圣托里尼岛西侧400米高的破火山口悬崖边缘，是全岛的行政中心和最繁华的市镇。白墙蓝顶的建筑风格与深蓝的爱琴海、天空混为一体，是圣托里尼最具代表性的画面之一；相比伊亚，费拉商业气息更浓、购物餐厅选择也更多，还是缆车、驴道上下老港口的必经之地。</div>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：沿悬崖步道漫步，可以乘坐缆车或骑驴下到老港口（Skala）看游轮停泊。小镇打车方便，酒店和纪念品店众多，逛累了随处可以找家咖啡馆坐下看海。</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">13:00-14:30</div>
+      <div class="activity">🍽️ 午餐：费拉镇悬崖餐厅，人均约¥160-240</div>
+    </div>
+    <div class="time-block">
+      <div class="time">15:00-16:00</div>
+      <div class="activity">⛪ <strong>费拉三钟教堂 (Three Bells of Fira)</strong>
+        <a href="https://maps.google.com/?q=Three+Bells+of+Fira+Santorini" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍圣托里尼被拍摄最多次的蓝顶教堂之一，正名圣狄奥多利教堂
+        <div class="bg">🏺 <strong>背景</strong>：这座蓝顶白墙、带钟楼的教堂位于费拉与费罗斯特法尼（Firostefani）之间的悬崖步道上，因造型经典而多次登上《国家地理》等杂志封面，是圣托里尼最具辨识度的宗教建筑之一。1956年大地震后，岛上大量传统建筑重建时都延续了这种蓝色圆顶配色，一说蓝色呼应希腊国旗，也有说法认为蓝色能驱散海上的恶灵。</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-21:00（每日）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：从费拉沿悬崖步道往费罗斯特法尼方向走约15-20分钟即到，最佳拍照位置在教堂后方需要绕到侧面小路，人多时略拥挤，建议避开正午硬光，下午光线更柔和。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjCAfUGXw6lALimBAt68yXrU87tz-uy-r1QvMoiFl6mXQ_oCTJrZUCgXQAgc6KSxhtzvYIfIixau7AS7U83skiLCRtDHI1jpIttaCML3jjcEow6DZ5rh1J2SG70fcY8iULe-tRjgVIQYI0mJTAFjKPca=s4800-w800" alt="费拉三钟教堂">
+    <div class="attraction-img-caption">📷 费拉三钟教堂——圣托里尼被拍摄最多的蓝顶教堂之一（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">16:00</div>
+      <div class="activity">🏨 返回酒店换泳衣，收拾防晒用品，等候船公司接送</div>
+    </div>
+    <div class="time-block">
+      <div class="time">17:00-21:30</div>
+      <div class="activity">⛵ <strong>日落帆船之旅</strong>
+        <br>📍双体帆船出海，红沙滩+白沙滩浮潜+火山温泉+悬崖日落
+        <div class="bg">🏺 <strong>背景</strong>：日落帆船是圣托里尼最经典的体验项目之一，行程沿着火山口海岸线，串联起红沙滩、白沙滩、火山温泉三个只能从海上抵达的秘境，最后停在合适海域正对夕阳观赏日落——比在陆地上挤在伊亚人群中看日落更私密、视角也更开阔。</div>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 拼团双体帆船（10月平季）：约€90-120/人（约¥700-950），含全程接送、BBQ晚餐、酒水畅饮、浮潜装备</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：标准行程4.5-5小时：先去红/白沙滩游泳浮潜，再到火山温泉海域（海水略带硫磺味，体验一下就好），最后定点看日落，甲板上供应希腊风味BBQ晚餐和无限畅饮酒水。船员小费建议€5-10/人，建议提前1-2周预订，选靠谱平台（GetYourGuide/Viator）看真实评价。</small>
+      </div>
+    </div>
+    <div class="warn">⚠️ 建议出发前提前1-2周在线预订日落帆船，10月平季船位仍然抢手，且需要提前确认接送酒店和上船码头。</div>
+  </div>
+
+  <!-- Day 7 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 7 · 圣托里尼：伊亚小镇 + 城堡日落 → 飞回雅典</span>
+      <span class="day-date">10月9日 周五</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏨 酒店早餐，退房（行李寄存酒店前台）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:00-11:00</div>
+      <div class="activity">🚌 前往伊亚（Oia）（费拉坐公交约€2，车程约30分钟；或打车约€25-30）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00-15:00</div>
+      <div class="activity">🚶 <strong>伊亚小镇 (Oia)</strong>
+        <a href="https://maps.google.com/?q=Oia+Santorini" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍世界闻名的日落观赏点，蓝顶白墙的经典希腊明信片风景
+        <div class="bg">🏺 <strong>背景</strong>：伊亚坐落在圣托里尼岛西北角悬崖上，19世纪曾是爱琴海最繁荣的航海世家聚居地，岛上船长的宅邸和洞穴屋至今保留。1956年一场里氏7.8级大地震几乎摧毁了岛上所有建筑，如今看到的白墙蓝顶小屋大多是震后重建的成果。相比商业味更浓的费拉，伊亚游客来此的主要目的几乎都是为了日落，白天则可以悠闲逛遍蜿蜒的石阶小巷、艺廊和精品店。</div>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：中午前逛小镇人少，可以从容拍照；避开正午高温可以找家悬崖咖啡馆歇脚。镇上有不少手工艺品和珠宝店，性价比不错。</small>
+      </div>
+    </div>
+    <div class="time-block">
+      <div class="time">15:00-16:00</div>
+      <div class="activity">🍽️ 午餐：伊亚悬崖餐厅，人均约¥160-240</div>
+    </div>
+    <div class="time-block">
+      <div class="time">16:30-18:30</div>
+      <div class="activity">🏰 <strong>伊亚城堡 (Castle of Oia)</strong>
+        <a href="https://maps.google.com/?q=Castle+of+Oia+Santorini" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <br>📍观赏日落的绝佳制高点，威尼斯时期防御遗迹
+        <div class="bg">🏺 <strong>背景</strong>：伊亚城堡建于文艺复兴时期威尼斯人统治期间，用于防御海盗袭击，如今仅存部分城墙和一座瞭望塔遗迹。城堡地处悬崖最前沿，270度无遮挡地俯瞰整个卡尔德拉海湾和爱琴海，是伊亚公认视野最好、也最拥挤的日落观赏点。</div>
+        <br><small style="color:#c0392b;font-size:12px;">🎫 免费</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：⚠️ 日落前2小时到占位置，10月当地日落时间约18:40。人多时台阶和城墙边缘都会站满人，注意脚下安全，不要翻越围栏拍照。日落瞬间全场会自发鼓掌，非常有仪式感。</small>
+      </div>
+    </div>
+    <img class="attraction-img" src="https://lh3.googleusercontent.com/place-photos/AG9NLjDNB7SNetOIqjHTY3X_y51EyKYwqPN12PAwAhXNPK3AzPWGxXPqMuRYUt_zCd7U8ozSUOWtVAtG-zFfwiNpW9XUlctGn-Xi6GhRTix40F4yR7iuXlAx44YNHo8mxF3iS8t1fBe4RPR7QdXTLCU=s4800-w800" alt="伊亚城堡">
+    <div class="attraction-img-caption">📷 伊亚城堡——观赏日落的绝佳制高点（图源 Google 地图）</div>
+
+    <div class="time-block">
+      <div class="time">19:00-20:00</div>
+      <div class="activity">🍽️ 晚餐：伊亚悬崖餐厅（提前预订景观位）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">20:00-21:30</div>
+      <div class="activity">🚕 从伊亚返回费拉，取行李，前往圣托里尼机场（约30-40分钟）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">22:00-22:50</div>
+      <div class="activity">✈️ A3361 爱琴海航空 · 圣托里尼 → 雅典（飞行约50分钟，约¥1103/人）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">23:30</div>
+      <div class="activity">🏨 入住雅典机场附近酒店（最后一晚，方便明天赶国际航班）</div>
+    </div>
+    <div class="tip">💡 今晚航班较晚，建议提前预订机场附近酒店（而非市区），减少奔波。</div>
+  </div>
+
+  <!-- Day 8 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 8 · 雅典 → 国际航班回国</span>
+      <span class="day-date">10月10日 周六</span>
+    </div>
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏨 酒店早餐，退房</div>
+    </div>
+    <div class="time-block">
+      <div class="time">10:00-13:00</div>
+      <div class="activity">🛍️ 若酒店在市区，可安排最后购物（科隆纳基或普拉卡）；若住机场附近，可在机场免税店采购希腊特产（橄榄油、葡萄酒、巧克力）</div>
+    </div>
+    <div class="time-block">
+      <div class="time">11:00-13:00</div>
+      <div class="activity">🛃 机场退税、办理登机手续</div>
+    </div>
+    <div class="time-block">
+      <div class="time">14:20</div>
+      <div class="activity">✈️ HO1658 雅典起飞，经上海中转（HO1257）返回北京大兴</div>
+    </div>
+    <div class="info">💡 <strong>今日重点</strong>：因为昨晚是圣托里尼晚班机落地雅典，今天不再安排景点，专心办理值机、退税，从容赶国际航班。</div>
+  </div>
+
+  <!-- Day 9 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 9 · 抵达国内</span>
+      <span class="day-date">10月11-12日</span>
+    </div>
+    <div class="time-block">
+      <div class="time">10:35（10月12日）</div>
+      <div class="activity">🛬 抵达北京大兴机场，结束旅程</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== 酒店推荐 ===== -->
+<section>
+  <h2>🏨 酒店推荐</h2>
+
+  <h3>雅典（2晚 + 返程前1晚机场附近）</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Plaka Hotel <span class="badge">推荐</span></div>
+      <div class="price">约 ¥960-1200 / 晚</div>
+      <div class="desc">位置极佳，步行5分钟到卫城入口。屋顶可看卫城景观。建议提前预订。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Hotel Hermitage Athens</div>
+      <div class="price">约 ¥800-1040 / 晚</div>
+      <div class="desc">蒙纳斯提拉齐区，性价比高，周边餐厅密集。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Sofitel Athens Airport <span class="badge">Day7晚推荐</span></div>
+      <div class="price">约 ¥900-1300 / 晚</div>
+      <div class="desc">机场航站楼步行可达，晚班机落地/次日一早飞国际航班都很方便。</div>
+    </div>
+  </div>
+
+  <h3>扎金索斯（2晚）</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Elegance Luxury Executive Suites <span class="badge">推荐</span></div>
+      <div class="price">约 ¥1000-1600 / 晚</div>
+      <div class="desc">扎金索斯镇附近成人专属精品酒店，参考自旅行社报价单中的推荐酒店。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">扎金索斯镇港口周边民宿</div>
+      <div class="price">约 ¥600-900 / 晚</div>
+      <div class="desc">步行可达索洛莫斯广场和港口，出海团大多在镇上或附近酒店接送。</div>
+    </div>
+  </div>
+
+  <h3>圣托里尼（2晚）</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Celestia Grand <span class="badge">推荐</span></div>
+      <div class="price">约 ¥2000-3000 / 晚</div>
+      <div class="desc">悬崖泳池别墅，卡尔德拉（Caldera）海景，蜜月首选！</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Cave Hotel</div>
+      <div class="price">约 ¥1600-2400 / 晚</div>
+      <div class="desc">洞穴酒店，圣托里尼特色住宿，超浪漫！</div>
+    </div>
+    <div class="place-card">
+      <div class="name">蓝顶白墙民宿</div>
+      <div class="price">约 ¥1200-2000 / 晚</div>
+      <div class="desc">费拉镇中心，方便Day6步行往返各景点。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 餐饮推荐</h2>
+
+  <h3>雅典</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Kostas <span class="badge">当地人推荐</span></div>
+      <div class="price">人均 ¥64-96</div>
+      <div class="desc">Gyros快餐店，当地人经常光顾。必尝Gyros和Souvlaki。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Saita</div>
+      <div class="price">人均 ¥120-160</div>
+      <div class="desc">传统希腊菜，家庭经营。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Strofi</div>
+      <div class="price">人均 ¥160-200</div>
+      <div class="desc">屋顶餐厅，观赏卫城夜景。</div>
+    </div>
+  </div>
+
+  <h3>扎金索斯</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">港口海鲜餐厅（索洛莫斯广场附近）</div>
+      <div class="price">人均 ¥120-200</div>
+      <div class="desc">新鲜海鲜，临海座位可以看港口日落。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">拉加纳斯海滩餐厅</div>
+      <div class="price">人均 ¥100-180</div>
+      <div class="desc">沙滩海景位，适合玩完海滩直接用餐。</div>
+    </div>
+  </div>
+
+  <h3>圣托里尼</h3>
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">Ambrosia</div>
+      <div class="price">人均 ¥200-320</div>
+      <div class="desc">伊亚热门餐厅，传统希腊菜，建议提前预订景观位。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">Mama's House</div>
+      <div class="price">人均 ¥120-200</div>
+      <div class="desc">费拉镇家庭餐厅，性价比高。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 交通订票指南 ===== -->
+<section>
+  <h2>🎫 交通订票指南</h2>
+  <ol class="steps">
+    <li><strong>国际机票</strong>：北京无直飞雅典航班，建议提前1-2个月在携程/航司官网预订经上海中转的往返机票（吉祥航空/国航），越早订中转衔接时间越好。</li>
+    <li><strong>私人专车（雅典↔基利尼两段）</strong>：可通过 Viator、GetYourGuide 或当地地接社预订"Athens private transfer with stops"类产品，务必备注途经迈锡尼/科林斯运河停留需求，提前告知具体停留时长，建议提前2-3周预订确保有车。</li>
+    <li><strong>基利尼↔扎金索斯渡轮</strong>：Levante Ferries 官网或 Ferryhopper App 可直接购票，旺季建议提前1-2周锁定班次和座位。</li>
+    <li><strong>扎金索斯出海一日游（蓝洞+沉船湾）</strong>：GetYourGuide/Viator 上有大量选择，建议看近期真实评价，优先选择"含酒店接送"的套餐减少衔接麻烦。</li>
+    <li><strong>雅典↔圣托里尼机票</strong>：瑞安航空/爱琴海航空官网或携程均可订，瑞安航空为廉价航空注意托运行李需单独购买。</li>
+    <li><strong>圣托里尼日落帆船</strong>：GetYourGuide/Viator 预订，选双体帆船（Catamaran）比单体帆船更平稳，注意核实"日落时段"班次而非普通白天班次。</li>
+  </ol>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+
+  <h3>货币与支付</h3>
+  <ul>
+    <li>货币：欧元 (EUR)，以下金额已按1€≈¥8换算</li>
+    <li>取现：建议取现一次备 ¥1600-2400</li>
+    <li>刷卡：Visa/MasterCard普及，小店付现，扎金索斯偏僻海滩摊位建议备现金</li>
+    <li>小费：餐厅留¥8-16或四舍五入，出海团/专车司机可给€5-10表示感谢</li>
+  </ul>
+
+  <h3>通讯</h3>
+  <ul>
+    <li>SIM卡：机场可买，约¥80-160含流量</li>
+    <li>建议：出发前在国内买欧洲通用电话卡</li>
+  </ul>
+
+  <h3>天气与穿着</h3>
+  <ul>
+    <li>10月气温：白天18-25°C，早晚12-15°C，扎金索斯出海海上风大略凉</li>
+    <li>建议：轻薄长袖 + 舒适步行鞋 + 防晒帽 + 泳衣（提前穿好方便出海）</li>
+  </ul>
+
+  <h3>🚕 打车指南</h3>
+  <div class="info">雅典打车推荐 <strong>Bolt</strong> 或 <strong>Uber</strong>。扎金索斯和圣托里尼打车软件覆盖有限，建议通过酒店前台叫车或提前包车。</div>
+  <ul>
+    <li><strong>雅典</strong>：Bolt/Uber，机场到市区约¥320-400</li>
+    <li><strong>扎金索斯</strong>：镇内步行为主，出岛玩建议跟团或包车，不建议自驾（山路多、路况不如本土）</li>
+    <li><strong>圣托里尼</strong>：推荐租ATV（约€30-50/天）或打车/公交</li>
+  </ul>
+
+  <h3>城市间交通一览</h3>
+  <table>
+    <tr><th>航段</th><th>时长</th><th>价格参考</th><th>预订方式</th></tr>
+    <tr><td>北京→雅典（经上海中转，往返）</td><td>约15.5小时（单程）</td><td>¥7741/人（往返）</td><td>吉祥航空 / 国航联运</td></tr>
+    <tr><td>雅典→迈锡尼→基利尼（专车）</td><td>约4-5小时</td><td>€360-480/天/车</td><td>Viator/GetYourGuide/地接社</td></tr>
+    <tr><td>基利尼→扎金索斯（渡轮）</td><td>约1小时15分</td><td>€13.5/人起</td><td>Levante Ferries官网</td></tr>
+    <tr><td>雅典→圣托里尼（飞机）</td><td>45-50分钟</td><td>¥334/人</td><td>瑞安航空</td></tr>
+    <tr><td>圣托里尼→雅典（飞机）</td><td>约50分钟</td><td>¥1103/人</td><td>爱琴海航空</td></tr>
+  </table>
+
+  <h3>⚠️ 注意事项</h3>
+  <ul>
+    <li><strong>国际航班</strong>：北京无直飞雅典航班，需经上海中转，往返总耗时较长，建议选夜班机在飞机上休息</li>
+    <li><strong>雅典→扎金索斯段</strong>：路途遥远（车程+渡轮近6小时），建议全程预留弹性时间，不要卡点赶船</li>
+    <li><strong>沉船湾</strong>：2026年已暂停沙滩登陆，只能海上巡游/浮潜，如遇黄牛兜售"登滩票"不要轻信</li>
+    <li><strong>Bochali威尼斯城堡+拜占庭博物馆</strong>：周二休息，且当天行程经过时间也会错过开放时段，如需参观要单独调整日程</li>
+    <li><strong>伊亚日落/城堡</strong>：务必提前2小时到占位置</li>
+    <li><strong>渡轮/出海团/帆船</strong>：均建议提前1-2周在线预订，旺季/平季周末容易约满</li>
+    <li><strong>申根签证</strong>：需办理希腊申根签证</li>
+  </ul>
+</section>
+
+<!-- ===== 出行准备清单 ===== -->
+<section>
+  <h2>✅ 出行前准备清单</h2>
+  <ul class="checklist">
+    <li>希腊申根签证（提前1-2个月申请）</li>
+    <li>预订私人专车（雅典↔基利尼两段，提前2-3周）</li>
+    <li>预订基利尼↔扎金索斯渡轮票（提前1-2周）</li>
+    <li>预订扎金索斯出海一日游（蓝洞+沉船湾，提前1-2周）</li>
+    <li>预订城际机票（雅典↔圣托里尼，提前1个月）</li>
+    <li>预订圣托里尼日落帆船（提前1-2周）</li>
+    <li>预订酒店（10月旺季务必提前，含Day7雅典机场附近酒店）</li>
+    <li>购买欧洲通用电话卡</li>
+    <li>准备€500-800（约¥4000-6400）现金</li>
+    <li>购买旅行保险</li>
+    <li>下载Bolt、Uber、Google Maps、Ferryhopper、WhatsApp</li>
+  </ul>
+
+  <h3>🎒 行李建议</h3>
+  <ul class="checklist">
+    <li>舒适的步行鞋（卫城、迈锡尼都是石头路）</li>
+    <li>防晒霜和帽子</li>
+    <li>薄外套（早晚温差大，出海风大也需要）</li>
+    <li>欧标转换插头</li>
+    <li>充电宝</li>
+    <li>泳衣 + 防水手机袋（扎金索斯出海和圣托里尼帆船都会用到）</li>
+  </ul>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 2026-07-15 · 数据来源：Google Maps + 携程问道实时查询 + 官方售票网站，行程结构参考自当地旅行社团期报价单并改编为独立旅行版本
+</footer>
+
+</div>
+</body>
+</html>
