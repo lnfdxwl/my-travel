@@ -94,6 +94,14 @@
   .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
   .time-block .activity { color: #2c3e50; margin-top: 2px; }
 
+  /* 景点历史背景 */
+  .bg { font-size: 13px; color: #6b5a3f; background: #fbf6ec; border-left: 3px solid #d4a574; padding: 8px 12px; margin: 6px 0; border-radius: 4px; line-height: 1.7; }
+
+  /* 景点真实配图 */
+  .attraction-img { width: 100%; max-width: 600px; height: 280px; object-fit: cover; border-radius: 8px; margin: 10px 0; display: block; }
+  .attraction-img-caption { font-size: 12px; color: #999; margin: -4px 0 10px; }
+  .attraction-img-placeholder { width: 100%; max-width: 600px; height: 200px; background: linear-gradient(135deg, #e8dfc8 0%, #d4a574 100%); border-radius: 8px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; text-align: center; padding: 10px; }
+
   /* Tables */
   table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
   th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
@@ -270,8 +278,18 @@
     <div class="time-block">
       <div class="time">09:00</div>
       <!-- 地图链接格式：<a href="https://maps.google.com/?q={纬度},{经度}" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a> -->
-      <div class="activity">🏛️ <strong>景点1</strong> <a href="https://maps.google.com/?q=纬度,经度" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>（说明为什么要去）</div>
+      <div class="activity">🏛️ <strong>景点1</strong> <a href="https://maps.google.com/?q=纬度,经度" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>（说明为什么要去）
+        <!-- 历史背景：2-4句，讲清楚"是什么/为什么叫这个名字/历史意义"，见 docs/guide-spec.md 景点历史背景规范 -->
+        <div class="bg">🏺 <strong>背景</strong>：景点的历史文化背景，2-4句话。</div>
+        <!-- 开放时间：必须用 google-maps MCP 实时查，不要凭记忆估算 -->
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-18:00（每日）</small>
+        <!-- 导览提示：怎么玩的实操建议，和上面的历史背景分工不同、都要有 -->
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：实操建议，比如从哪个入口进、重点看什么、最佳拍照点。</small>
+      </div>
     </div>
+    <!-- 真实配图：用 maps_search_places + maps_place_details(maxPhotos:1) 获取，见 docs/guide-spec.md 景点配图规范，禁止用灰色占位框凑数 -->
+    <img class="attraction-img" src="{google地图照片URL}" alt="景点1">
+    <div class="attraction-img-caption">📷 景点1一句话说明（图源 Google 地图）</div>
     <div class="time-block">
       <div class="time">11:00</div>
       <div class="activity">🍽️ 景点附近吃午饭（推荐餐厅或菜品）</div>
@@ -337,6 +355,22 @@
   <table>
     <tr><th>时间</th><th>车次/航班</th><th>类型</th><th>票价</th><th>备注</th></tr>
     <tr><td>HH:MM → HH:MM</td><td>车次号</td><td>高铁/慢车</td><td>$XX</td><td>备注</td></tr>
+  </table>
+</section>
+
+<!-- ===== 预算汇总 ===== -->
+<section>
+  <h2>💰 人均预算汇总</h2>
+  <div class="tip">💡 以下为人均预估费用，<strong>不含国际往返机票</strong>（单独列在"行程概览"里）。数字按行程里已列出的价格区间取中位数估算即可，不用精确到个位。</div>
+  <table>
+    <tr><th>类别</th><th>人均参考价</th><th>说明</th></tr>
+    <tr><td>境内城际交通</td><td>$XX</td><td>城市间火车/飞机/大巴</td></tr>
+    <tr><td>酒店住宿（X晚）</td><td>$XX</td><td>按推荐档酒店双人间÷2人计算</td></tr>
+    <tr><td>景点门票</td><td>$XX</td><td>主要景点门票合计</td></tr>
+    <tr><td>餐饮（X天）</td><td>$XX</td><td>含特别推荐餐厅在内</td></tr>
+    <tr><td>市内交通/打车</td><td>$XX</td><td>机场往返、当地打车</td></tr>
+    <tr><td>签证+保险+SIM卡+零钱</td><td>$XX</td><td></td></tr>
+    <tr><td><strong>合计（不含国际机票）</strong></td><td><strong>约$XX/人</strong></td><td>加上国际往返机票$XX/人，全程总花费约<strong>$XX/人</strong></td></tr>
   </table>
 </section>
 

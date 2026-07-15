@@ -9,8 +9,10 @@ Skill 位置：`.claude/skills/ctrip-wendao/`（项目级）
 调用方式：
 ```bash
 cd /Users/zhaozeyang/my-travel/.claude/skills/ctrip-wendao/scripts
-WENDAO_API_KEY="a22b18cd04124d5289fb7376ca283e15" node wendao_query.js "你的查询"
+WENDAO_API_KEY="e55daf2030f64fbf882e8da9736d3fdb" node wendao_query.js "你的查询"
 ```
+
+> Key 以 `.claude/skills/ctrip-wendao/SKILL.md` 里记录的为准，这里的仅作示例，如果不一致以 SKILL.md 为准。
 
 查询示例：
 - `"2026年6月19日塔什干到撒马尔罕的全部火车班次"`
@@ -35,63 +37,17 @@ WENDAO_API_KEY="a22b18cd04124d5289fb7376ca283e15" node wendao_query.js "你的�
 
 ## 谷歌地图 MCP (google-maps)
 
-用于查询景点真实开放时间、地点坐标、附近搜索等。已配置在 `~/.claude.json`，Claude Code 会话中可直接使用。
+用于查询景点真实开放时间、真实照片、地点坐标、附近搜索等。已作为原生 MCP 工具接入 Claude Code 会话，**直接调用工具即可，不需要走 bash/mcporter 这一层**（`mcporter` 命令行方式已过时，如果发现环境里又变回需要手动调用命令行，说明工具集成方式变了，回来更新本文档）。
 
-### 调用方式（mcporter）
+可用工具前缀均为 `mcp__google-maps__*`，常用的有 `maps_search_places`、`maps_place_details`、`maps_geocode`、`maps_search_nearby`、`maps_directions`、`maps_distance_matrix`、`maps_weather`、`maps_explore_area` 等，具体参数看工具定义里的 schema 即可。
 
-```bash
-PATH="/opt/homebrew/bin:$PATH"
-MCPORTER=/Users/zhaozeyang/.npm/_npx/bdbf2deecdd22bc5/node_modules/.bin/mcporter
-```
+### 查询景点开放时间 + 真实照片（两步走）
 
-> 注：node 在 `/opt/homebrew/bin/node`，mcporter 需通过完整路径调用。
+**第一步**：`maps_search_places` 用景点名称搜索，拿到 `place_id`（建议用英文名搜，命中率更高，比如 "Acropolis of Athens" 而不是"雅典卫城"）。
 
-### 查询景点开放时间（两步走）
-
-**第一步**：用景点名称搜索，获取 `place_id`：
-```bash
-$MCPORTER call google-maps.maps_search_places query="Shah-i-Zinda Samarkand Uzbekistan"
-# 返回数组，取第一条的 place_id
-```
-
-**第二步**：用 `place_id` 获取详情（含开放时间）：
-```bash
-$MCPORTER call google-maps.maps_place_details placeId="ChIJtWrGxqQYTT8R7glw_6oUdmA"
-# 返回 opening_hours.weekday_text 数组，每天一行
-```
-
-**批量查询示例**（脚本化）：
-```bash
-PATH="/opt/homebrew/bin:$PATH"
-MCPORTER=/Users/zhaozeyang/.npm/_npx/bdbf2deecdd22bc5/node_modules/.bin/mcporter
-
-# 搜索并打印 place_id
-$MCPORTER call google-maps.maps_search_places query="Registan Samarkand" 2>&1 | \
-  python3 -c "import json,sys; d=json.load(sys.stdin); print(d[0]['place_id'], d[0]['name'])"
-
-# 获取开放时间
-$MCPORTER call google-maps.maps_place_details placeId="ChIJN5PlwrcYTT8Rr5LMngOOLFM" 2>&1 | \
-  python3 -c "
-import json,sys
-d=json.load(sys.stdin)
-h=d.get('opening_hours') or {}
-for t in h.get('weekday_text',[]): print(t)
-"
-```
-
-### 可用工具（18个）
-
-| 工具 | 用途 |
-|------|------|
-| `maps_search_places` | 按名称搜索地点，返回 place_id、坐标、评分 |
-| `maps_place_details` | 按 place_id 获取详情，含开放时间、电话、地址 |
-| `maps_geocode` | 地址转坐标 |
-| `maps_batch_geocode` | 批量地址转坐标（最多 50 个） |
-| `maps_search_nearby` | 搜索附近 POI |
-| `maps_directions` | 路线规划 |
-| `maps_distance_matrix` | 多点距离矩阵 |
-| `maps_weather` | 查询天气 |
-| `maps_explore_area` | 探索区域内热门地点 |
+**第二步**：`maps_place_details` 传入 `place_id`，同时可以传 `maxPhotos`（如 1）拿到真实照片 URL。返回结果里：
+- `opening_hours.weekday_text` — 每天的开放时间，一行一天
+- `photos[].url` — 真实照片直链，可以直接用在攻略的 `<img>` 标签里（见 `guide-spec.md` 景点配图规范）
 
 ### 注意事项
 
@@ -99,3 +55,4 @@ for t in h.get('weekday_text',[]): print(t)
 - 部分开放式广场（如广场、集市入口）可能无时间或返回 24 小时
 - 查到的时间是本地时间，直接填入攻略即可
 - 季节性变化：旺季（5-9月）部分景点延长至晚 22:00，淡季缩短，查询时间靠近出行日期为准
+- 同一个景点，中英文名称搜索结果可能不同（比如返回的是附近的同名小地标），拿到结果后核对一下坐标/地址是否真的对得上再用
