@@ -1,2 +1,3 @@
 {"skillName":"travel-manager","sourceType":"mt-name","sourceId":"travel-manager","env":"prod","installedAt":"2026-05-22T12:50:22.537Z","targetDir":"/Users/zhaozeyang/my-travel/.claude/skills"}
 {"skillName":"ctrip-wendao","sourceType":"mt-name","sourceId":"ctrip-wendao","env":"prod","installedAt":"2026-05-22T14:30:29.332Z","targetDir":"/Users/zhaozeyang/my-travel/.claude/skills"}
+{"skillName":"meituan-travel","sourceType":"mt-name","sourceId":"meituan-travel","env":"prod","installedAt":"2026-07-14T03:09:41.696Z","targetDir":"/Users/zhaozeyang/my-travel/.claude/skills"}
