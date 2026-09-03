@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西安 3 日游攻略 v1｜2026.09.04 - 09.06（兵马俑专线）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* 景点历史背景 */
+  .bg { font-size: 13px; color: #6b5a3f; background: #fbf6ec; border-left: 3px solid #d4a574; padding: 8px 12px; margin: 6px 0; border-radius: 4px; line-height: 1.7; }
+
+  /* 景点真实配图 */
+  .attraction-img { width: 100%; max-width: 600px; height: 280px; object-fit: cover; border-radius: 8px; margin: 10px 0; display: block; }
+  .attraction-img-caption { font-size: 12px; color: #999; margin: -4px 0 10px; }
+  .attraction-img-placeholder { width: 100%; max-width: 600px; height: 200px; background: linear-gradient(135deg, #e8dfc8 0%, #d4a574 100%); border-radius: 8px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; text-align: center; padding: 10px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Step list */
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 28px; height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>🏯 长安三千年 · 西安 3 日游</h1>
+  <div class="subtitle">钟鼓楼 · 明城墙 · 兵马俑 · 华清宫 · 大唐不夜城</div>
+  <div class="meta">
+    <span>📅 2026年09月04日（周五）— 09月06日（周日）</span>
+    <span>👥 2 人（情侣，一间房）</span>
+    <span>🚄 西安北站返程</span>
+  </div>
+</div>
+
+<!-- ===== 行程概览 ===== -->
+<section>
+  <h2>📋 行程概览</h2>
+  <div class="tip">💡 <strong>核心思路</strong>：周五下午从市中心钟鼓楼起步，用"傍晚城墙+夜景"消化半天；周六全天东进临潼，<strong>开门即入兵马俑避开人潮</strong>，下午华清宫、晚上回市区看大唐不夜城；周日上午陕历博+大慈恩寺，14:57 高铁从容返程。全程只住一家酒店、不搬行李。</div>
+
+  <div class="transport-list">
+    <div class="transport-item train">
+      <div class="transport-icon">🚄<span class="label">返程</span></div>
+      <div class="transport-content">
+        <div class="route">G970 · 西安北 → 北京西</div>
+        <div class="schedule">出发 <span class="time">14:57</span> → 到达 <span class="time">20:20</span>（历时 5 小时 23 分）</div>
+        <div class="meta-line">二等座 ¥525 ｜ 一等座 ¥840 ｜ 查询时二等座需候补、一等座有余票</div>
+        <div class="why"><strong>选这班的原因：</strong>最接近你要求的"下午3点"，周日上午还能完整安排一个博物馆；若候补不到二等座，备选 G3932（16:01→21:16，二等座 ¥525 有余票），详见交通章节。</div>
+      </div>
+    </div>
+    <div class="transport-item">
+      <div class="transport-icon">🧳<span class="label">去程</span></div>
+      <div class="transport-content">
+        <div class="route">9月4日（周五）14:00 已抵达西安 · 自行前往酒店</div>
+        <div class="schedule">攻略行程从 <span class="time">14:00</span> 开始排，去程交通自理</div>
+        <div class="meta-line">若落地西安北站：地铁2号线直达钟楼站约 35 分钟、¥5；打车到钟鼓楼约 16km、¥45-55</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>🗺️ 游览顺序</h3>
+  <ul>
+    <li><strong>Day 1（周五）</strong>：14:00 入住钟鼓楼片区 → 钟楼+鼓楼 → 回坊小吃 → 永宁门登城墙看日落夜景 → 长安大牌档晚餐</li>
+    <li><strong>Day 2（周六）</strong>：08:30 开门即入兵马俑 → 下午华清宫 → 晚上大雁塔北广场喷泉 + 大唐不夜城</li>
+    <li><strong>Day 3（周日）</strong>：陕西历史博物馆 → 大慈恩寺/大雁塔 → 午餐三秦套餐 → 14:57 G970 返程</li>
+  </ul>
+
+  <div class="warn">⚠️ <strong>两个必须提前抢的预约（出发前就要办）</strong>：① 兵马俑门票提前 <strong>7 天</strong>在"秦始皇帝陵博物院"微信公众号实名放票，周六票抢手；② 陕历博免费票提前 <strong>5 天（含当天）17:00</strong> 整点放票，定闹钟抢。均凭身份证刷证入馆。</div>
+</section>
+
+<!-- ===== 每日行程 ===== -->
+<section>
+  <h2>📅 每日行程</h2>
+
+  <!-- Day 1 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 1 · 钟鼓楼登楼 + 回坊寻味 + 城墙夜骑</span>
+      <span class="day-date">09月04日 周五</span>
+    </div>
+    <div class="tip">💡 今天全部步行可达：酒店→钟鼓楼→回坊→南门→南大街，方圆 1.5 公里，穿好走的鞋。</div>
+
+    <div class="time-block">
+      <div class="time">14:00</div>
+      <div class="activity">🏨 抵达钟鼓楼片区酒店，办理入住、放下行李。<small style="color:#888;">🚇 若从西安北站来：地铁2号线到钟楼站约 35 分钟。</small></div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">14:40</div>
+      <div class="activity">🔔 <strong>西安钟楼</strong> <a href="https://maps.google.com/?q=Xi'an+Bell+Tower" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：钟楼始建于明洪武十七年（1384年），是中国现存形制最大、保存最完整的钟楼，曾悬挂一口唐代景云钟报时，古城四条大街以它为中心向东西南北展开。</div>
+        <img class="attraction-img" src="images/belltower.jpg" alt="西安钟楼夜景">
+        <div class="attraction-img-caption">📷 华灯初上的钟楼，四条大街在楼下环岛交汇（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30–21:30（4月1日–10月10日，21:00 停止入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：登楼看景云钟复制品与日间访古表演；建议钟楼、鼓楼买<strong>联票 ¥50</strong>（单买各 ¥30），两楼步行 5 分钟。</small>
+        <br><small style="color:#888;">🚶 步行约 5 分钟（300m）到鼓楼</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">15:10</div>
+      <div class="activity">🥁 <strong>西安鼓楼</strong> <a href="https://maps.google.com/?q=Xi'an+Drum+Tower" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：鼓楼比钟楼早建 4 年，楼上藏"文武盛地""声闻于天"两块巨匾，楼内陈列着形态各异的古代鼓阵，每天有定时编钟鼓乐表演。</div>
+        <img class="attraction-img" src="images/drumtower.jpg" alt="西安鼓楼">
+        <div class="attraction-img-caption">📷 暮色中的鼓楼，一层整齐排列着二十四节气鼓（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30–21:30（4月1日–10月10日，21:00 停止入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：鼓乐表演场次以楼内公告为准，提前 5 分钟占前排；鼓楼北侧门出去就是回民街北院门，无缝衔接。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">16:00</div>
+      <div class="activity">🍢 <strong>回坊小吃巡礼</strong>（北院门→西羊市→大皮院） <a href="https://maps.google.com/?q=Beiyuanmen+Muslim+Street+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：回民街不是一条街，而是有几百年历史的穆斯林聚居区，约两万回民"依寺而居"，巷子里藏着化觉巷清真大寺和最地道的老店——<strong>主街北院门看热闹，真正好吃的在大皮院、北广济街这些支巷</strong>。</div>
+        <img class="attraction-img" src="images/muslimstreet.jpg" alt="西安回民街夜景">
+        <div class="attraction-img-caption">📷 青石板路两侧灯笼高挂，回坊入夜最有烟火气（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：街区全天开放，店铺多在 10:00–22:00</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：下午垫肚子路线——一真楼来碗清淡口羊肉泡馍（营业到21:00，适合怕膻的新手）、再顺路买甑糕、红柳枝烤肉、酸梅汤；老米家泡馍只开到约15:00，今天赶不上，明天不安排回坊就别特意回头。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">17:40</div>
+      <div class="activity">🚶 沿南大街步行约 15 分钟（1.2km）到永宁门，途中先在手机上给晚餐餐厅取号（见 20:00 安排）。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">18:00</div>
+      <div class="activity">🧱 <strong>西安城墙 · 永宁门（南门）登城</strong> <a href="https://maps.google.com/?q=Yongningmen+Xi'an+City+Wall" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：西安城墙是中国现存规模最大、保存最完整的古代城垣，明洪武年间在唐皇城基础上扩建而成，周长约 13.7 公里，四座主门分别是长乐、安定、永宁、安远——"长安永定"。</div>
+        <img class="attraction-img" src="images/citywall.jpg" alt="西安城墙永宁门">
+        <div class="attraction-img-caption">📷 穿过永宁门砖券门洞，城楼在夕阳下格外厚重（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:00–22:00（22:00 停止售票入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：门票 ¥53，南门设施最全。城上租自行车（单人 ¥45/3小时、双人 ¥90/3小时，押金 ¥100，四门通租通还），建议向东骑到长乐门折返，约 1 小时；19:00 后城墙上和城内楼宇陆续亮灯，日落+夜景一次看全。不想骑车可坐观光电瓶车。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">20:00</div>
+      <div class="activity">🍽️ <strong>晚餐：长安大牌档·上元灯会（南大街店）</strong> <a href="https://maps.google.com/?q=%E9%95%BF%E5%AE%89%E5%A4%A7%E7%89%8C%E6%A1%A3%E5%8D%97%E5%A4%A7%E8%A1%97%E5%BA%97+%E8%A5%BF%E5%AE%89" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。南大街39号，下城墙步行即到。⚠️ <strong>周五晚必等位，建议 17:30 前后就在大众点评/线上提前取号</strong>，包厢需提前 1–3 天电话预订：029-81770066。必点：长安葫芦鸡、毛笔酥、妃子笑、西府一口香、关中六小碗、醪糟冰淇淋，人均 ¥70–100。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">21:30</div>
+      <div class="activity">🌙 步行回酒店，顺路看钟楼广场亮灯夜景，今天步行约 1.2 万步。</div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 2 · 临潼东线：兵马俑开门场 + 华清宫 + 大唐不夜城</span>
+      <span class="day-date">09月05日 周六</span>
+    </div>
+    <div class="warn">⚠️ 今天是全程重头戏：<strong>门票提前 7 天预约、带身份证原件、08:30 开门即入</strong>，10 点后旅行团大波到达，一号坑会挤到看不到俑。</div>
+
+    <div class="time-block">
+      <div class="time">07:00</div>
+      <div class="activity">🥣 酒店附近早餐：肉夹馍 + 肉丸胡辣汤（西安人的硬核早晨），便利店再买两瓶水和零食带进景区。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">07:30</div>
+      <div class="activity">🚕 出发去兵马俑（约 40km）。<strong>两个方案：</strong>
+        <ul>
+          <li><strong>方案A·推荐（2人分摊）</strong>：滴滴/出租车走连霍高速直达，40–50 分钟，约 ¥110–130 + 高速费约 ¥15，08:20 前到北门排队。</li>
+          <li><strong>方案B·省钱</strong>：地铁1号线到纺织城站换 9 号线（秦陵西方向），秦陵西站 D 口出再打车 4km/10 分钟到博物院；全程约 1.5 小时、人均约 ¥12，选此方案需把出发时间提前到 06:50。</li>
+        </ul>
+        <div class="warn" style="margin-top:8px;">❗ <strong>避坑</strong>：火车站东广场曾长期有假冒"游5（306）"黑车；且正规游5路自 2026 年 8 月 29 日起起点已改到西安东站。第一次去不建议研究公交，直接按上面 A/B 方案走。</div>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">08:30</div>
+      <div class="activity">⚔️ <strong>秦始皇帝陵博物院 · 兵马俑</strong> <a href="https://maps.google.com/?q=Terracotta+Army+Museum+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：公元前 246 年，13 岁的嬴政开始为自己修陵，兵马俑是秦陵的地下卫戍军，1974 年由当地打井农民意外发现。三座坑共埋藏陶俑陶马近 8000 件，千人千面，每一张脸都不一样，被誉为"世界第八大奇迹"。</div>
+        <img class="attraction-img" src="images/terracotta.jpg" alt="兵马俑一号坑">
+        <div class="attraction-img-caption">📷 一号坑军阵全景：6000 件陶俑组成的东方军阵（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30–19:00（旺季3/16–11/15，17:00 停止售票入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：门票 ¥120（含兵马俑+丽山园通票），北门是唯一入口。<strong>逆人流路线：三号坑（指挥部，最小）→ 二号坑（军阵混合、跪射俑）→ 一号坑（最大最震撼，留到状态最好时看）→ 文物陈列厅铜车马</strong>，全程约 2.5 小时。强烈建议租电子讲解或请正规讲解员（拼团人均约 ¥20–30），没有讲解就是看泥人。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">10:30</div>
+      <div class="activity">🐎 <strong>文物陈列厅 · 铜车马</strong>
+        <div class="bg">🏺 <strong>背景</strong>：两乘青铜车马按真车马一半比例铸造，用了 3000 多件金银饰件，是"青铜之冠"，曾在外巡展多年，是博物院的镇馆之宝之一。</div>
+        <img class="attraction-img" src="images/bronze-chariot.jpg" alt="秦陵铜车马">
+        <div class="attraction-img-caption">📷 一号铜车马"高车"，四马架辕、伞盖可机械转动（图源携程景点相册）</div>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：体力好、时间充裕可凭同一张票坐免费摆渡车去丽山园（秦始皇陵封土+K0007陪葬坑，约 1.5 小时）；本次行程紧凑，<strong>建议放弃丽山园，把时间留给华清宫</strong>。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">11:30</div>
+      <div class="activity">🍜 景区商业街简单午餐（面食/德克士等，口味一般、价格偏高，吃饱即可；也可吃早上自带的零食）。<small style="color:#888;">🚕 打车约 15–20 分钟（9.5km，约 ¥20–25）到华清宫</small></div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">13:00</div>
+      <div class="activity">♨️ <strong>华清宫</strong> <a href="https://maps.google.com/?q=Huaqing+Palace+Lintong+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：华清宫背靠骊山、有6000年温泉利用史，盛唐时是唐玄宗与杨贵妃的行宫，"春寒赐浴华清池，温泉水滑洗凝脂"写的就是这里；1936年西安事变的第一枪也在园内五间厅打响，一座园子串起两段历史。</div>
+        <img class="attraction-img" src="images/huaqing.jpg" alt="华清宫航拍">
+        <div class="attraction-img-caption">📷 唐式殿宇沿骊山层叠，九龙湖如一块碧玉（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：07:00–18:40（9月1日–12月31日，18:00 停止售票、18:10 停止入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：门票 ¥108（两日有效）。先看海棠汤（贵妃池）、莲花汤等唐御汤遗址，再到五间厅看西安事变弹孔墙；想上骊山可坐索道（往返 ¥60）看老母殿与兵谏亭，脚力一般可放弃。16:00 前出园即可。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">16:30</div>
+      <div class="activity">🚇 步行到地铁 9 号线华清池站，纺织城换 1 号线、通化门换 3 号线直达大雁塔站（约 1 小时 10 分钟），<strong>不回酒店、直接到大雁塔片区</strong>，可先在大悦城休息逛街。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">18:15</div>
+      <div class="activity">🍽️ 大雁塔片区晚餐：<strong>奔跑吧陕菜·雁塔长安（大唐不夜城店）</strong>，连续多年必吃榜、有观大雁塔景观位，招牌葫芦鸡、妃子笑、油泼辣子鱼，人均 ¥80 左右；想省事也可选 <strong>子午路张记肉夹馍（翠华路总店）</strong>，营业到 24:00。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">19:40</div>
+      <div class="activity">⛲ <strong>大雁塔北广场音乐喷泉</strong> <a href="https://maps.google.com/?q=Giant+Wild+Goose+Pagoda+North+Square+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。平日每天 12:00 / 16:00 / 19:00 / 21:00 各一场（每场约 10 分钟，网络信息、以现场公告为准）；先看广场夜景，逛完大唐不夜城后 20:50 折返回来看 21:00 场（两地步行约 8 分钟），提前 10 分钟到中轴线上占位。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">20:10</div>
+      <div class="activity">🏮 <strong>大唐不夜城步行街</strong> <a href="https://maps.google.com/?q=Datang+Everbright+City+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>：这条 1500 米的中轴大道以大雁塔为背景，复原盛唐天街格局，玄奘广场、贞观文化广场、开元庆典广场一路排开，九组帝王与历史人物群雕立于街中，是西安"盛唐氛围感"的天花板。</div>
+        <img class="attraction-img" src="images/datang.jpg" alt="大唐不夜城夜景">
+        <div class="attraction-img-caption">📷 仿唐殿宇灯火通明，街头演艺随时开场（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：街区全天免费开放，店铺/演艺多在 11:00–23:00</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：必看"不倒翁小姐姐"等街头行为艺术（演出时间看街区当日牌示）、贞观之治群雕、开元盛世群雕；一路向南慢逛约 1.5 小时。</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">21:15</div>
+      <div class="activity">🚇 看完 21:00 喷泉场后，地铁3/4号线大雁塔站返程回酒店（约 25 分钟）。</div>
+    </div>
+
+    <div class="info">ℹ️ <strong>可选 B 方案（《长恨歌》演出）</strong>：华清宫闭园后上演大型实景舞剧《长恨歌》，以骊山为幕、温泉湖为台，口碑极高，门票约 ¥300+ 需另购、看完约 21:30 才能回市区。若选看演出，今晚的大唐不夜城就放弃（两处无法兼得），第二天周日上午时间不变。</div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-title">Day 3 · 陕历博国宝 + 大慈恩寺，午后从容返程</span>
+      <span class="day-date">09月06日 周日</span>
+    </div>
+    <div class="tip">💡 今天所有环节都按"14:57 的高铁"倒推，13:20 必须从市区出发去西安北站，宁可在车站喝咖啡也不卡点。</div>
+
+    <div class="time-block">
+      <div class="time">08:00</div>
+      <div class="activity">🥣 早餐后退房，行李寄存在酒店前台。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">08:40</div>
+      <div class="activity">🚇 地铁前往陕西历史博物馆（小寨东路91号）。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">09:00</div>
+      <div class="activity">🏛️ <strong>陕西历史博物馆</strong> <a href="https://maps.google.com/?q=Shaanxi+History+Museum+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>
+        <div class="bg">🏺 <strong>背景</strong>："给我一天，还你万年"——陕西是中国古代十三朝京畿所在，陕历博馆藏 170 余万件，从蓝田人、商周青铜器到唐代金银器，基本陈列就是一部缩写的中国通史，建筑本身也是仿唐殿堂风格。</div>
+        <img class="attraction-img" src="images/museum.jpg" alt="陕西历史博物馆">
+        <div class="attraction-img-caption">📷 仿唐风格的博物馆主馆，水池与石碑是经典机位（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30–19:00（3/15–11/14，18:00 停止入馆；每周一闭馆，周日正常开放）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：基本陈列<strong>免费</strong>，提前 5 天（含当天）17:00 在"陕西历史博物馆"公众号放票，定闹钟抢；按第一展厅（史前–秦）→第二（汉–魏晋）→第三（隋唐–明清）顺序，必看兽首玛瑙杯、鎏金舞马衔杯纹银壶、阙楼仪仗图，约 1.5–2 小时。何家村遗宝等特展另收费（约 ¥30，以官方为准）。</small>
+      </div>
+    </div>
+
+    <div class="info">ℹ️ <strong>没抢到陕历博票的备选</strong>：改去 <strong>西安博物院（小雁塔）</strong>，同样免费、好约得多，院中有唐代小雁塔与荐福寺古建，游览约 1.5 小时，之后行程顺延 20 分钟即可。</div>
+
+    <div class="time-block">
+      <div class="time">11:00</div>
+      <div class="activity">🛕 <strong>大慈恩寺 · 大雁塔</strong> <a href="https://maps.google.com/?q=Giant+Wild+Goose+Pagoda+Xi'an" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>。陕历博打车约 10 分钟（2km）或地铁3号线小寨→大雁塔 1 站。
+        <div class="bg">🏺 <strong>背景</strong>：大慈恩寺是唐高宗为太子时为追念母亲所建，玄奘法师自天竺取经归来后在此住持译经 11 年，并亲自主持修建大雁塔存放经卷，塔因此成为佛教东传与丝绸之路的标志。</div>
+        <img class="attraction-img" src="images/goose.jpg" alt="大慈恩寺大雁塔">
+        <div class="attraction-img-caption">📷 中轴线上望大雁塔，方正对称、气象庄严（图源携程景点相册）</div>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：08:30–18:00（3/1–10/14，17:00 停止售票入园）</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：入寺 ¥10，登塔需另购门票（以现场公示为准）；重点看玄奘三藏院与一层塔门石刻，登塔可南望终南山。时间控制在 1 小时内。</small>
+        <br><small style="color:#888;">🚕 打车约 10 分钟到翠华路午餐</small>
+      </div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">12:05</div>
+      <div class="activity">🍔 <strong>午餐：子午路张记肉夹馍（翠华路总店）</strong>——"三秦套餐"：腊汁肉夹馍（点肥瘦）+ 秦镇米皮 + 冰峰汽水，人均 ¥25，15 分钟解决战斗。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">12:50</div>
+      <div class="activity">🚇 打车/地铁回酒店取行李（约 25 分钟）。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">13:25</div>
+      <div class="activity">🚄 出发前往<strong>西安北站</strong> <a href="https://maps.google.com/?q=Xi'an+North+Railway+Station" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>：地铁2号线钟楼站直达约 35 分钟、¥5；打车约 30–40 分钟、¥45–55，预留堵车余量。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">14:10</div>
+      <div class="activity">🛂 抵达西安北站，安检、检票（车站大，建议提前 40 分钟到）。</div>
+    </div>
+
+    <div class="time-block">
+      <div class="time">14:57</div>
+      <div class="activity">🚄 <strong>G970 西安北 → 北京西，20:20 到达</strong>，旅程结束。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 酒店推荐 ===== -->
+<section>
+  <h2>🏨 酒店推荐</h2>
+  <p>💰 预算参考：¥190–310/晚（一间大床房，2 人入住）。<strong>两晚住同一家、不换酒店</strong>，位置首选钟鼓楼/南门片区：Day1 所有景点步行可达，去临潼和西安北站都有地铁2号线直达。</p>
+
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">西安璟欣酒店（回民街钟楼地铁站店） <span class="badge">极致性价比</span></div>
+      <div class="price">约 ¥188 / 晚</div>
+      <div class="desc">距钟楼地铁站仅约 110 米、2 分钟步行，双地铁换乘；钟楼舒适型热卖榜第 1，智能客控+影音房，下楼就是钟楼夜景。预算优先选它。<br><a href="https://maps.google.com/?q=%E7%92%9F%E6%A5%BF%E5%9C%B0%E9%93%81%E7%AB%99+%E8%A5%BF%E5%AE%89" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a></div>
+    </div>
+    <div class="place-card">
+      <div class="name">南枫酒店（西安钟鼓楼回民街店） <span class="badge">品质之选</span></div>
+      <div class="price">约 ¥266 / 晚</div>
+      <div class="desc">2025 年新开业 4 钻，评分 4.7，鹅绒床品、智能马桶、新风系统，早餐到 11 点；距地铁6号线桥梓口站约 580 米，步行去回坊和城墙都方便。<strong>本攻略默认推荐这家。</strong></div>
+    </div>
+    <div class="place-card">
+      <div class="name">橙羽橙皓酒店（钟鼓楼永宁门地铁站店） <span class="badge">城墙夜景</span></div>
+      <div class="price">约 ¥293 / 晚</div>
+      <div class="desc">4 钻评分 4.8，部分景观房开窗直面永宁门城墙与灯光秀，提供免费汉服体验，距永宁门地铁站约 280 米，想在房间里看城墙夜景选它。</div>
+    </div>
+    <div class="place-card">
+      <div class="name">西安钟楼饭店 <span class="badge">位置之王</span></div>
+      <div class="price">约 ¥306 / 晚</div>
+      <div class="desc">三十余年老牌 4 钻，距钟楼地铁站不到 100 米，开窗即见钟楼；院内就是中华老字号"西安饭庄"，吃非遗陕菜不用挪窝。<a href="https://maps.google.com/?q=%E8%A5%BF%E5%AE%89%E9%92%9F%E6%A5%BC%E9%A5%AD%E5%BA%97" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a></div>
+    </div>
+  </div>
+  <div class="tip">💡 预订时备注"9月4日约14:00后入住、9月6日13:00左右退房取行李"；周五周六两晚价格会浮动，锁定可退改房型尽早订。</div>
+</section>
+
+<!-- ===== 餐饮推荐 ===== -->
+<section>
+  <h2>🍽️ 餐饮深度指南</h2>
+  <div class="tip">💡 西安吃饭的底层逻辑：<strong>早餐碳水（肉夹馍/胡辣汤）、午餐面食或泡馍、晚餐正经陕菜</strong>；回坊吃味道往支巷钻，主街只适合看热闹。</div>
+
+  <div class="card-grid">
+    <div class="place-card">
+      <div class="name">同盛祥（钟楼店） <span class="badge">非遗泡馍</span></div>
+      <div class="price">人均 ¥30–50</div>
+      <div class="desc">
+        <strong>文化</strong>：创建于 1920 年的中华老字号，牛羊肉泡馍制作技艺是国家级非物质文化遗产，西大街5号近钟楼。<br>
+        <strong>点单逻辑</strong>：点"优质牛肉泡馍"，自己动手掰馍——<strong>掰成黄豆粒大小最入味</strong>，新手留 20 分钟；赶时间可选机切但口感略逊。<br>
+        <strong>味道</strong>：汤浓肉烂、馍粒吸满肉汤，配糖蒜和辣酱交替吃解腻。饭点排队久，错峰前往，无需预订。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">果渊斋老米家泡馍（北广济街）/ 一真楼（大皮院） <span class="badge">本地老店</span></div>
+      <div class="price">人均 ¥30–45</div>
+      <div class="desc">
+        <strong>文化</strong>：回坊巷子里本地人认的泡馍，不靠门面靠汤头。<br>
+        <strong>点单逻辑</strong>：老米家<strong>只开早午市、约15:00收摊</strong>，想吃头汤得赶早；一真楼营业到 21:00，行程更友好。<br>
+        <strong>味道</strong>：老米家汤清味醇、肉烂不膻；一真楼肉片大、香料轻，第一次吃泡馍怕膻选它。认准全称，主街有山寨同名店。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">秦豫肉夹馍（骡马市总店） <span class="badge">舌尖同款</span></div>
+      <div class="price">人均 ¥15–20</div>
+      <div class="desc">
+        <strong>文化</strong>：《舌尖上的中国》取景地，兴正元广场骡马市步行街，<strong>只做早午餐 07:00–14:00</strong>。<br>
+        <strong>点单逻辑</strong>：一定点"<strong>肥瘦</strong>"——腊汁肉要带点肥才润，纯瘦反而发柴；配一碗粉丝羊血或凉皮。<br>
+        <strong>味道</strong>：白吉馍现打、铁圈虎背菊花心，外皮酥脆掉渣，腊汁肉酥烂流油。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">子午路张记肉夹馍（翠华路总店） <span class="badge">稳定之选</span></div>
+      <div class="price">人均 ¥20–30</div>
+      <div class="desc">
+        <strong>文化</strong>：本地人公认的连锁品质标杆，距大雁塔约 1km，<strong>06:00–24:00 营业</strong>，正好接住 Day3 午餐。<br>
+        <strong>点单逻辑</strong>：肉夹馍+凉皮+冰峰汽水，就是西安人说的"三秦套餐"，扫码点单免排队。<br>
+        <strong>味道</strong>：馍烤得外脆内软，腊汁肉卤香厚重，冰峰是橙味老汽水、甜度刚好解腻。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">爱骅裤带面馆（钟楼小区总店） <span class="badge">一碗封神</span></div>
+      <div class="price">人均 ¥15–25</div>
+      <div class="desc">
+        <strong>文化</strong>：竹笆市街49号钟楼小区内，开了 20 年的面馆，碗比脸大、面宽如裤带（biangbiang 面的俗称）。<br>
+        <strong>点单逻辑</strong>：点"<strong>三合一</strong>"（肉臊子+西红柿鸡蛋+油泼辣子），11:00 前或 14:00 后错峰，饭点排队半小时起。<br>
+        <strong>味道</strong>：现扯宽面筋道弹牙，一勺热油浇在辣子上"滋啦"激香，拌匀后酸辣油香俱全。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">长安大牌档（南大街店 / 大悦城店） <span class="badge">陕菜集合</span></div>
+      <div class="price">人均 ¥70–100</div>
+      <div class="desc">
+        <strong>文化</strong>：盛唐风情装修，一站式尝遍关中小吃与陕菜大菜，适合游客"一顿吃全"。南大街店周五六营业到 22:00，电话 029-81770066；大悦城店在大雁塔旁，电话 029-65658866。<br>
+        <strong>点单逻辑</strong>：⚠️ <strong>周末晚高峰必等位，提前线上取号；包厢提前 1–3 天电话订</strong>。葫芦鸡、毛笔酥、妃子笑、关中六小碗、西府一口香照着点。<br>
+        <strong>味道</strong>：葫芦鸡先煮后蒸再炸，外酥里嫩一撕脱骨，是陕西十大名菜之首；毛笔酥是造型甜点，适合拍照。
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="name">西安饭庄·非遗陕菜（钟楼店） <span class="badge">百年老字号</span></div>
+      <div class="price">人均 ¥80–120</div>
+      <div class="desc">
+        <strong>文化</strong>：90 余年历史，南大街110号钟楼饭店1楼，"陕菜之乡"的门面，周总理曾用它的菜宴请外宾。<br>
+        <strong>点单逻辑</strong>：营业 11:00–14:00 / 17:00–21:00（午间休息别跑空），建议电话预订 029-87680880。<br>
+        <strong>味道</strong>：招牌葫芦鸡、金线油塔（千层油卷蘸料吃）、金奖锅贴、黄桂稠酒（微甜米酒，冰镇最佳）。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 交通订票指南 ===== -->
+<section>
+  <h2>🚆 交通订票指南</h2>
+
+  <h3>返程高铁（9月6日 周日）</h3>
+  <div class="info">ℹ️ 订票平台：铁路 12306 App / 官网，车票提前 15 天开售（已开售），周日为返程高峰，<strong>今天就可以下单或挂候补</strong>。</div>
+
+  <h4>订票步骤</h4>
+  <ol class="steps">
+    <li>12306 App 选 9月6日、西安北→北京西，按下方时刻筛选 14:00–16:30 车次</li>
+    <li>主选 G970（14:57）；若二等座显示候补，直接提交候补并同时锁定备选 G3932</li>
+    <li>两个乘车人证件信息提前维护好，候补订单最晚在发车前一天关注兑现结果；若两张票无法连座，上车后与邻座协商调换即可</li>
+  </ol>
+
+  <h3>备选班次对比（9月6日 西安北 → 北京方向）</h3>
+  <table>
+    <tr><th>车次</th><th>时刻</th><th>历时</th><th>终到</th><th>二等座</th><th>备注</th></tr>
+    <tr><td><strong>G970（主选）</strong></td><td>14:57 → 20:20</td><td>5h23m</td><td>北京西</td><td>¥525（查询时需候补，一等¥840有余票）</td><td>最接近15:00，上午行程完整</td></tr>
+    <tr><td>G1308</td><td>14:11 → 20:22</td><td>6h11m</td><td>北京丰台</td><td>¥522（余票充足）</td><td>到丰台、最慢，仅作保底</td></tr>
+    <tr><td><strong>G3932（备选）</strong></td><td>16:01 → 21:16</td><td>5h15m</td><td>北京西</td><td>¥525（查询时有余票）</td><td>晚1小时出发，上午可更从容</td></tr>
+    <tr><td>G362</td><td>16:10 → 20:45</td><td>4h35m</td><td>北京西</td><td>¥577.5（需候补）</td><td>全程最快，候补成功率不确定</td></tr>
+  </table>
+  <p style="font-size:12px;color:#999;">余票与价格为 2026-09-03 查询结果，实时变动，以 12306 下单时为准。</p>
+
+  <h3>市内与临潼交通速查</h3>
+  <table>
+    <tr><th>路线</th><th>推荐方式</th><th>耗时</th><th>费用</th></tr>
+    <tr><td>西安北站 → 钟鼓楼酒店</td><td>地铁2号线直达（钟楼站）</td><td>约35分钟</td><td>¥5/人；打车¥45–55</td></tr>
+    <tr><td>酒店 → 兵马俑</td><td>打车走连霍高速（推荐）</td><td>40–50分钟</td><td>约¥110–130+高速费¥15</td></tr>
+    <tr><td>酒店 → 兵马俑（省钱）</td><td>地铁1号线→纺织城换9号线→秦陵西D口打车4km</td><td>约1.5小时</td><td>约¥12/人</td></tr>
+    <tr><td>兵马俑 → 华清宫</td><td>打车（9.5km）</td><td>15–20分钟</td><td>约¥20–25</td></tr>
+    <tr><td>华清宫 → 市区</td><td>地铁9号线华清池站→纺织城换1号线</td><td>约1小时</td><td>约¥7/人</td></tr>
+    <tr><td>陕历博 → 大慈恩寺</td><td>地铁3号线1站 / 打车2km</td><td>10分钟</td><td>¥3 / 约¥10</td></tr>
+    <tr><td>钟鼓楼 → 西安北站</td><td>地铁2号线直达</td><td>约35分钟</td><td>¥5/人；打车¥45–55</td></tr>
+  </table>
+</section>
+
+<!-- ===== 预算汇总 ===== -->
+<section>
+  <h2>💰 人均预算汇总</h2>
+  <div class="tip">💡 以下为 2 人同行、住一间房的<strong>人均预估</strong>，不含 9月4日去程交通（自理）；未计入可选的《长恨歌》演出（约¥300+）与骊山索道（¥60）。</div>
+  <table>
+    <tr><th>类别</th><th>人均参考价</th><th>说明</th></tr>
+    <tr><td>返程高铁</td><td>¥525</td><td>G970 二等座（候补）/ 备选 G3932 同价</td></tr>
+    <tr><td>酒店住宿（2晚）</td><td>¥266</td><td>南枫酒店约¥266/晚 × 2晚 ÷ 2人</td></tr>
+    <tr><td>景点门票</td><td>¥371</td><td>兵马俑120 + 华清宫108 + 城墙53 + 钟鼓楼联票50 + 大慈恩寺10 + 登塔约30；陕历博/大唐不夜城/回坊免费</td></tr>
+    <tr><td>餐饮（3天）</td><td>¥300</td><td>含1顿长安大牌档/陕菜正餐 + 日常泡馍面食小吃</td></tr>
+    <tr><td>市内交通/打车</td><td>¥120</td><td>兵马俑往返打车分摊 + 地铁 + 其余短途打车</td></tr>
+    <tr><td><strong>合计（不含去程）</strong></td><td><strong>约 ¥1,580/人</strong></td><td>若选一等座返程则再加约 ¥315/人；看《长恨歌》再加约 ¥300+</td></tr>
+  </table>
+</section>
+
+<!-- ===== 实用信息 ===== -->
+<section>
+  <h2>💡 实用信息</h2>
+
+  <h3>天气与穿着</h3>
+  <ul>
+    <li>9月4–6日西安以晴为主：白天最高 32–35℃，早晚 21–23℃，昼夜温差约 10℃</li>
+    <li>白天防晒（遮阳帽/墨镜/防晒霜）、及时补水，兵马俑一号坑展厅内闷热；早晚备一件薄外套</li>
+    <li>全程步行量大（Day1 约1.2万步、Day2 约1.5万步），务必穿软底运动鞋</li>
+  </ul>
+
+  <h3>预约与证件</h3>
+  <ul>
+    <li><strong>身份证原件全程随身</strong>：兵马俑、陕历博、城墙均刷身份证入园，没带证寸步难行</li>
+    <li>兵马俑：提前 7 天"秦始皇帝陵博物院"公众号预约（周六场最紧）</li>
+    <li>陕历博：提前 5 天（含当天）17:00 放票，"陕西历史博物馆"公众号，定 16:55 的闹钟</li>
+    <li>城墙/华清宫/钟鼓楼/大慈恩寺：公众号或携程随买随用，旺季建议提前一天买好</li>
+  </ul>
+
+  <h3>地铁与支付</h3>
+  <ul>
+    <li>西安地铁已开通 1/2/3/4/6/9/14 号线等，支付宝/微信搜"西安地铁"领乘车码，刷码进站</li>
+    <li>关键线路：2 号线纵贯南北（北客站—钟楼—永宁门—小寨）；9 号线直达临潼华清池/秦陵西</li>
+    <li>全城移动支付无障碍，备少量现金即可（¥200 以内零钱应急）</li>
+  </ul>
+
+  <h3>🚕 打车完全指南（滴滴出行 / 高德打车）</h3>
+  <div class="info">西安打车用 <strong>滴滴出行</strong>或<strong>高德打车</strong>，车源充足、明码计价，两个 App 可同时叫车比价；不要坐景区门口主动拉客的"黑车/黑导"。</div>
+  <h4>📲 出发前准备</h4>
+  <ol class="steps">
+    <li><strong>iOS/安卓</strong>：国内应用商店直接下载"滴滴出行""高德地图"，用 +86 手机号登录即可</li>
+    <li>提前绑定微信/支付宝免密支付，下车自动扣款免找零</li>
+    <li>临潼返程如遇景区门口叫车排队，向前走到大马路边或步行到秦陵西/华清池地铁站更稳妥</li>
+  </ol>
+  <h4>💰 本行程打车费用参考</h4>
+  <table>
+    <tr><th>路线</th><th>距离</th><th>约费用</th></tr>
+    <tr><td>西安北站 → 钟鼓楼酒店</td><td>约 16km</td><td>¥45–55</td></tr>
+    <tr><td>钟鼓楼 → 兵马俑（走高速）</td><td>约 40km</td><td>¥110–130 + 高速费约¥15</td></tr>
+    <tr><td>兵马俑 → 华清宫</td><td>约 9.5km</td><td>¥20–25</td></tr>
+    <tr><td>陕历博 → 大慈恩寺</td><td>约 2km</td><td>¥10 左右</td></tr>
+    <tr><td>钟鼓楼 → 西安北站</td><td>约 16km</td><td>¥45–55</td></tr>
+  </table>
+  <h4>⚠️ 注意事项</h4>
+  <ul>
+    <li><strong>核对照牌</strong>：上车前核对 App 车牌，不坐揽客私家车</li>
+    <li><strong>兵马俑防坑</strong>：只在博物院北门官方入口进；门口"导游"说"一号坑今天关闭、先去别的点"一律是骗局</li>
+    <li><strong>回坊防坑</strong>：主街大店价格偏高，往大皮院、北广济街支巷走；看清菜单价格再点</li>
+    <li><strong>9号线别下错站</strong>：华清池站对应华清宫，去兵马俑要坐到秦陵西站再打车</li>
+  </ul>
+</section>
+
+<!-- ===== 出行准备清单 ===== -->
+<section>
+  <h2>✅ 出行前准备清单</h2>
+
+  <h3>📋 必做事项（按时间倒排）</h3>
+  <ul class="checklist">
+    <li><strong>今天（9/3）</strong>：12306 下单/候补 9月6日 G970（14:57）返程票，同时备选 G3932</li>
+    <li><strong>立即预约</strong>："秦始皇帝陵博物院"公众号约 9月5日兵马俑门票（提前7天放票、已开售，¥120/人 ×2，周六场紧张）</li>
+    <li><strong>立即抢票</strong>：9月6日陕历博免费票已于 9/2 17:00 起放出（提前5天17:00放票），现在就上"陕西历史博物馆"公众号约，约不到就每天17:00捡漏退票</li>
+    <li>预订钟鼓楼片区酒店 2 晚（9/4–9/6），选可免费取消房型</li>
+    <li>线上买好城墙、华清宫、钟鼓楼联票、大慈恩寺门票（或出发前一天买）</li>
+    <li>长安大牌档如确定去，提前 1–3 天电话订位或当天 17:30 线上取号</li>
+  </ul>
+
+  <h3>🎒 行李建议</h3>
+  <ul class="checklist">
+    <li>身份证（最重要！所有预约刷证）</li>
+    <li>防晒霜、遮阳帽、墨镜（白天35℃）</li>
+    <li>薄外套（早晚21℃，高铁上空调也凉）</li>
+    <li>软底运动鞋（3天约4万步）</li>
+    <li>充电宝、饮用水（兵马俑展厅内耗时长）</li>
+    <li>少量零食（兵马俑景区午餐选择一般）</li>
+    <li>常用药：肠胃药、创可贴、防暑藿香正气水</li>
+  </ul>
+</section>
+
+<!-- ===== 决策记录 ===== -->
+<section>
+  <h2>📝 行程决策记录</h2>
+  <p style="font-size:13px;color:#888;margin-bottom:14px;">规划过程中的取舍，方便日后调整。</p>
+  <table>
+    <tr><th>决策点</th><th>选择</th><th>放弃的方案与原因</th></tr>
+    <tr><td>住宿片区</td><td>✅ 钟鼓楼/南门连住2晚</td><td>不选大雁塔片区：Day1 景点全在老城，且2号线去北站最顺</td></tr>
+    <tr><td>兵马俑交通</td><td>✅ 打车直达（2人分摊只比地铁贵几十元）</td><td>地铁全程1.5小时，早高峰耗体力；游5路2026年8月底刚改线、且假车多</td></tr>
+    <tr><td>兵马俑+华清宫顺序</td><td>✅ 上午兵马俑（开门场）→ 下午华清宫</td><td>反过来会在10点团队高峰撞上一号坑人流；华清宫下午光线也更柔和</td></tr>
+    <tr><td>丽山园</td><td>➖ 本次放弃（通票免费含）</td><td>再加1.5小时会挤压华清宫；二刷兵马俑时可专门看</td></tr>
+    <tr><td>《长恨歌》vs 大唐不夜城</td><td>✅ 默认大唐不夜城（免费、离酒店近）</td><td>长恨歌口碑极高但看完21:30、门票¥300+，列为可选B方案</td></tr>
+    <tr><td>返程车次</td><td>✅ G970 14:57（最贴近15点）</td><td>G362最快但16:10出发且需候补；G1308到北京丰台且最慢</td></tr>
+    <tr><td>华山/乾陵</td><td>❌ 不安排</td><td>华山需完整1天、乾陵法门寺在西线，2.5天行程不贪多</td></tr>
+  </table>
+</section>
+
+<footer>
+  本攻略由 AI 辅助规划 · 最后更新 2026-09-03 · 数据来源：携程问道（车次/门票/酒店实时查询）+ 景区官方开放信息
+</footer>
+
+</div>
+</body>
+</html>
