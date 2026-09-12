@@ -1,0 +1,686 @@
+{
+ "barrel-oak": {
+  "name": "Barrel Oak, The Irish Pub",
+  "addr": "Av. des Alpes 37, 1820 Montreux, Switzerland",
+  "rating": 4.2,
+  "reviews": 1271,
+  "phone": "+41 21 961 16 81",
+  "web": "http://www.barrel-oak.com/",
+  "maps": "https://maps.google.com/?cid=13055217213920218929&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:00 AM – 1:00 AM",
+   "Tuesday: 11:00 AM – 1:00 AM",
+   "Wednesday: 11:00 AM – 1:00 AM",
+   "Thursday: 11:00 AM – 1:00 AM",
+   "Friday: 11:00 AM – 2:00 AM",
+   "Saturday: 12:00 PM – 2:00 AM",
+   "Sunday: 12:00 PM – 1:00 AM"
+  ]
+ },
+ "le-safran": {
+  "name": "Safran",
+  "addr": "Grand' Rue 81, 1820 Montreux, Switzerland",
+  "rating": 4.7,
+  "reviews": 4100,
+  "phone": "+41 21 966 22 30",
+  "web": "https://www.mona-montreux.ch/fr/eat/",
+  "maps": "https://maps.google.com/?cid=15433827934339833355&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": null
+ },
+ "whymper": {
+  "name": "Whymper Stube",
+  "addr": "Bahnhofstrasse 80, 3920 Zermatt, Switzerland",
+  "rating": 4.4,
+  "reviews": 1165,
+  "phone": "+41 27 967 22 96",
+  "web": "https://www.monterosazermatt.ch/restaurants-bars/whymper-stube/",
+  "maps": "https://maps.google.com/?cid=9012873238237400537&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 12:00 – 9:30 PM",
+   "Tuesday: 12:00 – 9:30 PM",
+   "Wednesday: 12:00 – 9:30 PM",
+   "Thursday: 12:00 – 9:30 PM",
+   "Friday: 12:00 – 9:30 PM",
+   "Saturday: 12:00 – 9:30 PM",
+   "Sunday: 12:00 – 9:30 PM"
+  ]
+ },
+ "schaeferstube": {
+  "name": "Restaurant Schäferstube",
+  "addr": "Riedstrasse 2, 3920 Zermatt, Switzerland",
+  "rating": 4.6,
+  "reviews": 1244,
+  "phone": "+41 27 966 76 00",
+  "web": "https://www.julen.ch/de/restaurant-schaeferstube/",
+  "maps": "https://maps.google.com/?cid=7062962787736423438&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 – 10:00 PM",
+   "Tuesday: 6:00 – 10:00 PM",
+   "Wednesday: 6:00 – 10:00 PM",
+   "Thursday: 6:00 – 10:00 PM",
+   "Friday: 6:00 – 10:00 PM",
+   "Saturday: 6:00 – 10:00 PM",
+   "Sunday: 6:00 – 10:00 PM"
+  ]
+ },
+ "kulm3100": {
+  "name": "3100 Kulmhotel Gornergrat",
+  "addr": "Gornergrat 3100 m, 3100 Gornergrat, 3920 Zermatt, Switzerland",
+  "rating": 4.6,
+  "reviews": 1102,
+  "phone": "+41 27 966 64 00",
+  "web": "https://www.gornergrat-kulm.ch/",
+  "maps": "https://maps.google.com/?cid=8784082401650997797&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": null
+ },
+ "migros-spiez": {
+  "name": "Migros Restaurant - Spiez - Terminus",
+  "addr": "Bahnhofstrasse, 3700 Spiez, Switzerland",
+  "rating": 4.3,
+  "reviews": 568,
+  "phone": "+41 58 567 11 00",
+  "web": "https://filialen.migros.ch/de/migros-restaurant-spiez-terminus",
+  "maps": "https://maps.google.com/?cid=8770441865576376769&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 7:00 PM",
+   "Tuesday: 8:00 AM – 7:00 PM",
+   "Wednesday: 8:00 AM – 7:00 PM",
+   "Thursday: 8:00 AM – 7:00 PM",
+   "Friday: 8:00 AM – 8:00 PM",
+   "Saturday: 7:30 AM – 5:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "krone-spiez": {
+  "name": "Restaurant Krone Spiez",
+  "addr": "Seestrasse 28, 3700 Spiez, Switzerland",
+  "rating": 4.4,
+  "reviews": 557,
+  "phone": "+41 33 655 02 26",
+  "web": "http://www.krone-spiez.ch/",
+  "maps": "https://maps.google.com/?cid=16774251526396304069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Tuesday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Wednesday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Thursday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Friday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Saturday: 11:30 AM – 3:00 PM, 5:30 – 10:30 PM",
+   "Sunday: 11:30 AM – 8:30 PM"
+  ]
+ },
+ "mia-spiez": {
+  "name": "Mia Osteria & Pizzeria",
+  "addr": "4 & 6, Thunstrasse 6, 3700 Spiez, Switzerland",
+  "rating": 4.6,
+  "reviews": 289,
+  "phone": "+41 33 525 06 10",
+  "web": "http://www.mia-osteria.ch/",
+  "maps": "https://maps.google.com/?cid=16210932449421802123&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: Closed",
+   "Wednesday: 11:30 AM – 1:30 PM, 5:30 – 10:00 PM",
+   "Thursday: 11:30 AM – 1:30 PM, 5:30 – 10:00 PM",
+   "Friday: 11:30 AM – 1:30 PM, 5:30 – 10:00 PM",
+   "Saturday: 5:30 – 10:00 PM",
+   "Sunday: 2:00 – 9:00 PM"
+  ]
+ },
+ "baeren": {
+  "name": "Alpenkräuter Hotel Bären",
+  "addr": "Am Acher 1363, 3823 Wengen BE, Switzerland",
+  "rating": 4.8,
+  "reviews": 537,
+  "phone": "+41 33 855 14 19",
+  "web": "http://www.baeren-wengen.ch/restaurant",
+  "maps": "https://maps.google.com/?cid=2156095994186987195&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 – 9:30 PM",
+   "Tuesday: 6:00 – 9:30 PM",
+   "Wednesday: 6:00 – 9:30 PM",
+   "Thursday: 6:00 – 9:30 PM",
+   "Friday: 6:00 – 9:30 PM",
+   "Saturday: 6:00 – 9:30 PM",
+   "Sunday: 6:00 – 9:30 PM"
+  ]
+ },
+ "r1903": {
+  "name": "Restaurant 1903",
+  "addr": "Auf der Burg 1401c, 3823 Wengen BE, Switzerland",
+  "rating": 4.1,
+  "reviews": 71,
+  "phone": "+41 33 855 34 22",
+  "web": "https://hotel-schoenegg.ch/restaurant-1903/",
+  "maps": "https://maps.google.com/?cid=6813237359229461252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:00 AM – 9:00 PM",
+   "Tuesday: 7:00 AM – 9:00 PM",
+   "Wednesday: 7:00 AM – 9:00 PM",
+   "Thursday: 7:00 AM – 9:00 PM",
+   "Friday: 7:00 AM – 9:00 PM",
+   "Saturday: 7:00 AM – 9:00 PM",
+   "Sunday: 7:00 AM – 9:00 PM"
+  ]
+ },
+ "aletsch": {
+  "name": "Self Service Restaurant Aletsch",
+  "addr": "Jungfraujoch, 3801 Jungfraujoch, Switzerland",
+  "rating": 4.2,
+  "reviews": 570,
+  "phone": "+41 33 828 78 88",
+  "web": "https://www.jungfrau.ch/de-ch/essen-trinken/jungfraujoch/self-service-restaurant-aletsch/",
+  "maps": "https://maps.google.com/?cid=6481261910323608700&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 10:15 AM – 3:30 PM",
+   "Tuesday: 10:15 AM – 3:30 PM",
+   "Wednesday: 10:15 AM – 3:30 PM",
+   "Thursday: 10:15 AM – 3:30 PM",
+   "Friday: 10:15 AM – 3:30 PM",
+   "Saturday: 10:15 AM – 3:30 PM",
+   "Sunday: 10:15 AM – 3:30 PM"
+  ]
+ },
+ "bollywood": {
+  "name": "Restaurant Bollywood",
+  "addr": "Jungfraujoch, 3801 Lauterbrunnen, Switzerland",
+  "rating": 3.9,
+  "reviews": 285,
+  "phone": "+41 33 828 78 88",
+  "web": "https://www.jungfrau.ch/de-ch/essen-trinken/jungfraujoch/self-service-restaurant-bollywood/",
+  "maps": "https://maps.google.com/?cid=17017261531021999769&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": null
+ },
+ "crystal": {
+  "name": "Restaurant Crystal",
+  "addr": "Jungfraujoch, 3801 Fieschertal, Switzerland",
+  "rating": 4.6,
+  "reviews": 846,
+  "phone": "+41 33 828 78 88",
+  "web": "https://www.jungfrau.ch/de-ch/essen-trinken/jungfraujoch/restaurant-crystal/",
+  "maps": "https://maps.google.com/?cid=8528728893151818551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:00 AM – 2:30 PM",
+   "Tuesday: 11:00 AM – 2:30 PM",
+   "Wednesday: 11:00 AM – 2:30 PM",
+   "Thursday: 11:00 AM – 2:30 PM",
+   "Friday: 11:00 AM – 2:30 PM",
+   "Saturday: 11:00 AM – 2:30 PM",
+   "Sunday: 11:00 AM – 2:30 PM"
+  ]
+ },
+ "dasina": {
+  "name": "Ristorante Da Sina",
+  "addr": "Im Gruebi, 3823 Wengen BE, Switzerland",
+  "rating": 4.1,
+  "reviews": 1031,
+  "phone": "+41 33 855 31 72",
+  "web": "https://www.dasina.ch/",
+  "maps": "https://maps.google.com/?cid=3800443294792397985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 10:00 PM",
+   "Tuesday: 11:30 AM – 10:00 PM",
+   "Wednesday: 11:30 AM – 10:00 PM",
+   "Thursday: 11:30 AM – 10:00 PM",
+   "Friday: 11:30 AM – 10:00 PM",
+   "Saturday: 11:30 AM – 10:00 PM",
+   "Sunday: 11:30 AM – 10:00 PM"
+  ]
+ },
+ "caprice": {
+  "name": "Maya Caprice Boutique Hotel & Spa",
+  "addr": "Schonegg 1333d, 3823 Wengen BE, Switzerland",
+  "rating": 4.5,
+  "reviews": 266,
+  "phone": "+41 33 856 06 06",
+  "web": "https://www.mayacaprice.ch/",
+  "maps": "https://maps.google.com/?cid=15737304456638044400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:00 AM – 11:00 PM",
+   "Tuesday: 7:00 AM – 11:00 PM",
+   "Wednesday: 7:00 AM – 11:00 PM",
+   "Thursday: 7:00 AM – 11:00 PM",
+   "Friday: 7:00 AM – 11:00 PM",
+   "Saturday: 7:00 AM – 11:00 PM",
+   "Sunday: 7:00 AM – 11:00 PM"
+  ]
+ },
+ "chezmeyers": {
+  "name": "Chez Meyer's",
+  "addr": "Schonegg Zentrum, 3823 Wengen, Switzerland",
+  "rating": 4.3,
+  "reviews": 40,
+  "phone": "+41 33 856 58 58",
+  "web": "https://www.hotelregina.ch/de/hotel-mit-restaurant-schweiz/chez-meyers",
+  "maps": "https://maps.google.com/?cid=8776357434661522684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: Closed",
+   "Wednesday: 7:00 – 10:00 PM",
+   "Thursday: 7:00 – 10:00 PM",
+   "Friday: 7:00 – 10:00 PM",
+   "Saturday: 7:00 – 10:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "tham": {
+  "name": "Tham Restaurant",
+  "addr": "Rouft 1067, 3825 Mürren, Switzerland",
+  "rating": 4.5,
+  "reviews": 760,
+  "phone": "+41 33 856 01 10",
+  "maps": "https://maps.google.com/?cid=3093293777523513519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Tuesday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Wednesday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Thursday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Friday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Saturday: 12:00 – 3:00 PM, 5:30 – 8:30 PM",
+   "Sunday: 12:00 – 3:00 PM, 5:30 – 8:30 PM"
+  ]
+ },
+ "staeger": {
+  "name": "Restaurant Stägerstübli GmbH",
+  "addr": "Auf den Platten 1039C, 3825 Mürren, Switzerland",
+  "rating": 4.3,
+  "reviews": 824,
+  "phone": "+41 33 855 13 16",
+  "web": "http://www.staegerstuebli.ch/",
+  "maps": "https://maps.google.com/?cid=12965428775278645137&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:00 AM – 10:00 PM",
+   "Tuesday: Closed",
+   "Wednesday: Closed",
+   "Thursday: 11:00 AM – 10:00 PM",
+   "Friday: 11:00 AM – 10:00 PM",
+   "Saturday: 11:00 AM – 10:00 PM",
+   "Sunday: 11:00 AM – 10:00 PM"
+  ]
+ },
+ "eigergh": {
+  "name": "Eiger Guesthouse Mürren",
+  "addr": "Ägerten 1079E, 3825 Mürren, Switzerland",
+  "rating": 4.6,
+  "reviews": 536,
+  "phone": "+41 33 856 54 60",
+  "web": "https://www.eigerguesthouse.com/",
+  "maps": "https://maps.google.com/?cid=1828929016554697991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:30 AM – 11:30 PM",
+   "Tuesday: 7:30 AM – 11:30 PM",
+   "Wednesday: 7:30 AM – 11:30 PM",
+   "Thursday: 7:30 AM – 11:30 PM",
+   "Friday: 7:30 AM – 11:30 PM",
+   "Saturday: 7:30 AM – 11:30 PM",
+   "Sunday: 7:30 AM – 11:30 PM"
+  ]
+ },
+ "galliker": {
+  "name": "Wirtshaus Galliker",
+  "addr": "Schützenstrasse 1, 6003 Luzern, Switzerland",
+  "rating": 4.3,
+  "reviews": 302,
+  "phone": "+41 41 240 10 02",
+  "web": "https://wirtshaus-galliker.ch/",
+  "maps": "https://maps.google.com/?cid=16666803662814889640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: 11:15 AM – 2:30 PM, 6:00 PM – 12:30 AM",
+   "Wednesday: 11:15 AM – 2:30 PM, 6:00 PM – 12:30 AM",
+   "Thursday: 11:15 AM – 2:30 PM, 6:00 PM – 12:30 AM",
+   "Friday: 11:15 AM – 2:30 PM, 6:00 PM – 12:30 AM",
+   "Saturday: 11:15 AM – 2:30 PM, 6:00 PM – 12:30 AM",
+   "Sunday: Closed"
+  ]
+ },
+ "bolero": {
+  "name": "Bolero",
+  "addr": "Bundespl. 18, 6003 Luzern, Switzerland",
+  "rating": 4.6,
+  "reviews": 2239,
+  "phone": "+41 41 226 80 80",
+  "web": "https://www.bolero-luzern.ch/?utm_source=google",
+  "maps": "https://maps.google.com/?cid=1624863016067882544&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 2:00 PM, 5:30 – 11:00 PM",
+   "Tuesday: 11:30 AM – 2:00 PM, 5:30 – 11:00 PM",
+   "Wednesday: 11:30 AM – 2:00 PM, 5:30 – 11:00 PM",
+   "Thursday: 11:30 AM – 2:00 PM, 5:30 – 11:00 PM",
+   "Friday: 11:30 AM – 2:00 PM, 5:30 – 11:30 PM",
+   "Saturday: 11:30 AM – 11:30 PM",
+   "Sunday: 11:30 AM – 10:30 PM"
+  ]
+ },
+ "sternen": {
+  "name": "Sternen Grill + Sternen Grill Restaurant im oberen Stock.",
+  "addr": "Theaterstrasse 22, 8001 Zürich, Switzerland",
+  "rating": 4.4,
+  "reviews": 5696,
+  "phone": "+41 43 268 20 80",
+  "web": "http://www.sternengrill.ch/",
+  "maps": "https://maps.google.com/?cid=713698209979259651&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 10:30 AM – 11:00 PM",
+   "Tuesday: 10:30 AM – 11:30 PM",
+   "Wednesday: 10:30 AM – 11:30 PM",
+   "Thursday: 10:30 AM – 11:30 PM",
+   "Friday: 10:30 AM – 11:30 PM",
+   "Saturday: 10:30 AM – 11:30 PM",
+   "Sunday: 10:30 AM – 11:00 PM"
+  ]
+ },
+ "zeughaus": {
+  "name": "Zeughauskeller",
+  "addr": "Bahnhofstrasse 28A, 8001 Zürich, Switzerland",
+  "rating": 4.5,
+  "reviews": 14705,
+  "phone": "+41 44 220 15 15",
+  "web": "http://www.zeughauskeller.ch/",
+  "maps": "https://maps.google.com/?cid=15622472877203166342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 11:00 PM",
+   "Tuesday: 11:30 AM – 11:00 PM",
+   "Wednesday: 11:30 AM – 11:00 PM",
+   "Thursday: 11:30 AM – 11:00 PM",
+   "Friday: 11:30 AM – 11:00 PM",
+   "Saturday: 11:30 AM – 11:00 PM",
+   "Sunday: 11:30 AM – 11:00 PM"
+  ]
+ },
+ "swisschuchi": {
+  "name": "Swiss Chuchi Restaurant",
+  "addr": "Rosengasse 10, 8001 Zürich, Switzerland",
+  "rating": 4.3,
+  "reviews": 8139,
+  "phone": "+41 44 266 96 66",
+  "web": "https://hotel-adler.ch/swiss-chuchi-restaurant/",
+  "maps": "https://maps.google.com/?cid=1831317199510827319&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 11:15 PM",
+   "Tuesday: 11:30 AM – 11:15 PM",
+   "Wednesday: 11:30 AM – 11:15 PM",
+   "Thursday: 11:30 AM – 11:15 PM",
+   "Friday: 11:30 AM – 11:15 PM",
+   "Saturday: 12:00 – 11:15 PM",
+   "Sunday: 12:00 – 11:15 PM"
+  ]
+ },
+ "adler-vaduz": {
+  "name": "Adler 1908",
+  "addr": "Herrengasse 2, 9490 Vaduz, Liechtenstein",
+  "rating": 4.5,
+  "reviews": 412,
+  "phone": "+423 232 21 31",
+  "web": "http://www.adler.li/",
+  "maps": "https://maps.google.com/?cid=17615456118035376331&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 9:00 AM – 5:00 PM",
+   "Tuesday: 9:00 AM – 5:00 PM",
+   "Wednesday: 9:00 AM – 5:00 PM",
+   "Thursday: 9:00 AM – 5:00 PM",
+   "Friday: 9:00 AM – 5:00 PM",
+   "Saturday: Closed",
+   "Sunday: Closed"
+  ]
+ },
+ "madeinitaly": {
+  "name": "Made in Italy",
+  "addr": "herrengasse 9, 9490 Vaduz, Liechtenstein",
+  "rating": 4.6,
+  "reviews": 271,
+  "phone": "+423 230 23 45",
+  "web": "http://www.made-in-italy.li/",
+  "maps": "https://maps.google.com/?cid=44084370149928159&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 10:00 AM – 2:00 PM",
+   "Tuesday: 10:00 AM – 2:00 PM",
+   "Wednesday: 10:00 AM – 2:00 PM, 6:00 – 10:00 PM",
+   "Thursday: 10:00 AM – 2:00 PM, 6:00 – 10:00 PM",
+   "Friday: 10:00 AM – 2:00 PM, 6:00 – 10:00 PM",
+   "Saturday: 6:00 – 10:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "torkel": {
+  "name": "Torkel",
+  "addr": "Hintergass 9, 9490 Vaduz, Liechtenstein",
+  "rating": 4.8,
+  "reviews": 296,
+  "phone": "+423 232 44 10",
+  "web": "https://www.torkel.li/",
+  "maps": "https://maps.google.com/?cid=12260872151448884110&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: 12:00 – 1:30 PM, 6:30 – 8:30 PM",
+   "Wednesday: 12:00 – 1:30 PM, 6:30 – 8:30 PM",
+   "Thursday: 12:00 – 1:30 PM, 6:30 – 8:30 PM",
+   "Friday: 12:00 – 1:30 PM, 6:30 – 8:30 PM",
+   "Saturday: 6:30 – 8:30 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "williams": {
+  "name": "Williams ButchersTable am Bellevue - Zürich",
+  "addr": "Schifflände 6, 8001 Zürich, Switzerland",
+  "rating": 4.7,
+  "reviews": 1286,
+  "phone": "+41 44 506 75 06",
+  "web": "http://www.williamsbutcherstable.ch/",
+  "maps": "https://maps.google.com/?cid=7512159732419393639&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Tuesday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Wednesday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Thursday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Friday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Saturday: 11:00 AM – 11:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "thali": {
+  "name": "Thali House",
+  "addr": "Langstrasse 213, 8005 Zürich, Switzerland",
+  "rating": 4.7,
+  "reviews": 3052,
+  "phone": "+41 44 821 67 33",
+  "web": "https://www.th1.ch/",
+  "maps": "https://maps.google.com/?cid=4266929674508657723&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:00 AM – 10:15 PM",
+   "Tuesday: 11:00 AM – 10:15 PM",
+   "Wednesday: 11:00 AM – 10:15 PM",
+   "Thursday: 11:00 AM – 10:15 PM",
+   "Friday: 11:00 AM – 10:15 PM",
+   "Saturday: 11:00 AM – 10:15 PM",
+   "Sunday: 11:00 AM – 10:00 PM"
+  ]
+ },
+ "manzoni": {
+  "name": "Manzoni Bar",
+  "addr": "Schützengasse 15, 8001 Zürich, Switzerland",
+  "rating": 4.1,
+  "reviews": 185,
+  "phone": "+41 44 227 76 29",
+  "web": "http://www.manzonibar.ch/",
+  "maps": "https://maps.google.com/?cid=4073190308052182252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:30 AM – 11:00 PM",
+   "Tuesday: 7:30 AM – 11:00 PM",
+   "Wednesday: 7:30 AM – 11:00 PM",
+   "Thursday: 7:30 AM – 11:00 PM",
+   "Friday: 7:30 AM – 11:00 PM",
+   "Saturday: 7:30 AM – 11:00 PM",
+   "Sunday: 12:00 – 10:30 PM"
+  ]
+ },
+ "fonduebeizli": {
+  "name": "Fondue Beizli \"Neueck\"",
+  "addr": "Brühlgasse 26, 9000 St. Gallen, Switzerland",
+  "rating": 4.7,
+  "reviews": 951,
+  "phone": "+41 71 222 43 44",
+  "web": "http://www.fonduebeizli.ch/",
+  "maps": "https://maps.google.com/?cid=5435175779452617518&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: Closed",
+   "Tuesday: 11:00 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Wednesday: 11:00 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Thursday: 11:00 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Friday: 11:00 AM – 2:00 PM, 5:00 – 11:00 PM",
+   "Saturday: 11:00 AM – 11:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "bistro-sg": {
+  "name": "Bistro St.Gallen",
+  "addr": "Wassergasse 7, 9000 St. Gallen, Switzerland",
+  "rating": 4.5,
+  "reviews": 258,
+  "phone": "+41 71 227 57 77",
+  "web": "http://www.bistro-sg.ch/",
+  "maps": "https://maps.google.com/?cid=12271818299374657806&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:30 AM – 10:00 PM",
+   "Tuesday: 6:30 AM – 10:00 PM",
+   "Wednesday: 6:30 AM – 10:00 PM",
+   "Thursday: 6:30 AM – 10:00 PM",
+   "Friday: 6:30 AM – 10:00 PM",
+   "Saturday: 6:30 AM – 10:00 PM",
+   "Sunday: 6:30 AM – 10:00 PM"
+  ]
+ },
+ "schloessli": {
+  "name": "Castle Worth",
+  "addr": "Rheinfallquai 30, 8212 Neuhausen am Rheinfall, Switzerland",
+  "rating": 4.2,
+  "reviews": 1041,
+  "phone": "+41 52 544 14 00",
+  "web": "https://www.erlebnis-rheinfall.ch/",
+  "maps": "https://maps.google.com/?cid=5151837074348959861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 11:30 AM – 10:30 PM",
+   "Tuesday: 11:30 AM – 10:30 PM",
+   "Wednesday: 11:30 AM – 10:30 PM",
+   "Thursday: 11:30 AM – 10:30 PM",
+   "Friday: 11:30 AM – 10:30 PM",
+   "Saturday: 11:30 AM – 10:30 PM",
+   "Sunday: 11:30 AM – 9:30 PM"
+  ]
+ },
+ "rheinfels": {
+  "name": "Hotel Restaurant Rheinfels",
+  "addr": "Rhigass 8, 8260 Stein am Rhein, Switzerland",
+  "rating": 4.5,
+  "reviews": 466,
+  "phone": "+41 52 741 21 44",
+  "web": "http://www.rheinfels.ch/",
+  "maps": "https://maps.google.com/?cid=17927885580539255694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 9:00 PM",
+   "Tuesday: 8:00 AM – 9:00 PM",
+   "Wednesday: Closed",
+   "Thursday: 8:00 AM – 9:00 PM",
+   "Friday: 8:00 AM – 9:00 PM",
+   "Saturday: 8:00 AM – 9:00 PM",
+   "Sunday: 8:00 AM – 9:00 PM"
+  ]
+ },
+ "hohenklingen": {
+  "name": "Hohenklingen Castle",
+  "addr": "Burg Hohenklingen, 8260 Stein am Rhein, Switzerland",
+  "maps": "https://maps.google.com/?cid=3767349145572272035&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "hours": null
+ },
+ "lipp": {
+  "name": "Brasserie Lipp",
+  "addr": "Confédération Centre, Rue de la Confédération 8, 1204 Genève, Switzerland",
+  "rating": 4.5,
+  "reviews": 4376,
+  "phone": "+41 22 318 80 30",
+  "web": "https://www.brasserie-lipp.com/",
+  "maps": "https://maps.google.com/?cid=18349504053755307351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 1:00 AM",
+   "Tuesday: 8:00 AM – 1:00 AM",
+   "Wednesday: 8:00 AM – 1:00 AM",
+   "Thursday: 8:00 AM – 1:00 AM",
+   "Friday: 8:00 AM – 1:00 AM",
+   "Saturday: 8:00 AM – 1:00 AM",
+   "Sunday: 8:00 AM – 1:00 AM"
+  ]
+ },
+ "ducentre": {
+  "name": "Café du Centre",
+  "addr": "Pl. du Molard 5, 1204 Genève, Switzerland",
+  "rating": 4.1,
+  "reviews": 2773,
+  "phone": "+41 22 311 85 86",
+  "web": "https://cafeducentre.ch/",
+  "maps": "https://maps.google.com/?cid=11210838471911672183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 9:00 AM – 11:00 PM",
+   "Tuesday: 9:00 AM – 11:00 PM",
+   "Wednesday: 9:00 AM – 11:00 PM",
+   "Thursday: 9:00 AM – 11:00 PM",
+   "Friday: 9:00 AM – 11:00 PM",
+   "Saturday: 11:00 AM – 11:00 PM",
+   "Sunday: 11:00 AM – 11:00 PM"
+  ]
+ },
+ "mullers": {
+  "name": "Muller's Factory",
+  "addr": "Pl. du Cirque 4, 1204 Genève, Switzerland",
+  "rating": 4.4,
+  "reviews": 1118,
+  "phone": "+41 22 808 04 44",
+  "web": "https://www.mullersfactory.ch/",
+  "maps": "https://maps.google.com/?cid=16178266002337570953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:30 AM – 9:00 PM",
+   "Tuesday: 8:30 AM – 9:00 PM",
+   "Wednesday: 8:30 AM – 9:00 PM",
+   "Thursday: 8:30 AM – 9:00 PM",
+   "Friday: 8:30 AM – 9:00 PM",
+   "Saturday: 8:30 AM – 9:00 PM",
+   "Sunday: 10:15 AM – 8:00 PM"
+  ]
+ }
+}
