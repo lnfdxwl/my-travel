@@ -46,9 +46,13 @@ function hoursCN(key) {
 }
 
 const mapsUrl = key => (P[key] && P[key].maps) || null;
-const photo = key => (PH[key] && PH[key].uri) || null;
+/* 图片：优先用本地文件（images/）—— 无需梯子、不怕 Google URL 过期；
+   本地不存在时回退到 Google CDN，两种情况页面都能正常渲染 */
+const hasLocal = key => fs.existsSync(path.join(DIR, 'images', `${key}.jpg`));
+const photo = key => hasLocal(key) ? `images/${key}.jpg` : ((PH[key] && PH[key].uri) || null);
 /** 大图：优先用抓取时存的 full，否则改写 Google 图片 URL 的尺寸后缀 */
 const photoFull = key => {
+  if (fs.existsSync(path.join(DIR, 'images', `${key}@2x.jpg`))) return `images/${key}@2x.jpg`;
   const p = PH[key];
   if (!p) return null;
   if (p.full) return p.full;
