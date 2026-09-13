@@ -15,6 +15,7 @@ const path = require('path');
 const DIR = __dirname;
 const P = JSON.parse(fs.readFileSync(path.join(DIR, 'data/places.json'), 'utf8'));
 const PH = JSON.parse(fs.readFileSync(path.join(DIR, 'data/photos.json'), 'utf8'));
+const S = JSON.parse(fs.readFileSync(path.join(DIR, 'data/shops.json'), 'utf8'));
 
 const esc = s => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -88,6 +89,34 @@ const xhsUrl = key => XHS[key]
   : null;
 
 
+
+/** 取某家店在指定星期几的营业时间（dow: 1=周一 … 7=周日） */
+function dayHours(shopKey, dow) {
+  const h = S[shopKey] && S[shopKey].hours;
+  if (!h) return null;
+  const EN = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const row = h.find(x => x.startsWith(EN[dow - 1]));
+  if (!row) return null;
+  const t = row.split(': ').slice(1).join(': ')
+    .replace(/(\d{1,2}):(\d{2})\s*AM/g, (_, a, b) => `${String(+a).padStart(2,'0')}:${b}`)
+    .replace(/(\d{1,2}):(\d{2})\s*PM/g, (_, a, b) => `${(+a % 12) + 12}:${b}`)
+    .replace(/\s*–\s*/g, '–').trim();
+  return /closed/i.test(t) ? '休' : t;
+}
+
+/** 渲染超市条目 */
+function shop(o, dow) {
+  const v = S[o.key] || {};
+  const hrs = dayHours(o.key, dow);
+  const closed = hrs === '休';
+  const name = o.name || v.name || o.key;
+  return `<div class="shop${closed ? ' closed' : ''}">` +
+    `<div class="sname">${v.maps ? `<a href="${esc(v.maps)}" target="_blank" rel="noopener">${esc(name)}</a>` : esc(name)}</div>` +
+    (hrs ? `<div class="shrs">${closed ? '<strong class="warn">当天不营业</strong>' : `当天 ${esc(hrs)}`}</div>` : '') +
+    (o.where ? `<div class="note">${o.where}</div>` : '') +
+    `</div>`;
+}
+
 /** 渲染一个餐厅条目（缩略图 + 名称 + 评分 + 价格 + 标记） */
 function entry(o) {
   if (o.raw) {
@@ -117,45 +146,51 @@ function entry(o) {
 /* ────────────────────────── 编辑内容 ────────────────────────── */
 
 const DAYS = [
-{ d: 1, date: '10/3 周六', route: '日内瓦机场 → 蒙特勒（Territet 站）→ 日内瓦湖滨散步 → 西庸城堡（外观）',
+{ d: 1, dow: 6, date: '10/3 周六', route: '日内瓦机场 → 蒙特勒（Territet 站）→ 日内瓦湖滨散步 → 西庸城堡（外观）',
   meals: [{ meal: '晚餐',
+      shops: [{ key:'sm-montreux', where:'Rue de la Paix 4，火车站步行 5 分钟' }, { key:'sm-montreux-migros', where:'Pl. du Marché 6，湖边市集广场' }],
     rec: [{ key: 'barrel-oak', price: '25–40', tag: '爱尔兰酒吧 · 汉堡/炖肉' }],
     alt: [{ key: 'le-safran', price: '50–70', book: true, tag: '湖景露台 · 地中海菜' },
           { raw: '车站便利店', price: '8–15', tag: 'Coop Pronto / avec' }],
     why: '落地第一晚不折腾。汉堡（配格鲁耶尔芝士+蘑菇）、爱尔兰炖肉、fish &amp; chips 分量足，有 Halal 和素食。<br><strong>注意：Safran 的 Google 评分其实非常高（4.7 / 4100 条），比 Barrel Oak 高不少</strong> —— 只是贵一倍。想第一晚就吃好的，它值这个钱。',
-    note: '机场→蒙特勒火车 <strong>1h15 直达</strong>，每小时 2 班。<br><span class="warn">⚠️ 你在 Territet 下车，两家店都在蒙特勒市区</span>：Barrel Oak 在 Av. des Alpes 37（近火车站），Safran 在 Grand-Rue 81（湖边）。沿湖滨大道走 <strong>20–25 分钟</strong>，正好是行程里的「湖滨散步」，或坐一站火车 3 分钟。<br><span class="warn">⚠️ 周六 Coop 17–18 点已关</span>，买水只能靠车站便利店。' }] },
+    note: '机场→蒙特勒火车 <strong>1h15 直达</strong>，每小时 2 班。<br><span class="warn">⚠️ 你在 Territet 下车，两家店都在蒙特勒市区</span>：Barrel Oak 在 Av. des Alpes 37（近火车站），Safran 在 Grand-Rue 81（湖边）。沿湖滨大道走 <strong>20–25 分钟</strong>，正好是行程里的「湖滨散步」，或坐一站火车 3 分钟。<br><span class="note">✅ 更正：蒙特勒 Coop（Rue de la Paix 4）<strong>周六开到 19:00</strong>，你约 18:30 到，<strong>赶得及但别磨蹭</strong>；Migros（Pl. du Marché 6）开到 19:00。赶不上就走车站便利店。</span>' }] },
 
-{ d: 2, date: '10/4 周日', route: '蒙特勒 → Visp → 采尔马特 → 戈尔内格拉特 3089m 全景台（<strong>Riffelsee 倒影</strong>）→ 采尔马特（日照金山）',
+{ d: 2, dow: 7, date: '10/4 周日', route: '蒙特勒 → Visp → 采尔马特 → 戈尔内格拉特 3089m 全景台（<strong>Riffelsee 倒影</strong>）→ 采尔马特（日照金山）',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-zermatt', where:'Bahnhofplatz 6，<strong>出站正对面</strong>' }],
     rec: [{ raw: '采尔马特主街面包房 / 快餐', price: '15–25', tag: 'Bahnhofstrasse 沿街' }],
     alt: [{ key: 'kulm3100', price: '25–40', tag: '海拔 3100m 山顶自助' }],
     why: '12:30 才到站，吃快的，把时间留给下午山景、把钱留给晚上的火锅。<br>3100 Kulmhotel 是阿尔卑斯最高的酒店，评分 4.6，能边吃边正对马特洪峰 —— 贵一点但不坑。',
-    note: '蒙特勒→Visp→采尔马特 <strong>约 2.5–3h</strong>（Visp 换乘）。餐厅都在车站外主街上，<strong>出站即是</strong>。齿轨火车 Zermatt→Gornergrat <strong>33 分钟</strong>。<br><span class="warn">⚠️ 周日 Coop 全关</span>，原攻略「主街 Coop 买简餐」当天不成立。' },
+    note: '蒙特勒→Visp→采尔马特 <strong>约 2.5–3h</strong>（Visp 换乘）。餐厅都在车站外主街上，<strong>出站即是</strong>。齿轨火车 Zermatt→Gornergrat <strong>33 分钟</strong>。<br><span class="note">✅ 更正：采尔马特 Coop 就在<strong>出站正对面（Bahnhofplatz 6）</strong>，<strong>周日也开 8:00–20:00</strong> —— 原攻略「主街 Coop 买简餐」当天<strong>是成立的</strong>（我之前说关门，查错了）。</span>' },
   { meal: '晚餐',
+    shops: [{ key:'sm-zermatt', where:'买酒水零食回酒店比餐厅便宜一半' }],
     rec: [{ key: 'whymper', price: '35–55', book: true, tag: '🍲 芝士火锅 / 烤芝士' }],
     alt: [{ key: 'schaeferstube', price: '40–65', book: true, tag: '炭烤羊排 · Hotel Julen' }],
     why: '<strong>全程唯一一顿正经芝士火锅就吃这顿。</strong>瓦莱州是 fondue / raclette 的原产地，在采尔马特吃比在苏黎世吃更正宗，<strong>价格反而便宜一截</strong>（苏黎世 Swiss Chuchi 要 50–70）。吃了这顿，后面苏黎世就不用再花这个钱。<br>好消息：Google 显示它<strong>每天 12:00–21:30 营业，周日也开</strong>。',
     note: 'Whymper Stube 在 Bahnhofstrasse 80（Monte Rosa 酒店），<strong>车站步行约 5 分钟</strong>。<br><span class="warn">⚠️ 原攻略推荐的「采尔马特 Hotel Falken」并不存在</span> —— Hotel Falken 在<strong>翁根</strong>（和卢塞恩），采尔马特没有这家店。已替换为真实存在的 Schäferstube（Riedstrasse 2，Hotel Julen 旗下，4.6 分 / 1244 条）。' }] },
 
-{ d: 3, date: '10/5 周一', route: '采尔马特 → Visp → 施皮茨（城堡 + 湖边，行李寄存车站）→ 因特拉肯 → 翁根（住）',
+{ d: 3, dow: 1, date: '10/5 周一', route: '采尔马特 → Visp → 施皮茨（城堡 + 湖边，行李寄存车站）→ 因特拉肯 → 翁根（住）',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-spiez', where:'Oberlandstrasse 6，车站步行 3 分钟' }],
     rec: [{ key: 'migros-spiez', price: '15–25', tag: '车站旁自助餐厅' }],
     alt: [{ key: 'krone-spiez', price: '30–45', tag: '瑞士菜 · 离城堡最近' },
           { key: 'mia-spiez', price: '25–40', tag: '意餐 / 披萨' }],
     why: '寄完行李上楼就吃。<strong>瑞士人自己天天吃的那种自助</strong>，热菜现打、有汤有沙拉，CHF 15–25 管饱。晚上翁根有 Bären 那顿好的，中午没必要再花钱。',
     note: '采尔马特→Visp→施皮茨 <strong>约 1.5h</strong>。<br>Migros 在 Bahnhofstrasse <strong>火车站旁，出站即到</strong>；Krone 在 Seestrasse 28，<strong>离施皮茨城堡约 600m</strong>（几家里最近）；Mia Osteria 在 Thunstrasse 6，约 1km。<br>行李用施皮茨站行李柜（大件约 CHF 9–12）。' },
   { meal: '晚餐',
+    shops: [{ key:'sm-wengen', where:'Wengiboden，村中心' }],
     rec: [{ key: 'baeren', price: '35–55', book: true, verify: true, tag: '翁根村里最高分' }],
     alt: [{ key: 'r1903', price: '40–60', verify: true, tag: '时令菜 + 山景' },
           { raw: 'Coop Wengen 熟食', price: '10–15', tag: '18:30 关门' }],
     why: '<strong>Google 4.8 分（537 条），是翁根村里评价最高的一家</strong>，瑞士菜量大稳定，香草用自家花园的。<br>村子小、餐厅少，<strong>订位同时也等于确认了它 10 月还开着</strong>，一举两得。<br><span class="note">备选 Restaurant 1903 评分只有 4.1（71 条），别抱太高期待。</span>',
     note: '施皮茨→因特拉肯→翁根 <strong>约 1.5h</strong>。Bären 在 Am Acher 1363，<strong>村中心步行约 5 分钟</strong>，<strong>每天 18:00–21:30 只做晚餐</strong>。<br><span class="warn">⚠️ 本日时间风险最大：19:30 前必须到翁根。</span>翁根餐厅厨房 20:00 前后停单、Coop 18:30 关门。施皮茨游览压在 2 小时内，<strong>17:30 前上车</strong>。' }] },
 
-{ d: 4, date: '10/6 周二', route: '翁根 → 小夏戴克 → 少女峰 3454m（观景台 / 冰宫 / 雪原）→ 翁根',
+{ d: 4, dow: 2, date: '10/6 周二', route: '翁根 → 小夏戴克 → 少女峰 3454m（观景台 / 冰宫 / 雪原）→ 翁根',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-wengen', where:'<strong>前一晚或当天早上买三明治带上山</strong>' }],
     rec: [{ key: 'aletsch', price: '25–40', tag: '瑞士菜自助 · 正对冰川' }],
     alt: [{ key: 'crystal', price: '35–55', tag: '点餐制 · 山顶最高分' },
           { key: 'bollywood', price: '25–40', tag: '印度菜自助 · 素食友好' },
@@ -163,14 +198,16 @@ const DAYS = [
     why: '三家都在山顶站内。Aletsch 最实在，营业 10:15–15:30。<br><strong>但按 Google 评分，Restaurant Crystal 明显更好（4.6 / 846 条，vs Aletsch 4.2、Bollywood 3.9）</strong> —— 只开 11:00–14:30，想坐下来好好吃就它。<br><strong>最省是前一晚在翁根 Coop 买三明治带上去，一天能省 25–30。</strong>',
     note: '翁根→少女峰登山火车 <strong>约 1.5h</strong>（小夏戴克换乘），下山同样 1.5h，回翁根约 15:00–16:00。三家都在 <strong>Jungfraujoch 站内</strong>，出站沿通道即到。<br><span class="warn">⚠️ 12:00–13:00 排队极长</span>，建议 <strong>11:15 前先吃</strong>再逛观景台冰宫，或 13:30 后吃（注意 Crystal 14:30 就停）。<br><span class="note">原攻略写的「Jochstation 自助餐厅」不存在 —— Jochstation 是车站名。</span>' },
   { meal: '晚餐',
+    shops: [{ key:'sm-wengen', where:'18:30 关门，下山后要赶一下' }],
     rec: [{ key: 'dasina', price: '25–40', verify: true, tag: '意餐 / 披萨' }],
     alt: [{ key: 'caprice', price: '50–80', book: true, verify: true, tag: '主厨菜 · Maya Caprice' }],
     why: '上了一天少女峰已经累了 —— 这家<strong>不用订、不用换衣服、吃完就能睡</strong>。<br>Caprice 是翁根最「正经吃一顿」的选择（酒店已更名 <strong>Maya Caprice Boutique Hotel &amp; Spa</strong>，4.5 / 266 条），但 CHF 50–80 在这趟行程里算贵的。',
     note: '两家都在翁根村内，<strong>步行 5 分钟范围</strong>（翁根是无车悬崖小镇，从头走到尾几百米）。<br>Da Sina 在 Im Gruebi，Maya Caprice 在 Schonegg 1333d，离缆车站约 200m。' }] },
 
-{ d: 5, date: '10/7 周三', route: '翁根 → 劳特布伦嫩（施陶巴赫瀑布）→ 米伦（无车悬崖村 + 轻徒步）→ 翁根',
+{ d: 5, dow: 3, date: '10/7 周三', route: '翁根 → 劳特布伦嫩（施陶巴赫瀑布）→ 米伦（无车悬崖村 + 轻徒步）→ 翁根',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-muerren', where:'Borthalten，Bellevue 下面一点' }, { key:'sm-lauterbrunnen', where:'瀑布村，换乘时顺手买' }],
     rec: [{ key: 'tham', price: '25–40', cash: true, tag: '中餐 · 五星厨师主理' }],
     alt: [{ key: 'eigergh', price: '20–35', tag: '车站对面 · 全年营业' },
           { key: 'staeger', price: '30–50', tag: '1901 老木屋 · 瑞士传统菜' },
@@ -178,79 +215,90 @@ const DAYS = [
     why: '黑椒牛柳、咕咾鸡分量很足，老板 1997 年开到现在。连吃几天西餐后最好的换口味。<br><strong>Eiger Guesthouse 评分其实更高（4.6 / 536 条）且全年营业</strong>，10 月歇业风险最低，还更便宜 —— 稳妥派选它。<br>Stägerstübli 是本地人爱去那家（芝士火锅、raclette、Spätzli、奶油小牛肉炖菜）。',
     note: '翁根→劳特布伦嫩 <strong>15 分钟</strong>，换缆车 + 小火车上米伦 <strong>约 20 分钟</strong>。<br>Tham 和 Stägerstübli 在主街步行街上，Eiger Guesthouse <strong>正对米伦车站</strong>。<br><span class="warn">⚠️ Tham 只收现金</span>（CHF / EUR / USD），每天 12:00–15:00 / 17:30–20:30。<br><span class="note">米伦非常随意，登山服吃饭完全没问题。</span>' },
   { meal: '晚餐',
+    shops: [{ key:'sm-wengen', where:'回村后 18:30 前' }],
     rec: [{ key: 'baeren', price: '35–55', book: true, verify: true, tag: '村里最高分' },
           { key: 'dasina', price: '25–40', verify: true, tag: '更便宜' }],
     alt: [{ key: 'chezmeyers', price: '108–158', book: true, verify: true, tag: '米其林收录法餐' }],
     why: '省钱且稳妥，走了一天徒步不用换衣服直接去。<br><span class="warn">⚠️ Chez Meyer\'s 我要更正之前的说法</span>：① 营业日是 <strong>周三–周六 19:00–22:00</strong>（周日到周二休），Day 5 周三确实能去；② 但<strong>价格是套餐制 —— 3 道 CHF 108、5 道 CHF 158 每人</strong>，远高于我之前估的 60–90；③ 酒店官网挂的是「2026 年 12 月 17 日起重新开业」，<strong>10 月很可能根本不营业</strong>。想去务必先打电话问清楚。',
     note: '米伦→劳特布伦嫩→翁根 <strong>约 40 分钟</strong>。三家都在翁根村内步行范围。<br>Chez Meyer\'s 在 Hotel Regina（Schonegg 中心），有钢琴伴奏和山景，菜单是主厨定的惊喜菜单不能点菜，Google 仅 40 条评价（4.3）。' }] },
 
-{ d: 6, date: '10/8 周四', route: '翁根 → 因特拉肯 → 卢塞恩（卡佩尔廊桥 / 狮子纪念碑 / 冰河公园 / 穆塞格城墙）→ 苏黎世（班霍夫大街）',
+{ d: 6, dow: 4, date: '10/8 周四', route: '翁根 → 因特拉肯 → 卢塞恩（卡佩尔廊桥 / 狮子纪念碑 / 冰河公园 / 穆塞格城墙）→ 苏黎世（班霍夫大街）',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-luzern', where:'Zentralstrasse 1，<strong>卢塞恩站内</strong>' }],
     rec: [{ key: 'galliker', price: '35–55', book: true, tag: '🥧 1856 年四代家族店' }],
     alt: [{ key: 'bolero', price: '30–50', book: true, tag: '西班牙 tapas + 现做海鲜饭' }],
     why: '<strong>值得花钱的第二顿。</strong>必点当地名菜 <strong>Chögelipastetli</strong>（酥皮盅装小牛肉蘑菇），还有小牛头、牛肚、Läberli 这些老派菜，别处吃不到。<br><strong>关键是它排在中午 —— 午市套餐比晚市便宜近一半，份量一样。</strong>缺点是有点吵，Google 只有 4.3（302 条），冲的是「本地人的百年老店」而不是网红分数。<br>想稳一点选 Bolero：4.6 分、2239 条，卢塞恩评价最好的餐厅之一。',
     note: '翁根→因特拉肯→卢塞恩 <strong>约 2.5–3h</strong>（黄金山口精华段，<strong>建议订座、坐右侧</strong>，3 小时一趟错过很麻烦）。<br>Galliker 在 Schützenstrasse 1（Kasernenplatz），<strong>卢塞恩站步行约 8–10 分钟</strong>；Bolero 在 Bundesplatz 18，站边几分钟，但<span class="warn">在新城不在老城</span>，走到廊桥约 10 分钟 —— 下车先吃再进老城很顺。<br><span class="warn">⚠️ Galliker 只接电话订位</span>，周一周日休，厨房 11:15–14:30。' },
   { meal: '晚餐',
+    shops: [{ key:'sm-zurichhb', where:'苏黎世 HB 地下 ShopVille' }, { key:'sm-zurich-migros', where:'同在 HB 站内' }],
     rec: [{ key: 'sternen', price: '15–25', tag: '圣加仑烤肠夹面包' }],
     alt: [{ key: 'zeughaus', price: '45–60', book: true, tag: '1487 年军械库 · 传统瑞士菜' }],
     why: '当天赶路累。1962 年开在 Bellevue 广场的国民小吃，<strong>站着吃的圣加仑烤肠</strong>，全城最便宜的靠谱一餐，5696 条评价 4.4 分。二楼还有能看苏黎世湖的坐下餐厅。',
     note: '卢塞恩→苏黎世 <strong>50 分钟</strong>，每 30 分钟一班。<br>Sternen Grill 在 Theaterstrasse 22（Bellevue 广场），<strong>苏黎世 HB 坐电车 2–3 站，或步行约 15 分钟</strong>，每天开到 23:45。<br>Zeughauskeller 在 Bahnhofstrasse 28A（近 Paradeplatz），苏黎世 HB 步行 5–8 分钟，<strong>每天 11:30–23:00</strong>，240 个室内座位但从中午就开始满。' }] },
 
-{ d: 7, date: '10/9 周五', route: '苏黎世 → 瓦杜兹（列支敦士登，城堡全景机位）→ 兰德夸特奥莱 → 苏黎世',
+{ d: 7, dow: 5, date: '10/9 周五', route: '苏黎世 → 瓦杜兹（列支敦士登，城堡全景机位）→ 兰德夸特奥莱 → 苏黎世',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-vaduz', where:'Aeulestrasse 20，Städtle 主街旁' }],
     rec: [{ key: 'adler-vaduz', price: '30–45', tag: '列支敦士登传统菜' }],
     alt: [{ key: 'madeinitaly', price: '25–40', tag: '柴火披萨 + 手工意面' },
           { key: 'torkel', price: '80–120', book: true, tag: '王室葡萄园酒窖' }],
     why: '正宗列支敦士登本地菜：<strong>Rösti Vaduzerart</strong>、Spätzle、野味季节菜，香草来自自家花园。Google 上它叫 <strong>Adler 1908</strong>，4.5 分（412 条），比 Tripadvisor 的 4.0 高不少。<br>Made in Italy 性价比最高（4.6 / 271）；Torkel 是瓦杜兹最高分（4.8 / 296），16 分 GaultMillau，开在王室 Herawingert 葡萄园里。',
     note: '苏黎世→Sargans 换巴士→瓦杜兹 <strong>约 1.5–2h</strong>（列支敦士登没有火车站）。三家都在<strong>市中心步行范围</strong>（Herrengasse / Hintergass）。<br><span class="warn">⚠️ 三家营业时间都很窄，周五当天：</span>Adler <strong>09:00–17:00</strong>（周六日全休）· Made in Italy <strong>10:00–14:00</strong> · Torkel 午市<strong>只有 12:00–13:30</strong>。别踩空。<br><span class="note">奥莱里也有餐饮但不值得专门吃。瓦杜兹城堡是王室住所不对外开放，只能外观和远景打卡。</span>' },
   { meal: '晚餐',
+    shops: [{ key:'sm-zurichhb', where:'开到 22:30，回酒店前顺手买' }],
     rec: [{ key: 'williams', price: '60–80', book: true, tag: '🥩 瑞士第一牛排' }],
     alt: [{ key: 'thali', price: '25–40', tag: '印度菜 · 平价' },
           { key: 'manzoni', price: '25–40', tag: '意式咖啡吧 + 简餐' }],
     why: '<strong>全行程最贵、也最值得的一顿。</strong>Metzgerei（肉铺）和餐厅开在同一屋檐下 —— <strong>进门先在肉柜前自己挑一块</strong>，瑞士 LUMA 肋眼、美国野牛里脊、日本/澳洲和牛都有，挑完现烤。Google 4.7 分（1286 条）。<br>2026 年 <strong>World\'s 101 Best Steak Restaurants 全球第 64 名、瑞士第 1、德奥瑞区第 1</strong>，米其林指南 2025 收录。<br><span class="note">⚠️ 小红书笔记里写的「世界第 51」是往年名次，2026 年榜单是第 64 —— 瑞士第 1 是准确的。参考消费：4 人 CHF 275（约 69/人，含酒水）。<br>想省就选 Thali House（4.7 / 3052 条，比 Manzoni Bar 的 4.1 好得多）。</span>',
     note: '瓦杜兹→苏黎世 <strong>约 1.5–2h</strong>。<br>Williams 在 <strong>Schifflände 6，Bellevue 广场旁老城 Hechtplatz</strong>，苏黎世 HB 电车 2–3 站（和 Sternen Grill 同一片区）。<br><span class="warn">⚠️ 周日休息</span>；周一–周五 11:30–14:00 / 17:00–23:00（热菜供到 21:30）。<strong>官网 Book a table 在线预订</strong>，8 人以上需邮件。<br><span class="note">为什么排在周五：Day 6 到苏黎世已是傍晚偏晚、Day 8 周六最难订，周五最从容。</span>' }] },
 
-{ d: 8, date: '10/10 周六', route: '苏黎世 → 圣加仑（修道院图书馆，世界遗产）→ 阿彭策尔（彩绘老街）→ 苏黎世',
+{ d: 8, dow: 6, date: '10/10 周六', route: '苏黎世 → 圣加仑（修道院图书馆，世界遗产）→ 阿彭策尔（彩绘老街）→ 苏黎世',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-appenzell', where:'Zielstrasse 13' }, { key:'sm-stgallen', where:'圣加仑站内，保底选择' }],
     rec: [{ raw: '阿彭策尔主街 Hauptgasse 小馆', price: '30–50', tag: 'Appenzeller 奶酪 / Siedwurst' }],
     alt: [{ key: 'fonduebeizli', price: '35–55', book: true, tag: '约 10 种芝士火锅' },
           { key: 'bistro-sg', price: '30–45', tag: '瑞士 / 法餐' }],
     why: '阿彭策尔比圣加仑更有地方特色。必点 <strong>Appenzeller 奶酪</strong>（瑞士最有个性的硬奶酪之一）、<strong>Siedwurst</strong> 水煮小牛肉肠配洋葱酱、<strong>Chäshörnli</strong> 芝士通心粉配苹果泥。主街彩绘房子里 Gasthaus 密集，挑评分 4.0 以上的即可。<br>Fondue Beizli（全名 <strong>Fondue Beizli「Neueck」</strong>）Google 4.7 分 / 951 条，比预期高很多，是圣加仑很硬的一家。',
     note: '苏黎世→圣加仑 <strong>约 1h</strong>，圣加仑→阿彭策尔 <strong>约 45 分钟</strong>。建议<strong>图书馆看完直接去阿彭策尔吃</strong>，主街离车站步行 3–5 分钟。<br><span class="warn">⚠️ Fondue Beizli 在圣加仑 Brühlgasse 26，不在阿彭策尔</span>（站步行约 8 分钟）；Bistro St.Gallen 在 Wassergasse 7。<br><span class="note">原攻略备注「上午早去，堡内多逛逛」是别的版本留下的 —— 阿彭策尔没有城堡。</span>' },
   { meal: '晚餐',
+    shops: [{ key:'sm-zurichhb', where:'周六照常开到 22:30' }],
     rec: [{ key: 'sternen', price: '15–25', tag: '开到 23:45' }],
     alt: [{ key: 'zeughaus', price: '45–60', book: true, tag: '想吃顿传统的' },
           { key: 'manzoni', price: '25–40', tag: '班霍夫大街旁' }],
     why: '平价收尾。<strong>芝士火锅 Day 2 在采尔马特已经吃过更正宗的了</strong>，苏黎世没必要再花 CHF 50–70 吃第二次。<br>从阿彭策尔回来晚，Sternen Grill 开到 23:45 最保险。<br><span class="note">⚠️ Manzoni Bar 的 Google 评分只有 4.1（185 条），明显弱于另外两家，别抱期待 —— 当咖啡+简餐还行。</span>',
     note: '阿彭策尔→苏黎世 <strong>约 1.5–2h</strong>。Manzoni Bar 在 Schützengasse 15，苏黎世 HB 步行 2 分钟。<br><span class="warn">⚠️ 周六是苏黎世餐厅最满的一天</span> —— 要吃 Zeughauskeller 务必订位。<br><span class="note">苏黎世三晚这样铺开不重样：Day 6 烤肠 → Day 7 牛排 → Day 8 烤肠/简餐。</span>' }] },
 
-{ d: 9, date: '10/11 周日', route: '苏黎世 → 莱茵瀑布 → 沙夫豪森 → 莱茵河畔施泰因 → 回苏黎世取行李 → <strong>日内瓦</strong>',
+{ d: 9, dow: 7, date: '10/11 周日', route: '苏黎世 → 莱茵瀑布 → 沙夫豪森 → 莱茵河畔施泰因 → 回苏黎世取行李 → <strong>日内瓦</strong>',
   meals: [
   { meal: '午餐',
+    shops: [{ key:'sm-schaffhausen', where:'沙夫豪森站内便利店' }],
     rec: [{ raw: 'Inseli Bistro（瀑布小岛）', price: '15–30', tag: '每天 09:00–18:30 · 免订' }],
     alt: [{ key: 'schloessli', price: '40–60', book: true, tag: '同岛城堡餐厅 · 全景位' },
           { key: 'rheinfels', price: '35–55', tag: '施泰因老城 · 鱼类特色' }],
     why: 'Inseli Bistro 和 Schlössli Wörth <strong>在莱茵瀑布同一座小岛上</strong> —— 景一模一样，价钱只要一半，还不用订位。<br>想坐下来好好吃就选 Schlössli Wörth（12 世纪城堡，六角塔楼里的全景餐厅，<strong>靠窗位要专门指定</strong>），不过 Google 只有 4.2（1041 条），是「位置分」大于「菜分」的典型。<br>施泰因的 Rheinfels 反而评分更高（4.5 / 466），主打鱼。',
     note: '苏黎世→沙夫豪森 <strong>约 40 分钟</strong>，坐到 <strong>Neuhausen Rheinfall 站</strong>，步行一小段到河滨步道。Schlössli Wörth 在 Rheinfallquai 30，周日 11:30–21:30。<br><strong>参考时间线：</strong>苏黎世 08:30 出发 → 莱茵瀑布 09:20–11:30 → 施泰因 12:00–14:30（含午餐）→ 回苏黎世 16:00 取行李 → 17:00 上车。' },
   { meal: '晚餐',
+    shops: [{ key:'sm-geneva', where:'Pl. de Cornavin 7，<strong>日内瓦站内，周日照开</strong>' }],
     rec: [{ key: 'lipp', price: '40–60', book: true, tag: '每天 08:00–次日 01:00' }],
     alt: [{ key: 'ducentre', price: '35–55', tag: '周日 11:00–23:00' },
           { raw: 'Cornavin 火车站内', price: '15–35', tag: '周日保底，一定开' }],
     why: '<strong>好消息：这餐比我之前判断的安全得多。</strong>Brasserie Lipp <strong>每天 08:00 开到次日 01:00，周日照常</strong>，4.5 分 / 4376 条 —— 就算 21:00 才到日内瓦也完全来得及坐下来好好吃一顿法式 brasserie。<br>Café du Centre 周日也开到 23:00（4.1 / 2773）。<br>实在赶就 Cornavin 站内 —— 瑞士大车站餐饮<strong>不受周日休业限制</strong>，约开到 21:00。',
     note: '苏黎世→日内瓦 <strong>2h45</strong>，实际抵达约 <strong>20:00–21:00</strong>。Cornavin→机场火车仅 <strong>6 分钟</strong>。<br>Brasserie Lipp 在 Rue de la Confédération 8（Confédération Centre），<strong>Cornavin 站步行约 10 分钟或电车 1–2 站</strong>；Café du Centre 在 Place du Molard 5，再往湖边一点。<br><span class="note">老城名店 Les Armures、Café du Soleil 的芝士火锅几乎永远满座，当天到得晚赶不上 —— 而且 Day 2 已经吃过更正宗的了。</span>' }] },
 
-{ d: 10, date: '10/12 周一', route: '日内瓦 citywalk（老城 / 大喷泉 / 花钟）→ 日内瓦机场 → 13:20 返程',
+{ d: 10, dow: 1, date: '10/12 周一', route: '日内瓦 citywalk（老城 / 大喷泉 / 花钟）→ 日内瓦机场 → 13:20 返程',
   meals: [
   { meal: '早餐',
+    shops: [{ key:'sm-geneva', where:'站内，5:30 就开' }],
     rec: [{ raw: '酒店早餐', price: '含', tag: '最省事' }],
     alt: [{ key: 'mullers', price: '10–20', tag: '周一 08:30 开门' },
           { raw: 'Cornavin 站内 / 机场面包房', price: '10–20' }],
     why: '9:30 出发去机场，时间很从容 —— 早上完全可以先 citywalk 一小时再走。<br><strong>Muller\'s Factory 的营业时间已确认：周一到周六 08:30–21:00</strong>（之前标的「待确认」可以去掉了），4.4 分 / 1118 条。',
     note: 'Cornavin→机场火车 <strong>仅 6 分钟</strong>，最早 4:00 就有车，班次密集。<br>Muller\'s Factory 在 Place du Cirque 4，离 Cornavin 步行约 12 分钟，在老城方向 —— 和 citywalk 顺路。' },
   { meal: '午餐',
+    shops: [{ key:'sm-geneva', where:'<strong>买三明治带上飞机</strong>' }],
     rec: [{ raw: 'Coop 三明治带上飞机', price: '10–20' }],
     alt: [{ raw: '机场餐饮', price: '25–45' }],
     why: '13:20 起飞，<strong>机上第一餐通常要 14:30 之后</strong>，先垫一下。机场里吃贵不少。',
@@ -326,6 +374,8 @@ function mealRows(day) {
       `<td class="meal">${esc(m.meal)}</td>` +
       `<td class="cell-rec">${m.rec.map(entry).join('')}</td>` +
       `<td class="cell-alt">${m.alt.map(entry).join('')}</td>` +
+      `<td class="cell-shop">${(m.shops || []).map(x => shop(x, day.dow)).join('') ||
+        '<span class="note">山顶无超市</span>'}</td>` +
       `<td>${m.why}</td>` +
       `<td>${m.note}</td></tr>`;
   }).join('\n');
@@ -389,13 +439,22 @@ const html = `<!DOCTYPE html>
   tr:nth-child(even) td { background:#fbfaf7; }
   .scroll-x { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:12px 0; }
   .scroll-x table { margin:0; }
-  table.main { font-size:12.5px; min-width:1400px; }
+  table.main { font-size:12.5px; min-width:1560px; }
   table.main th { position:sticky; top:0; z-index:2; }
   table.main td.day { background:#f0f5fb !important; font-weight:700; color:#2563a8; white-space:nowrap; border-right:1px solid #dbe6f2; }
   table.main td.route { background:#fdfaf4 !important; font-size:12px; line-height:1.55; border-right:1px solid #f0e6d2; }
   table.main td.meal { white-space:nowrap; font-weight:600; color:#666; font-size:12px; }
   table.main tr.d-sep td { border-top:2px solid #d4a574; }
   .cell-rec { background:#f7fbf8 !important; }
+  .cell-shop { background:#fdfbf5 !important; }
+  .shop { margin-bottom:9px; padding-left:15px; position:relative; }
+  .shop:last-child { margin-bottom:0; }
+  .shop::before { content:'🛒'; position:absolute; left:0; top:1px; font-size:10px; }
+  .shop.closed { opacity:.6; }
+  .sname { font-weight:600; font-size:12px; line-height:1.35; }
+  .sname a { text-decoration:none; }
+  .shrs { font-size:11px; color:#27916a; font-weight:600; }
+  .shop.closed .shrs { color:#c0392b; }
   /* 餐厅条目 */
   .rest { display:flex; gap:9px; align-items:flex-start; margin-bottom:11px; }
   .rest:last-child { margin-bottom:0; }
@@ -468,9 +527,9 @@ const html = `<!DOCTYPE html>
   <div class="scroll-x">
   <table class="main">
     <thead><tr>
-      <th style="width:5%">时间</th><th style="width:11%">当天行程</th><th style="width:3%">餐</th>
-      <th style="width:14%">推荐餐厅</th><th style="width:15%">备选餐厅</th>
-      <th style="width:25%">推荐理由</th><th style="width:27%">备注（怎么过去 / 多久）</th>
+      <th style="width:5%">时间</th><th style="width:10%">当天行程</th><th style="width:3%">餐</th>
+      <th style="width:13%">推荐</th><th style="width:13%">备选餐厅</th><th style="width:12%">备选超市<br><span style="font-weight:400;opacity:.8">不想出去吃</span></th>
+      <th style="width:21%">推荐理由</th><th style="width:23%">备注（怎么过去 / 多久）</th>
     </tr></thead>
     <tbody>
 ${DAYS.map(mealRows).join('\n')}
@@ -481,9 +540,11 @@ ${DAYS.map(mealRows).join('\n')}
 
 <section>
   <h2>⚡ 三条保命提醒</h2>
-  <div class="alert red"><strong>① 瑞士超市周日全国关门。</strong>
-    Coop / Migros / Aldi / Lidl 周日一律不开（法律规定），周六也只开到 17:00–18:00。唯一例外是<strong>大火车站里面的店</strong>（苏黎世 HB 的 ShopVille、伯尔尼、巴塞尔 SBB、卢塞恩、洛桑、日内瓦 Cornavin 等约 30 个车站），约 8:00–21:00。<br>
-    <span class="note">影响：Day 1（周六晚到）、Day 2（周日，采尔马特）、Day 9（周日全天）。</span></div>
+  <div class="alert green"><strong>① 好消息：这趟行程的超市，周日基本都开。</strong>
+    瑞士平原城市的超市周日确实关门，<strong>但旅游度假区有法定豁免</strong>。我把沿途每家都查了 ——<br>
+    <strong>周日照常营业：</strong>采尔马特 Coop（8:00–20:00）· 翁根 / 米伦 Coop（8:00–18:30）· 劳特布伦嫩 Coop（8:00–19:00）· 因特拉肯 Coop（7:30–22:00）· 蒙特勒 Coop（9:00–18:00）· 瓦杜兹 Coop（8:00–17:00，列支敦士登法律不同）· 以及所有<strong>大火车站里的店</strong>（苏黎世 HB、卢塞恩、圣加仑、沙夫豪森、日内瓦 Cornavin）。<br>
+    <strong class="warn">周日关门的只有两家：</strong>施皮茨 Coop（Day 3 是周一，不受影响）· 阿彭策尔 Coop（Day 8 是周六，也不受影响）。<br>
+    <span class="note">⚠️ 仍要注意：<strong>周六</strong>不少超市 17:00 就关（施皮茨、阿彭策尔、瓦杜兹）。Day 1 落地那天蒙特勒 Coop 开到 19:00，赶得及但别磨蹭。</span></div>
   <div class="alert red"><strong>② 山区小镇晚上 8 点前后就打烊。</strong>
     翁根、米伦的餐厅厨房普遍 20:00 前后停单（Bären 21:30、Tham 20:30），村里 Coop <strong>18:30 关门</strong>。<br>
     <span class="note">影响：Day 3 傍晚从施皮茨过来 —— <strong>务必 19:30 前抵达翁根</strong>，原攻略写的末班车 22:38 那个点到就没饭吃了。</span></div>
@@ -550,6 +611,50 @@ ${bookingRows()}
   </table>
   </div>
   <p class="note">营业时间来自 Google Maps，为常规时间；<strong>10 月山区可能有季节性调整，以电话确认为准。</strong></p>
+</section>
+
+<section>
+  <h2>🛒 不想出去吃？超市能买到什么</h2>
+  <div class="alert green"><strong>瑞士超市是这趟行程最被低估的省钱入口。</strong>
+    同样一份三明治，Coop 卖 CHF 5–8，餐厅卖 CHF 18–25。而且瑞士超市的熟食品质远好过一般人对「超市食品」的想象 —— 本地人天天这么吃。<br>
+    走累了、山上下来太晚、周日餐厅关门、或者单纯不想再跟菜单较劲，<strong>买点东西回酒店</strong>是完全正常的选择。</div>
+
+  <div class="scroll-x">
+  <table>
+    <thead><tr><th style="width:16%">买什么</th><th style="width:14%">价格</th><th style="width:70%">说明</th></tr></thead>
+    <tbody>
+      <tr><td><strong>🥪 三明治</strong></td><td class="price">CHF 4–8</td>
+        <td>冷柜区一整排，火腿芝士、烟熏三文鱼、素食都有。<strong>上山前买两个塞包里，一天省 CHF 25–30</strong>（少女峰、戈尔内格拉特山顶餐厅比山下贵 30–50%）。</td></tr>
+      <tr><td><strong>🥗 沙拉盒 / 意面盒</strong></td><td class="price">CHF 6–12</td>
+        <td>配叉子直接吃。连着吃几天芝士和肉之后会很想要这个。</td></tr>
+      <tr><td><strong>🍗 烤鸡 / 熟食柜</strong></td><td class="price">CHF 10–16</td>
+        <td>大一点的 Coop 有烤鸡和热食柜台。两个人分一只烤鸡 + 面包 + 沙拉，CHF 20 出头吃很饱。</td></tr>
+      <tr><td><strong>🧀 瑞士奶酪</strong></td><td class="price">CHF 4–12</td>
+        <td><strong>Gruyère</strong>（格鲁耶尔，火锅主料）· <strong>Emmentaler</strong>（大孔奶酪）· <strong>Appenzeller</strong>（Day 8 阿彭策尔的招牌，味最冲）。真空包装的可以带回国。</td></tr>
+      <tr><td><strong>🥓 风干肉 / 香肠</strong></td><td class="price">CHF 6–15</td>
+        <td><strong>Bündnerfleisch</strong> 格劳宾登风干牛肉（薄切，配面包和红酒绝配）· <strong>Cervelat</strong> 国民香肠 · <strong>Landjäger</strong> 猎人肠，适合当徒步干粮。</td></tr>
+      <tr><td><strong>🍫 巧克力</strong></td><td class="price">CHF 2–6</td>
+        <td><strong>超市价比机场便宜一半</strong>，别留到最后在机场买。Lindt、Cailler（瑞士最老的牌子）、Frey（Migros 自有，性价比之王）、Toblerone。<strong>带手信就在超市一次性买齐。</strong></td></tr>
+      <tr><td><strong>🍲 即食瑞士菜</strong></td><td class="price">CHF 4–9</td>
+        <td>盒装 <strong>Rösti</strong>（煎土豆饼，微波即食）· <strong>Älplermagronen</strong>（牧民通心粉）· 盒装芝士火锅（加热即可，酒店有微波炉就能吃，比餐厅便宜 4/5）。</td></tr>
+      <tr><td><strong>🍺 酒水</strong></td><td class="price">CHF 1.5–15</td>
+        <td>啤酒 CHF 1.5–3、瑞士葡萄酒 CHF 8–15，<strong>餐厅点一杯就要 CHF 7–10</strong>。车站店周日也卖酒。<br><strong>矿泉水别买</strong> —— 瑞士自来水直接喝，带个水壶。</td></tr>
+      <tr><td><strong>☕ 早餐类</strong></td><td class="price">CHF 3–8</td>
+        <td>酸奶、水果、坚果、Gipfeli（瑞士版可颂）、<strong>Ovomaltine</strong>（阿华田，瑞士发明的，超市有各种衍生品）。酒店不含早餐时靠这个。</td></tr>
+      <tr><td><strong>💡 省钱线</strong></td><td class="price">最低</td>
+        <td>认准 Coop 的 <strong>Prix Garantie</strong> 和 Migros 的 <strong>M-Budget</strong> 自有品牌（白底简装），同类商品便宜 30–50%。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert amber"><strong>🏪 几个概念别搞混：</strong><br>
+    <strong>Coop / Migros 超市</strong> —— 正经超市，选择最全，价格最低。瑞士两大连锁，东西差不多，Migros 不卖酒（除车站店外）。<br>
+    <strong>Coop Restaurant / Migros Restaurant</strong> —— 开在超市里的<strong>自助餐厅</strong>，热菜 CHF 12–20，本攻略 Day 3 施皮茨推荐的就是这个。有汤有热菜有沙拉，坐着吃。<br>
+    <strong>Coop Pronto / Migrolino / avec / k kiosk</strong> —— <strong>便利店</strong>，多在加油站和火车站，营业时间长、周日也开，但<strong>贵 20–30%、选择少</strong>。只在超市关门后用。</div>
+
+  <div class="alert blue"><strong>🧾 实操细节：</strong>
+    进门<strong>不需要存包</strong>；散装果蔬要自己称重打价签（有些店直接收银台称）；塑料袋收费 CHF 0.3 左右，自带袋子；
+    全部支持刷卡和 Apple Pay，<strong>CHF 20 以下也能刷</strong>，不用凑现金。</div>
 </section>
 
 <section>

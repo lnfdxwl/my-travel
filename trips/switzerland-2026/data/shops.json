@@ -1,0 +1,291 @@
+{
+ "sm-montreux": {
+  "name": "Coop Supermarché Montreux",
+  "addr": "Rue de la Paix 4, 1820 Montreux, Switzerland",
+  "rating": 4.2,
+  "reviews": 787,
+  "maps": "https://maps.google.com/?cid=14873737091473972953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 7:00 PM",
+   "Tuesday: 8:00 AM – 7:00 PM",
+   "Wednesday: 8:00 AM – 7:00 PM",
+   "Thursday: 8:00 AM – 7:00 PM",
+   "Friday: 8:00 AM – 8:00 PM",
+   "Saturday: 8:00 AM – 7:00 PM",
+   "Sunday: 9:00 AM – 6:00 PM"
+  ]
+ },
+ "sm-montreux-migros": {
+  "name": "MIGROS",
+  "addr": "Pl. du Marché 6, 1820 Montreux, Switzerland",
+  "rating": 4.3,
+  "reviews": 1067,
+  "maps": "https://maps.google.com/?cid=4690228146214310547&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 8:00 PM",
+   "Tuesday: 8:00 AM – 8:00 PM",
+   "Wednesday: 8:00 AM – 8:00 PM",
+   "Thursday: 8:00 AM – 8:00 PM",
+   "Friday: 8:00 AM – 8:00 PM",
+   "Saturday: 8:00 AM – 7:00 PM",
+   "Sunday: 10:00 AM – 6:00 PM"
+  ]
+ },
+ "sm-zermatt": {
+  "name": "Coop Supermarkt Zermatt",
+  "addr": "Bahnhofpl. 6, 3920 Zermatt, Switzerland",
+  "rating": 4.2,
+  "reviews": 1239,
+  "maps": "https://maps.google.com/?cid=4772105405423147583&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 8:00 PM",
+   "Tuesday: 8:00 AM – 8:00 PM",
+   "Wednesday: 8:00 AM – 8:00 PM",
+   "Thursday: 8:00 AM – 8:00 PM",
+   "Friday: 8:00 AM – 8:00 PM",
+   "Saturday: 8:00 AM – 8:00 PM",
+   "Sunday: 8:00 AM – 8:00 PM"
+  ]
+ },
+ "sm-spiez": {
+  "name": "Coop Supermarkt Spiez",
+  "addr": "Oberlandstrasse 6, 3700 Spiez, Switzerland",
+  "rating": 4.2,
+  "reviews": 415,
+  "maps": "https://maps.google.com/?cid=12879283766285972932&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 7:00 PM",
+   "Tuesday: 8:00 AM – 7:00 PM",
+   "Wednesday: 8:00 AM – 7:00 PM",
+   "Thursday: 8:00 AM – 7:00 PM",
+   "Friday: 8:00 AM – 7:00 PM",
+   "Saturday: 8:00 AM – 5:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "sm-wengen": {
+  "name": "Coop Supermarkt Wengen",
+  "addr": "Wengiboden 1347, 3823 Lauterbrunnen, Switzerland",
+  "rating": 4.3,
+  "reviews": 432,
+  "maps": "https://maps.google.com/?cid=11878388720495410205&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 6:30 PM",
+   "Tuesday: 8:00 AM – 6:30 PM",
+   "Wednesday: 8:00 AM – 6:30 PM",
+   "Thursday: 8:00 AM – 6:30 PM",
+   "Friday: 8:00 AM – 6:30 PM",
+   "Saturday: 8:00 AM – 6:30 PM",
+   "Sunday: 8:00 AM – 6:30 PM"
+  ]
+ },
+ "sm-lauterbrunnen": {
+  "name": "Coop Supermarkt Lauterbrunnen",
+  "addr": "Bei den, Zuben 473A, 3822 Lauterbrunnen, Switzerland",
+  "rating": 4.1,
+  "reviews": 754,
+  "maps": "https://maps.google.com/?cid=16837083925147924259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 7:00 PM",
+   "Tuesday: 8:00 AM – 7:00 PM",
+   "Wednesday: 8:00 AM – 7:00 PM",
+   "Thursday: 8:00 AM – 7:00 PM",
+   "Friday: 8:00 AM – 7:00 PM",
+   "Saturday: 8:00 AM – 7:00 PM",
+   "Sunday: 8:00 AM – 7:00 PM"
+  ]
+ },
+ "sm-muerren": {
+  "name": "Coop Supermarkt Mürren",
+  "addr": "Borthalten 1032, 3825 Mürren, Switzerland",
+  "rating": 4.3,
+  "reviews": 434,
+  "maps": "https://maps.google.com/?cid=9967658538108984090&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 8:00 AM – 6:30 PM",
+   "Tuesday: 8:00 AM – 6:30 PM",
+   "Wednesday: 8:00 AM – 6:30 PM",
+   "Thursday: 8:00 AM – 6:30 PM",
+   "Friday: 8:00 AM – 6:30 PM",
+   "Saturday: 8:00 AM – 6:30 PM",
+   "Sunday: 8:00 AM – 6:30 PM"
+  ]
+ },
+ "sm-interlaken": {
+  "name": "Coop",
+  "addr": "Marktgasse 1, 3800 Interlaken, Switzerland",
+  "rating": 4.4,
+  "reviews": 1472,
+  "maps": "https://maps.google.com/?cid=8809502879425570603&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:30 AM – 10:00 PM",
+   "Tuesday: 7:30 AM – 10:00 PM",
+   "Wednesday: 7:30 AM – 10:00 PM",
+   "Thursday: 7:30 AM – 10:00 PM",
+   "Friday: 7:30 AM – 10:00 PM",
+   "Saturday: 7:30 AM – 10:00 PM",
+   "Sunday: 7:30 AM – 10:00 PM"
+  ]
+ },
+ "sm-luzern": {
+  "name": "Coop Supermarkt Luzern Bahnhof",
+  "addr": "Zentralstrasse 1, 6003 Luzern, Switzerland",
+  "rating": 4.2,
+  "reviews": 2489,
+  "maps": "https://maps.google.com/?cid=14913224528845883081&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 AM – 10:00 PM",
+   "Tuesday: 6:00 AM – 10:00 PM",
+   "Wednesday: 6:00 AM – 10:00 PM",
+   "Thursday: 6:00 AM – 10:00 PM",
+   "Friday: 6:00 AM – 10:00 PM",
+   "Saturday: 6:00 AM – 10:00 PM",
+   "Sunday: 7:00 AM – 10:00 PM"
+  ]
+ },
+ "sm-zurichhb": {
+  "name": "Coop Supermarket Zurich Train Station ShopVille",
+  "addr": "Halle, Löwenstrasse, 8001 Zürich, Switzerland",
+  "rating": 3.9,
+  "reviews": 1301,
+  "maps": "https://maps.google.com/?cid=17592567638957252195&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 AM – 10:30 PM",
+   "Tuesday: 6:00 AM – 10:30 PM",
+   "Wednesday: 6:00 AM – 10:30 PM",
+   "Thursday: 6:00 AM – 10:30 PM",
+   "Friday: 6:00 AM – 10:30 PM",
+   "Saturday: 6:00 AM – 10:30 PM",
+   "Sunday: 8:00 AM – 10:30 PM"
+  ]
+ },
+ "sm-zurich-migros": {
+  "name": "Migros-Supermarkt - Zürich - Hauptbahnhof",
+  "addr": "Hauptbahnhof, 8001 Zürich, Switzerland",
+  "rating": 4.2,
+  "reviews": 2557,
+  "maps": "https://maps.google.com/?cid=4777560839084157122&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:30 AM – 10:00 PM",
+   "Tuesday: 6:30 AM – 10:00 PM",
+   "Wednesday: 6:30 AM – 10:00 PM",
+   "Thursday: 6:30 AM – 10:00 PM",
+   "Friday: 6:30 AM – 10:00 PM",
+   "Saturday: 8:00 AM – 10:00 PM",
+   "Sunday: 8:00 AM – 10:00 PM"
+  ]
+ },
+ "sm-vaduz": {
+  "name": "Coop Supermarkt Vaduz Städtlemarkt",
+  "addr": "Aeulestrasse 20, 9490 Vaduz, Liechtenstein",
+  "rating": 4.3,
+  "reviews": 601,
+  "maps": "https://maps.google.com/?cid=3047403844715914626&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:00 AM – 8:00 PM",
+   "Tuesday: 7:00 AM – 8:00 PM",
+   "Wednesday: 7:00 AM – 8:00 PM",
+   "Thursday: 7:00 AM – 8:00 PM",
+   "Friday: 7:00 AM – 8:00 PM",
+   "Saturday: 7:00 AM – 5:00 PM",
+   "Sunday: 8:00 AM – 5:00 PM"
+  ]
+ },
+ "sm-stgallen": {
+  "name": "Coop Supermarkt St. Gallen Bahnhof",
+  "addr": "Bahnhofpl. 8A, 9000 St. Gallen, Switzerland",
+  "rating": 4.2,
+  "reviews": 1125,
+  "maps": "https://maps.google.com/?cid=13002523781517346881&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 AM – 10:00 PM",
+   "Tuesday: 6:00 AM – 10:00 PM",
+   "Wednesday: 6:00 AM – 10:00 PM",
+   "Thursday: 6:00 AM – 10:00 PM",
+   "Friday: 6:00 AM – 10:00 PM",
+   "Saturday: 6:00 AM – 10:00 PM",
+   "Sunday: 6:30 AM – 10:00 PM"
+  ]
+ },
+ "sm-appenzell": {
+  "name": "Coop Supermarkt Appenzell",
+  "addr": "Zielstrasse 13, 9050 Appenzell, Switzerland",
+  "rating": 4.5,
+  "reviews": 613,
+  "maps": "https://maps.google.com/?cid=3994954321515757146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 7:30 AM – 7:00 PM",
+   "Tuesday: 7:30 AM – 7:00 PM",
+   "Wednesday: 7:30 AM – 7:00 PM",
+   "Thursday: 7:30 AM – 7:00 PM",
+   "Friday: 7:30 AM – 8:00 PM",
+   "Saturday: 7:30 AM – 5:00 PM",
+   "Sunday: Closed"
+  ]
+ },
+ "sm-schaffhausen": {
+  "name": "Coop Pronto Shop Schaffhausen Bahnhof",
+  "addr": "Bahnhofstrasse 29, 8200 Schaffhausen, Switzerland",
+  "rating": 4.3,
+  "reviews": 178,
+  "maps": "https://maps.google.com/?cid=14872503792899165692&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 5:00 AM – 11:00 PM",
+   "Tuesday: 5:00 AM – 11:00 PM",
+   "Wednesday: 5:00 AM – 11:00 PM",
+   "Thursday: 5:00 AM – 11:00 PM",
+   "Friday: 5:00 AM – 12:00 AM",
+   "Saturday: 5:00 AM – 12:00 AM",
+   "Sunday: 5:00 AM – 11:00 PM"
+  ]
+ },
+ "sm-geneva": {
+  "name": "Coop",
+  "addr": "Pl. de Cornavin 7, 1201 Genève, Switzerland",
+  "rating": 4,
+  "reviews": 576,
+  "maps": "https://maps.google.com/?cid=11379167236517671220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 5:30 AM – 11:00 PM",
+   "Tuesday: 5:30 AM – 11:00 PM",
+   "Wednesday: 5:30 AM – 11:00 PM",
+   "Thursday: 5:30 AM – 11:00 PM",
+   "Friday: 5:30 AM – 11:00 PM",
+   "Saturday: 5:30 AM – 11:00 PM",
+   "Sunday: 5:30 AM – 11:00 PM"
+  ]
+ },
+ "sm-gva-airport": {
+  "name": "Interdiscount",
+  "addr": "Rte de l'Aéroport 25, 1215 Le Grand-Saconnex, Switzerland",
+  "rating": 4.5,
+  "reviews": 137,
+  "maps": "https://maps.google.com/?cid=9340988306627310917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+  "status": "OPERATIONAL",
+  "hours": [
+   "Monday: 6:00 AM – 8:30 PM",
+   "Tuesday: 6:00 AM – 8:30 PM",
+   "Wednesday: 6:00 AM – 8:30 PM",
+   "Thursday: 6:00 AM – 8:30 PM",
+   "Friday: 6:00 AM – 8:30 PM",
+   "Saturday: 6:00 AM – 8:30 PM",
+   "Sunday: 6:00 AM – 8:30 PM"
+  ]
+ }
+}
