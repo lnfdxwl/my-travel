@@ -275,11 +275,11 @@ const DAYS = [
   meals: [
   { meal: '午餐',
     shops: [{ key:'sm-schaffhausen', where:'沙夫豪森站内便利店' }],
-    rec: [{ raw: 'Inseli Bistro（瀑布小岛）', price: '15–30', tag: '每天 09:00–18:30 · 免订' }],
-    alt: [{ key: 'schloessli', price: '40–60', book: true, tag: '同岛城堡餐厅 · 全景位' },
-          { key: 'rheinfels', price: '35–55', tag: '施泰因老城 · 鱼类特色' }],
-    why: 'Inseli Bistro 和 Schlössli Wörth <strong>在莱茵瀑布同一座小岛上</strong> —— 景一模一样，价钱只要一半，还不用订位。<br>想坐下来好好吃就选 Schlössli Wörth（12 世纪城堡，六角塔楼里的全景餐厅，<strong>靠窗位要专门指定</strong>），不过 Google 只有 4.2（1041 条），是「位置分」大于「菜分」的典型。<br>施泰因的 Rheinfels 反而评分更高（4.5 / 466），主打鱼。',
-    note: '苏黎世→沙夫豪森 <strong>约 40 分钟</strong>，坐到 <strong>Neuhausen Rheinfall 站</strong>，步行一小段到河滨步道。Schlössli Wörth 在 Rheinfallquai 30，周日 11:30–21:30。<br><strong>参考时间线：</strong>苏黎世 08:30 出发 → 莱茵瀑布 09:20–11:30 → 施泰因 12:00–14:30（含午餐）→ 回苏黎世 16:00 取行李 → 17:00 上车。' },
+    rec: [{ key: 'rheinfels', price: '35–55', tag: '施泰因老城 · 鱼类特色' }],
+    alt: [{ key: 'schloessli', price: '40–60', book: true, tag: '瀑布小岛城堡 · 全景位' },
+          { raw: '沙夫豪森站 Coop 买三明治', price: '10–15', tag: '带到瀑布边野餐' }],
+    why: '<span class="warn">⚠️ 之前我推荐的 Inseli Bistro 已撤销</span> —— 它确实存在（就在瀑布小岛上、Schlössli Wörth 隔壁，每天 09:00–18:30），但 <strong>Google 评分只有 2.6 分（147 条）</strong>，是典型的景区快餐柜台。景好、便宜，菜不行。<br>改推 <strong>Rheinfels</strong>：莱茵河畔施泰因老城的老牌餐厅，<strong>4.5 分（466 条）是当天几家里最高的</strong>，主打莱茵河鱼。而且施泰因是当天停留最久、最从容的一站，在这吃比在瀑布边赶时间强。<br>想要「城堡里看瀑布」的体验就选 Schlössli Wörth（12 世纪城堡六角塔楼，4.2 / 1041，属于位置分大于菜分）。<br>纯省钱就在沙夫豪森站 Coop 买三明治，<strong>带到瀑布边野餐</strong> —— 景是免费的。',
+    note: '苏黎世→沙夫豪森 <strong>约 40 分钟</strong>（看瀑布坐到 <strong>Neuhausen Rheinfall 站</strong>，步行一小段到河滨步道）；沙夫豪森→莱茵河畔施泰因 <strong>约 25 分钟</strong>。<br>Rheinfels 在 Rhigass 8，<strong>施泰因老城河边，车站步行约 8 分钟</strong>；Schlössli Wörth 在 Rheinfallquai 30 的小岛上，周日 11:30–21:30。<br><strong>参考时间线：</strong>苏黎世 08:30 出发 → 莱茵瀑布 09:20–11:30 → 施泰因 12:00–14:30（含午餐）→ 回苏黎世 16:00 取行李 → 17:00 上车。' },
   { meal: '晚餐',
     shops: [{ key:'sm-geneva', where:'Pl. de Cornavin 7，<strong>日内瓦站内，周日照开</strong>' }],
     rec: [{ key: 'lipp', price: '40–60', book: true, tag: '每天 08:00–次日 01:00' }],
@@ -327,7 +327,7 @@ const BOOKING = [
     tip: '<span class="warn">⚠️ 三个坑：</span>① 营业日是<strong>周三–周六 19:00–22:00</strong>；② <strong>套餐 3 道 CHF 108 / 5 道 CHF 158 每人</strong>，远超一般预期；③ 酒店官网写的是「2026/12/17 起重新开业」，<strong>10 月很可能不营业</strong>。也可加 WhatsApp +41 77 937 52 26 问。' },
   { key: 'schloessli', pri: '建议订', day: 'Day 9 · 10/11 周日', adv: '1–2 周',
     online: 'https://erlebnis-rheinfall.ch/de/reservieren', onlineLabel: '官网在线订位',
-    tip: '只在选它而不选隔壁 Inseli Bistro 时才需要。<strong>靠窗全景位要专门指定</strong>，不订就只能坐里面看不到瀑布。周日 11:30–21:30。' },
+    tip: '当天想「在城堡里看着瀑布吃饭」才需要订。<strong>靠窗全景位要专门指定</strong>，不订就只能坐里面看不到瀑布。周日 11:30–21:30。' },
   { key: 'zeughaus', pri: '建议订', day: 'Day 6 或 Day 8', adv: '3–7 天',
     email: 'info@zeughauskeller.ch', online: 'https://www.zeughauskeller.ch/en/contact-opening-hours?c=Onlinereservation',
     onlineLabel: '官网在线订位',
@@ -719,7 +719,7 @@ ${bookingRows()}
       <li>确认<strong>采尔马特</strong>的 Monte Rosa（Whymper Stube）<strong>10/4 是否营业</strong>，备选 Schäferstube 一起问。</li>
       <li>打电话订 <strong>Wirtshaus Galliker</strong>（卢塞恩，<strong>只接电话</strong>）。</li>
       <li>官网订 <strong>Williams ButchersTable</strong>（Day 7 周五晚，瑞士第一牛排）。</li>
-      <li>如果选 Schlössli Wörth 而非 Inseli Bistro，订<strong>靠窗全景位</strong>。</li>
+      <li>如果 Day 9 想在莱茵瀑布的 Schlössli Wörth 吃，订<strong>靠窗全景位</strong>（不订看不到瀑布）。</li>
     </ol>
     <p><strong>出发前 3–7 天：</strong></p>
     <ol start="6">
