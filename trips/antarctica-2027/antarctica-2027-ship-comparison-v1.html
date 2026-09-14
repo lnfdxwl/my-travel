@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南极 2027 春节｜宏迪斯号 vs 海洋信天翁号 选船决策对比</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    color: #2c3e50;
+    background: #f5f1e8;
+  }
+  .container { max-width: 1100px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0d3b66 0%, #2563a8 45%, #7fb3d5 100%);
+    color: #fff;
+    padding: 52px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 30px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 18px; font-size: 13.5px; opacity: 0.9; }
+  .hero .meta span { margin: 0 10px; white-space: nowrap; }
+
+  section { padding: 34px 60px; border-bottom: 1px solid #eee; }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 21px; color: #2563a8; margin-bottom: 18px;
+    padding-bottom: 9px; border-bottom: 2px solid #d4a574; display: inline-block;
+  }
+  h3 { font-size: 17px; color: #34495e; margin: 22px 0 10px; }
+  h4 { font-size: 14.5px; color: #2563a8; margin: 14px 0 6px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 22px; }
+  li { margin-bottom: 6px; }
+  small { line-height: 1.6; }
+
+  /* 结论块 */
+  .verdict {
+    background: linear-gradient(135deg, #fbf6ec 0%, #f4ece0 100%);
+    border: 1px solid #d4a574; border-left: 6px solid #2563a8;
+    border-radius: 10px; padding: 24px 28px; margin: 4px 0 18px;
+  }
+  .verdict .pick { font-size: 20px; font-weight: 700; color: #0d3b66; margin-bottom: 10px; }
+  .verdict .pick .tag {
+    display: inline-block; background: #2563a8; color: #fff; font-size: 12px;
+    padding: 3px 10px; border-radius: 12px; margin-left: 10px; vertical-align: middle; font-weight: 600;
+  }
+  .verdict p { font-size: 14.5px; color: #4a4a4a; margin-bottom: 8px; }
+  .verdict p:last-child { margin-bottom: 0; }
+
+  /* 双栏对比卡 */
+  .versus { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+  .ship-card { border: 1px solid #e8dfc8; border-radius: 10px; padding: 20px 22px; background: #fff; }
+  .ship-card.a { border-top: 5px solid #c0392b; }
+  .ship-card.b { border-top: 5px solid #2563a8; }
+  .ship-card .sname { font-size: 17px; font-weight: 700; color: #2c3e50; margin-bottom: 2px; }
+  .ship-card .seng { font-size: 12px; color: #999; margin-bottom: 12px; letter-spacing: 0.3px; }
+  .ship-card .row { font-size: 13.5px; padding: 6px 0; border-bottom: 1px dashed #eee; display: flex; justify-content: space-between; gap: 10px; }
+  .ship-card .row:last-child { border-bottom: none; }
+  .ship-card .row .k { color: #888; flex-shrink: 0; }
+  .ship-card .row .v { text-align: right; font-weight: 600; color: #2c3e50; }
+  .ship-card .v.good { color: #1e8449; }
+  .ship-card .v.bad { color: #c0392b; }
+
+  /* 表格 */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13.5px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tbl-wrap { overflow-x: auto; }
+  .tbl-wrap.wide table { min-width: 560px; }
+
+  /* Callouts */
+  .tip  { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 13.5px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 13.5px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 13.5px; }
+  div.good { background: #eafaf1; border-left: 4px solid #27ae60; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 13.5px; }
+
+  /* 打假条目 */
+  .myth { border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; margin: 12px 0; background: #fffdf9; }
+  .myth .claim { font-size: 14.5px; font-weight: 600; color: #c0392b; margin-bottom: 6px; }
+  .myth .claim::before { content: "宣传："; color: #999; font-weight: 400; font-size: 13px; }
+  .myth .truth { font-size: 13.5px; color: #444; }
+  .myth .truth::before { content: "实际："; color: #1e8449; font-weight: 600; margin-right: 4px; }
+
+  /* 时间轴 */
+  .tl { margin: 16px 0; }
+  .tl-row { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 9px 0; border-bottom: 1px dashed #eee; font-size: 13.5px; align-items: baseline; }
+  .tl-row:last-child { border-bottom: none; }
+  .tl-row .d { color: #c0392b; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tl-row.sea { background: #f7f9fb; }
+  .tl-row.ant { background: #eafaf1; }
+  .tl-row .tagx { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 9px; margin-left: 6px; vertical-align: middle; }
+  .tagx.s { background: #dfe6ec; color: #5d6d7e; }
+  .tagx.a { background: #27ae60; color: #fff; }
+  .tagx.l { background: #d4a574; color: #fff; }
+
+  /* 配图 */
+  .shot { width: 100%; max-width: 620px; height: 260px; object-fit: cover; border-radius: 8px; margin: 10px 0 2px; display: block; }
+  .shot-cap { font-size: 12px; color: #999; margin-bottom: 12px; }
+
+  /* checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 9px 0 9px 30px; position: relative; border-bottom: 1px dashed #eee; font-size: 13.5px; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 17px; font-weight: bold; }
+  .checklist li b { color: #2c3e50; }
+
+  /* 死线 */
+  .deadline { display: grid; grid-template-columns: 118px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px dashed #eee; font-size: 13.5px; }
+  .deadline:last-child { border-bottom: none; }
+  .deadline .dd { font-weight: 700; color: #c0392b; font-variant-numeric: tabular-nums; }
+
+  a.map { color: #2563a8; text-decoration: none; font-size: 12.5px; white-space: nowrap; }
+  a.map:hover { text-decoration: underline; }
+  a.src { color: #2563a8; text-decoration: none; }
+  a.src:hover { text-decoration: underline; }
+
+  footer { text-align: center; padding: 26px 20px; color: #95a5a6; font-size: 12.5px; background: #f5f1e8; line-height: 1.8; }
+
+  @media (max-width: 720px) {
+    section { padding: 24px 18px; }
+    .hero { padding: 36px 20px; }
+    .hero h1 { font-size: 22px; }
+    .hero .meta span { display: block; margin: 4px 0; }
+    .versus { grid-template-columns: 1fr; }
+    .verdict { padding: 18px 18px; }
+    .verdict .pick { font-size: 17px; }
+    .tl-row { grid-template-columns: 76px 1fr; gap: 10px; }
+    .deadline { grid-template-columns: 100px 1fr; }
+    .shot { height: 190px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <h1>🐧 南极 2027 春节 · 两船怎么选</h1>
+  <div class="subtitle">【南极秘境】宏迪斯号 &nbsp;vs&nbsp; 经典南极「海洋信天翁号」</div>
+  <div class="meta">
+    <span>👥 两人同行</span>
+    <span>💰 预算敏感</span>
+    <span>🗣️ 英语一般</span>
+    <span>📅 对比日期 2026-09-14</span>
+  </div>
+</div>
+
+<!-- ===== 结论 ===== -->
+<section>
+  <h2>🎯 结论</h2>
+
+  <div class="verdict">
+    <div class="pick">选 海洋信天翁号<span class="tag">推荐</span></div>
+    <p>决定性理由只有一条：船上语言。宏迪斯这一班按日期与逐日行程比对，对应 Oceanwide 官方国际散拼航次 HDS28-27（官网同为 2/3–2/13，同样点名 Erebus and Terror Gulf、喙岛、恶魔岛、维加岛），其官网语言字段写的是 English；信天翁是行之悦整船包下的华人团，中文陪同和中文探险队员写在产品定义里。9 个船上夜晚里，每天的次日计划简报、野生动物解说、登陆分组指令都用得上这件事，不只是德雷克那两天的讲座。</p>
+    <p>两边价格几乎持平（差约 1,700 元），所以这不是花钱买舒适，而是在同一笔预算下选择听得懂还是听不懂。</p>
+  </div>
+
+  <div class="warn">
+    <strong>但这不是一边倒的选择。</strong>宏迪斯在南极内容上确实更强：多 1 个南极日、多一整片威德尔海、船东口碑显著更好（Trustpilot 4.3 vs 2.2）。<br>
+    <strong>会改口的情况</strong>：如果你们对"看到别人看不到的东西"有执念，愿意用听不懂讲座去换那片 99% 的南极游客没去过的海域——那就选宏迪斯。这是一个合理的、不同的价值排序，不是错误答案。
+  </div>
+</section>
+
+<!-- ===== 核心差异 ===== -->
+<section>
+  <h2>⚖️ 核心差异</h2>
+
+  <div class="versus">
+    <div class="ship-card a">
+      <div class="sname">宏迪斯号</div>
+      <div class="seng">m/v Hondius · Oceanwide Expeditions · HDS28-27</div>
+      <div class="row"><span class="k">行程</span><span class="v">18 天（1/30–2/16）</span></div>
+      <div class="row"><span class="k">船上</span><span class="v">2/3 登船 – 2/13 下船 · 10 晚</span></div>
+      <div class="row"><span class="k">南极天数</span><span class="v good">5 天</span></div>
+      <div class="row"><span class="k">覆盖地理</span><span class="v good">东侧 + 西侧 + 南设得兰</span></div>
+      <div class="row"><span class="k">船上语言</span><span class="v bad">English（官网标注）</span></div>
+      <div class="row"><span class="k">船东口碑</span><span class="v good">Trustpilot 4.3 / 5</span></div>
+      <div class="row"><span class="k">船</span><span class="v">2019 年 · 6,603 吨 · PC6 · 170 客</span></div>
+      <div class="row"><span class="k">陆地住宿</span><span class="v bad">当地 4 星</span></div>
+      <div class="row"><span class="k">陆地行程</span><span class="v good">乌拉圭 + 布宜 + 探戈秀 + 烤肉</span></div>
+      <div class="row"><span class="k">双人舱起价</span><span class="v">¥109,999</span></div>
+    </div>
+
+    <div class="ship-card b">
+      <div class="sname">海洋信天翁号</div>
+      <div class="seng">Ocean Albatros · Albatros Expeditions · 行之悦包船</div>
+      <div class="row"><span class="k">行程</span><span class="v">17 天（1/29–2/14）</span></div>
+      <div class="row"><span class="k">船上</span><span class="v">2/2 登船 – 2/11 下船 · 9 晚</span></div>
+      <div class="row"><span class="k">南极天数</span><span class="v bad">4 天</span></div>
+      <div class="row"><span class="k">覆盖地理</span><span class="v bad">西侧 + 南设得兰</span></div>
+      <div class="row"><span class="k">船上语言</span><span class="v good">中文（华人包船）</span></div>
+      <div class="row"><span class="k">船东口碑</span><span class="v bad">Trustpilot 2.2 / 5</span></div>
+      <div class="row"><span class="k">船</span><span class="v">2023 年 · 8,500 吨 · 1A · 184 客</span></div>
+      <div class="row"><span class="k">陆地住宿</span><span class="v good">布宜五星 3 晚</span></div>
+      <div class="row"><span class="k">陆地行程</span><span class="v bad">仅布宜市区一天</span></div>
+      <div class="row"><span class="k">双人舱起价</span><span class="v">¥107,900</span></div>
+    </div>
+  </div>
+
+  <h3>两条被我删掉的论据</h3>
+  <div class="info">
+    评审推翻了我最初拿来支持信天翁的两条，写在这里以免再被销售话术带偏：<br>
+    <strong>载客 170 vs 189 对登陆时长几乎没影响</strong> —— IAATO 限单点上岸 100 人，170 人和 184 人都要分两组轮换，轮换次数一样，每人上岸 1–1.5 小时。（另注：有分析称信天翁冲锋艇 18 艘多于宏迪斯，经查是把手册里的“救生船 18 艘”误读成了冲锋艇，两者不是一回事，该论据已删除。）<br>
+    <strong>X-Bow 不解决晕船主因</strong> —— X-Bow 主要减纵摇和拍击，德雷克晕船主因是横摇，靠减摇鳍，两条船都有。一贴晕船贴约 ¥100 就覆盖了这 4 天，不值得当决策主轴。
+  </div>
+</section>
+
+<!-- ===== 航线 ===== -->
+<section>
+  <h2>🗺️ 航线与南极天数</h2>
+
+  <h3>宏迪斯号 · 南极 5 天</h3>
+  <div class="tl">
+    <div class="tl-row"><span class="d">2/3</span><span>乌斯怀亚登船 <a class="map" href="https://maps.google.com/?q=Ushuaia+Port+Argentina" target="_blank">📍地图</a><span class="tagx l">登船</span></span></div>
+    <div class="tl-row sea"><span class="d">2/4–2/5</span><span>德雷克海峡南下<span class="tagx s">海上</span> · 除夕 2/5 在此</span></div>
+    <div class="tl-row ant"><span class="d">2/6–2/7</span><span>威德尔海 / Erebus and Terror Gulf —— 喙岛、恶魔岛、维加岛、詹姆斯罗斯岛、保莱特岛 <a class="map" href="https://maps.google.com/?q=Paulet+Island+Antarctica" target="_blank">📍地图</a><span class="tagx a">南极</span></span></div>
+    <div class="tl-row ant"><span class="d">2/8–2/10</span><span>半岛西侧 + 南设得兰 —— 天堂湾、尼克港、丹科岛、欺骗岛 <a class="map" href="https://maps.google.com/?q=Deception+Island+Antarctica" target="_blank">📍地图</a><span class="tagx a">南极</span></span></div>
+    <div class="tl-row sea"><span class="d">2/11–2/12</span><span>德雷克海峡北返<span class="tagx s">海上</span></span></div>
+    <div class="tl-row"><span class="d">2/13</span><span>乌斯怀亚下船（早 7 点）<span class="tagx l">下船</span></span></div>
+  </div>
+
+  <h3>海洋信天翁号 · 南极 4 天</h3>
+  <div class="tl">
+    <div class="tl-row"><span class="d">2/2</span><span>乌斯怀亚登船<span class="tagx l">登船</span></span></div>
+    <div class="tl-row sea"><span class="d">2/3–2/4</span><span>德雷克海峡南下<span class="tagx s">海上</span></span></div>
+    <div class="tl-row ant"><span class="d">2/5–2/8</span><span>南设得兰 + 南极半岛 —— 利文斯顿岛、彼得曼岛、欺骗岛、布朗断崖、天堂湾 <a class="map" href="https://maps.google.com/?q=Paradise+Bay+Antarctica" target="_blank">📍地图</a>、库佛维尔岛、拉可罗港 <a class="map" href="https://maps.google.com/?q=Port+Lockroy+Antarctica" target="_blank">📍地图</a><span class="tagx a">南极</span> · 除夕 2/5 在此</span></div>
+    <div class="tl-row sea"><span class="d">2/9–2/10</span><span>德雷克海峡北返<span class="tagx s">海上</span></span></div>
+    <div class="tl-row"><span class="d">2/11</span><span>乌斯怀亚下船<span class="tagx l">下船</span></span></div>
+  </div>
+
+  <div class="tip">
+    两条线都是第 3 天清晨抵达南极，所以首日都是半天。净差仍是 1 个完整南极日，扣掉抵达日的半天，活动窗口约 9 个 vs 7 个。
+  </div>
+
+  <h3>威德尔海到底稀缺在哪</h3>
+  <p>按 IAATO 官方登陆点统计（2024–25 季，全季 555 航次 / 3,666 次登陆）：</p>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>登陆点</th><th class="num">24–25 季登陆次数</th><th class="num">占全季</th><th>谁去</th></tr>
+    <tr><td>Neko Harbour 尼克港</td><td class="num">220</td><td class="num">6.0%</td><td>仅宏迪斯</td></tr>
+    <tr><td>Danco Island 丹科岛</td><td class="num">173</td><td class="num">4.7%</td><td>仅宏迪斯</td></tr>
+    <tr><td>Petermann Island 彼得曼岛</td><td class="num">135</td><td class="num">3.7%</td><td>信天翁主打</td></tr>
+    <tr><td>Cuverville 库佛维尔岛</td><td class="num">107</td><td class="num">2.9%</td><td>两船都去</td></tr>
+    <tr><td><b>Paulet Island 保莱特岛</b></td><td class="num">20</td><td class="num">0.55%</td><td>仅宏迪斯</td></tr>
+    <tr><td><b>Devil Island 恶魔岛</b></td><td class="num">6</td><td class="num">0.16%</td><td>仅宏迪斯</td></tr>
+  </table>
+  </div>
+  <p>信天翁行程册列的 7 个参考登陆点（利文斯顿岛、彼得曼岛、欺骗岛、布朗断崖、天堂湾、库佛维尔岛、拉可罗港）全部是半岛西侧与南设得兰的常规点，是一条标准答案航线；宏迪斯多出的保莱特岛和恶魔岛，去过南极的人里约 96–99% 没登过。</p>
+
+  <img class="shot" src="https://lh3.googleusercontent.com/place-photos/AG9NLjD5uwA3Wn2MbDEwKwwTXIlHUckf1-ui9yy_pwx5LXLlTOLeYlRsUApku6CanR02Ny9jd1k7mn2SadfT8oqLYrlZhSSUwbC8pOAUSw93wSP0TOU1Jxcx904TPTM5fosjm10lpz7FODTkj2H9raY=s4800-w800" alt="保莱特岛">
+  <div class="shot-cap">📷 保莱特岛（Paulet Island）——火山口湖周围约 10 万对阿德利企鹅繁殖群，仅宏迪斯航线经过（图源 Google 地图）</div>
+
+  <img class="shot" src="https://lh3.googleusercontent.com/place-photos/AG9NLjChXZ3ENYt7esVPlnx-O9t0TY8hrkV_2AlLovc9Yz4w6nMiAyhLSbsnEkEJy9yeDA48PxWn-alFH2dyXFIdtn8NV3n5v1t7Im53IZ1OPxssPfGBrJbIk4EDplspb9ECh9x4adBwzl1c3W_clw=s4800-w800" alt="天堂湾">
+  <div class="shot-cap">📷 天堂湾（Paradise Bay）——两条航线都会去的经典点，Google 评分 4.9（图源 Google 地图）</div>
+
+  <div class="good">
+    <strong>一个被我改掉的判断。</strong>我最初以为威德尔海是"赌一把，冰况不好就退回半岛"。查下来不是：Swoop Antarctica 的口径是 1–3 月才是威德尔海通航期，2 月正是海冰退开、桌状冰山最壮观的窗口。这段内容大概率能兑现。而且下行风险也有限——万一进不去，Plan B 就是转去半岛西侧，也就是信天翁那条线。
+  </div>
+</section>
+
+<!-- ===== 打假 ===== -->
+<section>
+  <h2>🔍 宣传册里对不上的四处</h2>
+
+  <div class="myth">
+    <div class="claim">宏迪斯封面印“追踪帝企鹅”，配一张帝企鹅大图（封面为图片，正文文本中无此句）</div>
+    <div class="truth">行程不含雪丘岛、不含直升机，列出的登陆点没有一个是帝企鹅栖息地——恶魔岛、保莱特岛是阿德利，尼克港、丹科岛、库渥维尔是金图/巴布亚。手册正文也只在威德尔海介绍里写了一句“以巨大的桌状冰山、密集海冰和帝企鹅栖息地闻名”。Oceanwide 自家的帝企鹅产品是另一条船（Ortelius + 直升机），且最佳观察期是 11 月初，2 月雏鸟已入海、群落散开。<b>按零概率计。</b>同一张封面还写"1A-SUPER 至高抗冰级"，实际 PC6 在 PC1–PC7 里属中等。</div>
+  </div>
+
+  <div class="myth">
+    <div class="claim">宏迪斯自费项目：南极露营 439 欧起、极地皮划艇 179 欧起</div>
+    <div class="truth">Oceanwide 官网 HDS28-27 航次页把 Camping 和 Kayaking 都标为 <b>FREE</b>。折合约 ¥3,425 / ¥1,396 的差价，必须让客服解释清楚。</div>
+  </div>
+
+  <div class="myth">
+    <div class="claim">信天翁"华人包船"</div>
+    <div class="truth"><b>有强旁证，但尚无书面确认。</b>Polar Latitudes 官网自己的排期里，Ocean Albatros 在 2027/2/2 到 2/10 之间是空档（前一班 1/21–2/2，后一班 2/10–3/1），中间那段被抽走了，这正是包船的痕迹。有个聚合站 northsouthvoyages 列了这一班，但它整体日期比官方偏移约一天，属陈旧数据。仍建议要一份书面确认。</div>
+  </div>
+
+  <div class="myth">
+    <div class="claim">信天翁被渠道页宣传为“行程一价全包”（此语出自分销页面，非手册原文）</div>
+    <div class="truth">南极段小费 20–25 美元/人/天需另付；船上网络全自费；湿登陆的长筒防水靴含不含租赁，手册一字未提（宏迪斯明确写含免费租赁）。</div>
+  </div>
+  <div class="myth">
+    <div class="claim">信天翁 17 天 13 晚，陆地内容与宏迪斯 18 天相当</div>
+    <div class="truth">陆地段明显更薄：信天翁只有 Day 3 布宜市区一天，宏迪斯多出乌拉圭科洛尼亚（世遗老城）一日游、探戈秀三道式西餐、潘帕斯烤肉餐。另外信天翁 Day 15（2/12）只标了"早餐"，白天怎么安排、午晚餐在哪都没写；宏迪斯在同一位置（2/14）排了整天市区游 + 烤肉午餐。住宿本身没问题——3 晚布宜 + 1 晚乌斯怀亚与费用包含对得上。</div>
+  </div>
+
+</section>
+
+<!-- ===== 钱 ===== -->
+<section>
+  <h2>💰 钱到底差多少</h2>
+
+  <p>同档双人舱对比（都是最低档舷窗舱、3 层甲板）：</p>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>项目</th><th class="num">宏迪斯<br><small>探险家标准海景 Twin Porthole</small></th><th class="num">信天翁<br><small>舷窗房 D 舱</small></th></tr>
+    <tr><td>团费</td><td class="num">109,999</td><td class="num">107,900</td></tr>
+    <tr><td>邮轮小费（未含）</td><td class="num">约 1,000<br><small>10–15 欧 × 10–11 天</small></td><td class="num">约 1,400<br><small>20–25 美元 × 9–10 天</small></td></tr>
+    <tr><td><b>小计</b></td><td class="num"><b>≈ 111,000</b></td><td class="num"><b>≈ 109,300</b></td></tr>
+    <tr><td>国内段交通</td><td class="num">广州集合，未含</td><td class="num">北/上/广，未含</td></tr>
+    <tr><td>美签（如无）</td><td class="num">约 1,350</td><td class="num">约 1,350</td></tr>
+    <tr><td>补充医疗撤离险</td><td class="num" colspan="2" style="text-align:center">两家都未告知，见下方风险提示</td></tr>
+  </table>
+  </div>
+  <p>差约 <b>1,600–1,700 元</b>（按“晚”还是按“天”计两家条款都没写死，取两种算法区间）——在 11 万的量级上是噪音，不构成决策依据。汇率按 1 欧 ≈ 7.80 元、1 美元 ≈ 6.71 元（2026-09-14）。</p>
+
+  <h3>想再省钱的选法</h3>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>舱位</th><th class="num">价格/人</th><th>说明</th></tr>
+    <tr><td>信天翁 三人房 F 舱</td><td class="num">98,900</td><td>全场最低，但要和一位陌生同性拼住</td></tr>
+    <tr><td>信天翁 舷窗房 D 舱</td><td class="num">107,900</td><td>两人一间，<b>务必书面确认要"两张单人床"</b></td></tr>
+    <tr><td>信天翁 落地窗 E 舱</td><td class="num">111,900</td><td>⚠️ 只有一张 150×200 大床，两个女生不合适</td></tr>
+    <tr><td>信天翁 标准阳台 C 舱</td><td class="num">115,900</td><td>有阳台，不用跑甲板就能看鲸和冰山</td></tr>
+    <tr><td>宏迪斯 三人舱</td><td class="num">95,999 / 98,999</td><td>上铺 / 下铺，有上下铺，三人挤 13–16㎡</td></tr>
+  </table>
+  </div>
+  <h3>两人同行的隐性风险：单房差</h3>
+  <p>如果其中一人拒签或临时取消，另一人要么补单房差，要么被安排与陌生人拼房。这笔钱两份报价都没给清楚：</p>
+  <ul>
+    <li>宏迪斯：陆地段单房差 ¥2,695/全程，<b>但邮轮单房差直接写"请单独咨询"，没有金额</b>。手册还专门写了拼房免责（打鼾、磨牙、房内饮酒等）。</li>
+    <li>信天翁：单人房 G 舱 ¥128,900，比 D 舱贵 ¥21,000；陆地段单房差同样只写"不含"，无金额。</li>
+  </ul>
+  <div class="warn">
+    <strong>E 舱的坑</strong>：PDF 里只有 E 舱写"一张双人床（大号床 150×200 厘米）"，C 舱和 D 舱都明写"双人床<b>或</b>两张单人床"。只贵 4,000 元很容易被推荐，但床型不对。
+  </div>
+</section>
+
+<!-- ===== 风险 ===== -->
+<section>
+  <h2>⚠️ 两家都没告诉你的风险</h2>
+
+  <h3>1. 强制医疗撤离险，两家给的大概率都不达标</h3>
+  <div class="warn">
+    Albatros 条款要求每人 <b>20 万美元</b>紧急撤离险，登船时须出示凭证；Oceanwide 要求最低 <b>10 万欧/美元</b>。<br>
+    宏迪斯赠送的"40 万京东安联畅享全球"折约 6.0 万美元，且 40 万通常是意外身故伤残主险额度、医疗救援分项更低；信天翁只写"出境旅游意外险覆盖南极地区"，无额度、无险种、无保司。<br>
+    南极单次医疗撤离常超 10 万美元。<b>无论选哪家，都要自费补一份高额撤离险，这笔钱两家都没算进去。</b>
+  </div>
+
+  <h3>2. 船东口碑：一个需要正确解读的 2.2 分</h3>
+  <p>Albatros Expeditions 在 Trustpilot 是 2.2/5（约 42–49 条），Oceanwide 是 4.3/5。差距很大，但拆开看结构不一样：</p>
+  <ul>
+    <li>低分主要来自两处：<b>Ocean Victory</b>（另一条船）2026 年 1 月把 10 天半岛行程做成南极不足 1 天、只退 56%；以及公司客服层面的投诉（邮件不回、同舱不同价）。</li>
+    <li><b>Ocean Albatros 这条船本身</b>的乘客评价是正面的——Swoop、LiveAboard、QuirkyCruise 都给出"我坐过最好的探险船之一""探险队很棒""餐食优秀"。</li>
+  </ul>
+  <p>所以风险真实存在，但不等同于那起事故。可执行的对冲是：向行之悦索要船东侧的航次确认书，以及行程缩水时的赔付条款，对照 Ocean Victory 的 56% 先例谈。</p>
+
+  <h3>3. 宏迪斯这份文件本身有几个硬伤</h3>
+  <ul>
+    <li>通篇只写"我社 / 旅行社"，<b>没有任何公司抬头、许可证号、地址电话</b>——你不知道跟谁签合同。</li>
+    <li>退改条款自相矛盾：政策写"121 天以上无损"，但"费用未含"第 3 条又写"获得签证后取消须收取定金费用"，5 万定金到底退不退，两条打架。</li>
+    <li>内陆段（布宜↔乌斯怀亚）两段全写"待告"，而 2/13 早 7 点下船当天要飞布宜、次日接国际段。</li>
+    <li>免责条款里出现了本航次根本没有的直升机条款，说明文件是模板拼凑的。</li>
+  </ul>
+
+  <h3>4. 信天翁这份手册整份没有合同条款</h3>
+  <p>无退改、无定金、无付款节点、无违约责任、无不可抗力处理。不是没有条款，是没给你看。可以拿船东 Albatros 的公开条款做谈判锚点：180 天以上取消仅扣 1,000 美元，179–91 天扣 25%，90 天内 100%。</p>
+</section>
+
+<!-- ===== 时间线 ===== -->
+<section>
+  <h2>⏰ 时间线：宏迪斯的决策窗口很紧</h2>
+  <div class="deadline"><span class="dd">2026-10-01</span><span>宏迪斯 <b>无损取消最后一天</b>（出发前 121 天）。距 9/14 只剩 17 天。</span></div>
+  <div class="deadline"><span class="dd">2026-10-02</span><span>起取消赔团款 <b>50%</b>。</span></div>
+  <div class="deadline"><span class="dd">2026-10-30</span><span>宏迪斯美签拒签兜底方案（改办阿根廷贴纸签）的材料交齐截止（出发前 3 个月）。</span></div>
+  <div class="deadline"><span class="dd">2026-11-01</span><span>宏迪斯起取消赔 <b>100%</b>；同日为尾款截止日（出发前 90 天）。</span></div>
+  <div class="deadline"><span class="dd">2027-01-29</span><span>信天翁出发。</span></div>
+  <div class="deadline"><span class="dd">2027-01-30</span><span>宏迪斯出发。</span></div>
+  <div class="info">信天翁完全没写退改政策和付款节点，所以它的时间压力未知——这本身就是第一个该问的问题。</div>
+</section>
+
+<!-- ===== 必问清单 ===== -->
+<section>
+  <h2>📋 签合同前必问清单</h2>
+
+  <h3>两家都要问</h3>
+  <ul class="checklist">
+    <li><b>强制医疗撤离险的额度要求是多少，你们给的这份达标吗？</b>不达标的话差额怎么补、在哪买。</li>
+    <li><b>美签之外还需要阿根廷 AVE 电子旅行许可吗？</b>中国领事服务网的口径是需要 AVE，且要求美签"过去 2 年内至少使用过 1 次"；两份行程都没提这件事。</li>
+    <li><b>如果同行两人中有一人拒签或取消，另一人怎么办？</b>要求把邮轮单房差和陆地单房差的<b>具体金额</b>写进确认单，并确认有没有拒绝与陌生人拼房的权利。</li>
+    <li><b>这条航线历史上平均安排多少次登陆／冲锋艇巡游？</b>拿不到承诺也要个均值做预期管理（通常 8–12 次）。两家合同都把登陆次数的风险完全转移给了客人。</li>
+  </ul>
+
+  <h3>问宏迪斯</h3>
+  <ul class="checklist">
+    <li><b>组团社全称和旅行社业务经营许可证号。</b>收款账户必须与合同抬头一致，绝不打私人账户。</li>
+    <li><b>5 万定金在"121 天以上取消"时到底退不退？</b>两条条款自相矛盾，要求书面澄清。</li>
+    <li><b>Oceanwide 官网写露营和皮划艇免费，为什么中文报价收 439 欧 / 179 欧？</b></li>
+    <li><b>把"配中文探险队员 + 讲座中文翻译"写进合同补充条款。</b>Oceanwide 确有中文向导（其 OTL24-26 航次官方语言标注含 CN），这个要求提得出来。写不进去就按全英文估值。</li>
+    <li><b>布宜↔乌斯怀亚内陆段航班号和时刻</b>，以及 2/13 下船当天延误赶不上 2/14 国际段时，责任和费用怎么算。</li>
+    <li><b>2/6–2/7 威德尔海如果因冰情进不去，改成什么？</b>顺便当面问一句"敢不敢把帝企鹅写进合同"——看销售怎么回答，这是判断对方诚信度最好的试纸。</li>
+    <li><b>WiFi 到底含不含？</b>费用包含写送 1.5GB/天流量券，费用未含又写"上网"不含，两条打架。</li>
+  </ul>
+
+  <h3>问信天翁（行之悦）</h3>
+  <ul class="checklist">
+    <li><b>完整退改政策、定金金额、付款节点、行程缩水的赔付条款。</b></li>
+    <li><b>船东侧的包船航次确认书</b>，以及书面确认这是整船华人包船、中文探险队员的具体人数。</li>
+    <li><b>国际段航司、转机次数、转机时长、行李额。</b>手册只给了阿根廷内陆段 AR1852 / AR1879。</li>
+    <li><b>湿登陆用的长筒防水靴含不含租赁？</b></li>
+    <li><b>船上网络收费标准。</b>（宏迪斯每天赠 1.5GB）</li>
+    <li><b>除夕 2/5 是德雷克之后的抵达日，当天实际安排几次岸上活动？</b></li>
+    <li><b>D 舱确认可以要两张单人床</b>，并写进确认单。</li>
+    <li><b>皮划艇、南极冰泳这些活动含不含、多少钱、名额多少？</b>甲板图上画了皮划艇平台、亮点里写了南极冰泳，但手册对自费项目一个字没提。</li>
+    <li><b>2/12（Day 15）白天的安排、午晚餐是什么？</b>手册只标了早餐。</li>
+  </ul>
+</section>
+
+<!-- ===== 决策记录 ===== -->
+<section>
+  <h2>🧭 决策记录</h2>
+  <p>这份对比在成稿过程中推翻了三处初始判断，留在这里以免下次重复踩：</p>
+  <div class="tbl-wrap wide">
+  <table>
+    <tr><th>初始判断</th><th>修正后</th><th>依据</th></tr>
+    <tr><td>威德尔海是赌博，冰况不好就泡汤</td><td>2 月正是威德尔海通航窗口的峰值，不是淡季</td><td>Swoop Antarctica：1–3 月海冰退开才能安全进入</td></tr>
+    <tr><td>载客 170 &lt; 184，宏迪斯登陆更从容</td><td>伪差异，两船都要分两组轮换</td><td>IAATO 100 人上限 + 乘客实测报告</td></tr>
+    <tr><td>X-Bow 让信天翁明显更抗德雷克风浪</td><td>被高估。X-Bow 治纵摇，晕船主因是横摇，两船都有减摇鳍</td><td>船型规格对比 + X-Bow 作用机理</td></tr>
+    <tr><td>船东 2.2 分说明信天翁运营不可靠</td><td>部分成立但被放大：低分集中在另一条船和客服，本船评价正面</td><td>Trustpilot / TripAdvisor / Swoop / QuirkyCruise 交叉比对</td></tr>
+  </table>
+  </div>
+  <p>价格方面还有一条没采信：有分析用国际牌价倒推出"包船溢价 1.1–1.8 万"，但它拿来对比的是 3 月末季和 shared cabin 报价，而春节是旺季峰值（Polar Latitudes 官方 2/28 同船同线报价 from $21,246）。口径不一致，这个数字不成立，所以价格仍以两个中文包价产品直接对比为准。</p>
+</section>
+
+<!-- ===== 待确认 ===== -->
+<section>
+  <h2>❓ 还需要确认的两件事</h2>
+  <ol>
+    <li><b>你们俩现在有没有有效的美国 B1/B2 签证，以及有没有实际去过美国？</b>两个团都靠它免签入境阿根廷；AVE 那条要求可能卡住"有签证但从未使用"的情况。</li>
+    <li><b>从哪个城市出发？</b>宏迪斯是广州集合走土耳其航空转伊斯坦布尔；信天翁写的是北京/上海/广州。国内段两家都不含，这笔钱要加进总账。</li>
+  </ol>
+</section>
+
+<!-- ===== 信源 ===== -->
+<section>
+  <h2>📚 信源</h2>
+  <ul>
+    <li>两份行程 PDF 原件（2027-01-30 宏迪斯 18 天 / 2027-01-29 信天翁 17 天 13 晚）</li>
+    <li><a class="src" href="https://oceanwide-expeditions.com/antarctica/cruises/hds28-27-antarctic-peninsula-weddell-sea-activity-long-hikes" target="_blank">Oceanwide 官方航次页 HDS28-27</a>（语言、逐日行程、露营/皮划艇是否免费）</li>
+    <li><a class="src" href="https://polar-latitudes.com/rates-and-dates" target="_blank">Polar Latitudes 官方排期</a>（用于验证 2/2–2/10 空档＝包船）</li>
+    <li><a class="src" href="https://en.wikipedia.org/wiki/MV_Hondius" target="_blank">MV Hondius 船舶规格</a> · <a class="src" href="https://www.cruisemapper.com/ships/Ocean-Albatros-2178" target="_blank">Ocean Albatros 船舶规格</a></li>
+    <li><a class="src" href="https://iaato.org/faqs" target="_blank">IAATO</a>（100 人上岸上限）+ IAATO 登陆点统计 ATCM47/IP034（2024–25 季）</li>
+    <li>Trustpilot / TripAdvisor / Cruise Critic / Swoop Antarctica / QuirkyCruise（船东与船舶口碑交叉比对）</li>
+    <li>配图：Google 地图</li>
+  </ul>
+</section>
+
+<footer>
+  南极 2027 春节选船对比 · v1 · 生成于 2026-09-14<br>
+  价格、条款、航班以旅行社最终出团通知为准；本页结论基于当日可查证的公开信息。
+</footer>
+
+</div>
+</body>
+</html>
