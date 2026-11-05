@@ -78,6 +78,11 @@
   }
   .transport-content .why strong { color: #2563a8; }
 
+  /* Daily itinerary navigation */
+  .day-nav { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0 0 18px; }
+  .day-nav li { margin: 0; }
+  .day-nav a { color: #2563a8; display: inline-block; padding: 4px 0; }
+
   /* Day card */
   .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
   .day-header {
@@ -265,10 +270,11 @@
     </div>
     <div class="time-block">
       <div class="time">HH:MM（当地时间）</div>
-      <div class="activity">🛬 落地，出关 → 打车到酒店 → 休息</div>
+      <div class="activity">🛬 抵达{航站楼}。取行李后去{上客点}，乘{交通方式}到{酒店}，预留{通关时间 + 接送时间}；跨夜到店写明预订日期与保留房间的安排。</div>
     </div>
   </div>
 
+  <!-- 每日行程较长时，用 .day-nav 链到各日的 id，方便手机快速跳转。 -->
   <!-- Day 1 -->
   <div class="day">
     <div class="day-header">
@@ -276,23 +282,27 @@
       <span class="day-date">MM月DD日 周X</span>
     </div>
     <div class="time-block">
-      <div class="time">09:00</div>
+      <div class="time">{游览起止时间}</div>
       <!-- 地图链接格式：<a href="https://maps.google.com/?q={纬度},{经度}" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a> -->
       <div class="activity">🏛️ <strong>景点1</strong> <a href="https://maps.google.com/?q=纬度,经度" target="_blank" style="color:#2563a8;text-decoration:none;font-size:13px;">📍地图</a>（说明为什么要去）
         <!-- 历史背景：2-4句，讲清楚"是什么/为什么叫这个名字/历史意义"，见 docs/guide-spec.md 景点历史背景规范 -->
         <div class="bg">🏺 <strong>背景</strong>：景点的历史文化背景，2-4句话。</div>
         <!-- 开放时间：必须用 google-maps MCP 实时查，不要凭记忆估算 -->
-        <br><small style="color:#27ae60;font-size:12px;">🕐 开放时间：09:00-18:00（每日）</small>
+        <br><small style="color:#27ae60;font-size:12px;">🕐 {当日开放和最晚入场时间} · {票价或预约方式} · {馆方出处}</small>
         <!-- 导览提示：怎么玩的实操建议，和上面的历史背景分工不同、都要有 -->
-        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：实操建议，比如从哪个入口进、重点看什么、最佳拍照点。</small>
+        <br><small style="color:#7c3aed;font-size:12px;">🧭 <strong>导览</strong>：从{入口}先看{看点及可辨认的细节}，沿{参观方向}到{第二处看点}，约{停留时长}。从{出口}去下一站。</small>
       </div>
     </div>
     <!-- 真实配图：用 maps_search_places + maps_place_details(maxPhotos:1) 获取，见 docs/guide-spec.md 景点配图规范，禁止用灰色占位框凑数 -->
     <img class="attraction-img" src="{google地图照片URL}" alt="景点1">
     <div class="attraction-img-caption">📷 景点1一句话说明（图源 Google 地图）</div>
     <div class="time-block">
-      <div class="time">11:00</div>
-      <div class="activity">🍽️ 景点附近吃午饭（推荐餐厅或菜品）</div>
+      <div class="time">{离开景点}–{到达餐厅}</div>
+      <div class="activity">从{实际出口}到{餐厅或上客点}，{方式及已核实的里程}，预留{分钟}。<a href="https://www.google.com/maps/dir/?api=1&amp;origin={起点}&amp;destination={终点}&amp;travelmode=walking">步行导航</a></div>
+    </div>
+    <div class="time-block">
+      <div class="time">{午餐起止时间}</div>
+      <div class="activity">🍽️ {餐厅或街区}，两人可点{当地菜}。餐后从{地点}取行李，{搭乘方式}去{具体车站或航站楼}，最迟{时间}出发。</div>
     </div>
     <div class="time-block">
       <div class="time">16:00</div>

@@ -53,13 +53,16 @@ my-travel/
 - Primary: `#2563a8` (blue) | Secondary: `#d4a574` (gold) | Background: `#f5f1e8` (beige)
 - Standard components: `transport-item`, `day-block`, `time-block`, `place-card`, `checklist`
 
+### Daily itineraries
+- Follow the sightseeing and transfer requirements in `docs/guide-spec.md`. Before publishing, walk through each day from the first hotel or station to the last stop using only the daily itinerary.
+
 ### Index Page
 - Every time a new destination guide is created, update `index.html` in the same turn
 
 ### Document Loading Triggers
 | Document | When to load |
 |----------|-------------|
-| `docs/guide-spec.md` | Creating or modifying guide structure |
+| `docs/guide-spec.md` | Creating or revising a guide, including daily sightseeing and transfers |
 | `docs/tools.md` | Querying real-time flights/trains/hotels |
 | `docs/planning-principles.md` | Starting a new trip plan |
 

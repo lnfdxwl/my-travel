@@ -59,7 +59,7 @@ my-travel/
 ### Document Loading Triggers
 | Document | When to load |
 |----------|-------------|
-| `docs/guide-spec.md` | Creating or modifying guide structure |
+| `docs/guide-spec.md` | Creating or revising a guide, including daily sightseeing and transfers |
 | `docs/tools.md` | Querying real-time flights/trains/hotels |
 | `docs/planning-principles.md` | Starting a new trip plan |
 

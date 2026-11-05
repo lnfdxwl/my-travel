@@ -44,6 +44,6 @@ git add . && git commit -m "更新攻略" && git push
 
 | 文档 | 加载时机 |
 |------|---------|
-| `docs/guide-spec.md` | 新建行程、修改攻略结构时 |
+| `docs/guide-spec.md` | 新建攻略、修改每日行程或攻略结构时 |
 | `docs/tools.md` | 需要查实时航班/火车/酒店时 |
 | `docs/planning-principles.md` | 开始规划新行程时 |
