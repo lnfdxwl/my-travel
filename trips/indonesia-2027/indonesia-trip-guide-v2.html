@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>雅加达＋巴厘岛双人深度游 v2｜2027.04.03–04.11</title><style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f5f1e8;
+    padding: 0;
+  }
+  .container { max-width: 1400px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,0.05); }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #2563a8 0%, #4a90c2 50%, #d4a574 100%);
+    color: white;
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero .subtitle { font-size: 16px; opacity: 0.95; }
+  .hero .meta { margin-top: 20px; font-size: 14px; opacity: 0.9; }
+  .hero .meta span { margin: 0 12px; }
+
+  /* Sections */
+  section { padding: 35px 60px; border-bottom: 1px solid #eee; }
+  section:last-child { border-bottom: none; }
+  h2 {
+    font-size: 22px;
+    color: #2563a8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    display: inline-block;
+  }
+  h3 { font-size: 18px; color: #34495e; margin: 20px 0 12px; }
+  h4 { font-size: 15px; color: #2563a8; margin: 14px 0 8px; }
+  p { margin-bottom: 10px; }
+  ul, ol { margin: 10px 0 10px 24px; }
+  li { margin-bottom: 6px; }
+
+  /* Transport timeline */
+  .transport-list { margin: 16px 0; }
+  .transport-item {
+    background: #fff;
+    border: 1px solid #e8dfc8;
+    border-left: 5px solid #2563a8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .transport-item.intl { border-left-color: #c0392b; }
+  .transport-item.train { border-left-color: #2563a8; }
+  .transport-item.flight-dom { border-left-color: #d4a574; }
+  .transport-icon { font-size: 28px; text-align: center; line-height: 1.2; }
+  .transport-icon .label { display: block; font-size: 10px; color: #999; margin-top: 4px; letter-spacing: 0.5px; }
+  .transport-content .route { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+  .transport-content .schedule { font-size: 14px; color: #555; margin-bottom: 4px; }
+  .transport-content .schedule .time { color: #c0392b; font-weight: 600; }
+  .transport-content .meta-line { font-size: 12px; color: #999; margin-top: 4px; }
+  .transport-content .why {
+    background: #f8f9fc;
+    border-left: 3px solid #d4a574;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    border-radius: 4px;
+  }
+  .transport-content .why strong { color: #2563a8; }
+
+  /* Daily itinerary navigation */
+  .day-nav { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0 0 18px; }
+  .day-nav li { margin: 0; }
+  .day-nav a { color: #2563a8; display: inline-block; padding: 4px 0; }
+
+  /* Day card */
+  .day { background: #faf7f0; border-radius: 8px; padding: 22px 24px; margin: 16px 0; border: 1px solid #e8dfc8; }
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4a574;
+  }
+  .day-title { font-size: 17px; font-weight: 600; color: #2563a8; }
+  .day-date { font-size: 13px; color: #999; }
+  .time-block { margin: 10px 0; padding-left: 12px; border-left: 3px solid #d4a574; }
+  .time-block .time { font-weight: 600; color: #c0392b; font-size: 14px; }
+  .time-block .activity { color: #2c3e50; margin-top: 2px; }
+
+  /* 景点历史背景 */
+  .bg { font-size: 13px; color: #6b5a3f; background: #fbf6ec; border-left: 3px solid #d4a574; padding: 8px 12px; margin: 6px 0; border-radius: 4px; line-height: 1.7; }
+
+  /* 景点真实配图 */
+  .attraction-img { width: 100%; max-width: 600px; height: 280px; object-fit: cover; border-radius: 8px; margin: 10px 0; display: block; }
+  .attraction-img-caption { font-size: 12px; color: #999; margin: -4px 0 10px; }
+  .attraction-img-placeholder { width: 100%; max-width: 600px; height: 200px; background: linear-gradient(135deg, #e8dfc8 0%, #d4a574 100%); border-radius: 8px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; text-align: center; padding: 10px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fc; color: #2563a8; font-weight: 600; }
+  tr:hover { background: #fafafa; }
+
+  /* Callouts */
+  .tip { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+  .info { background: #eaf4fb; border-left: 4px solid #2563a8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; font-size: 14px; }
+
+  /* Hotel & restaurant cards */
+  .card-grid { display: grid; gap: 14px; margin: 14px 0; }
+  .place-card { background: #fff; border: 1px solid #e8dfc8; border-radius: 8px; padding: 16px 18px; }
+  .place-card .name { font-size: 16px; font-weight: 600; color: #2c3e50; margin-bottom: 6px; }
+  .place-card .name .badge {
+    display: inline-block;
+    background: #d4a574;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .place-card .price { color: #c0392b; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .place-card .desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* Code block */
+  .email-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: "SF Mono", Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+
+  /* Step list */
+  .steps { counter-reset: step; list-style: none; margin-left: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 14px; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 28px; height: 28px;
+    background: #2563a8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0 8px 30px; position: relative; border-bottom: 1px dashed #eee; }
+  .checklist li::before { content: "☐"; position: absolute; left: 0; top: 8px; color: #2563a8; font-size: 18px; font-weight: bold; }
+
+  /* Footer */
+  footer { text-align: center; padding: 25px; color: #95a5a6; font-size: 13px; background: #f5f1e8; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    section { padding: 25px 20px; }
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .transport-item { grid-template-columns: 50px 1fr; gap: 10px; padding: 14px; }
+    .transport-icon { font-size: 22px; }
+  }
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; }
+    section { page-break-inside: avoid; }
+  }
+</style></head><body><main class="container">
+<header class="hero"><h1>雅加达与巴厘岛 · 两个人的七个白天</h1><div class="subtitle">雅加达老城与独立广场周边　/　乌布寺庙与稻田　/　沙努尔海岸</div><div class="meta">2027 年 4 月 3–11 日　·　北京经广州往返　·　双人行 v2</div></header>
+<section id="overview"><h2>路线与航班</h2>
+<p>雅加达住 3 晚，落地补觉后看老城与唐人街，留第二个完整白天看独立后的城市。4 月 6 日直飞巴厘岛，乌布与沙努尔各住 2 晚。全程 7 晚、3 家酒店，仅换两次住宿。</p>
+<div class="transport-item"><div class="transport-icon">✈<span class="label">截图去程</span></div><div class="transport-content"><div class="route">4 月 3 日　北京 → 广州 → 雅加达</div><div class="schedule">北京大兴 <a aria-label="北京大兴的地图" href="https://maps.google.com/?q=39.509805,116.410507" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 14:00 → 广州白云 T2 <a aria-label="广州白云 T2的地图" href="https://maps.google.com/?q=23.395908,113.307970" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 17:15（CZ3186）<br/>广州 T2 19:15 → 雅加达苏加诺–哈达 T3 <a aria-label="雅加达苏加诺–哈达 T3的地图" href="https://maps.google.com/?q=-6.120494,106.660568" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 23:25（CZ387）</div></div></div>
+<div class="transport-item"><div class="transport-icon">✈<span class="label">候选直飞</span></div><div class="transport-content"><div class="route">4 月 6 日　雅加达 → 巴厘岛</div><div class="schedule">苏加诺–哈达机场 CGK <a aria-label="苏加诺–哈达机场 CGK的地图" href="https://maps.google.com/?q=-6.120494,106.660568" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>（国内出发 T1B，以登机牌为准）09:40 → 伍拉·赖机场 DPS <a aria-label="伍拉·赖机场 DPS的地图" href="https://maps.google.com/?q=-8.746993,115.168166" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 12:35。狮航 JT034，飞行 1 小时 55 分，查询价 ¥578/人。</div></div></div>
+<div class="transport-item"><div class="transport-icon">✈<span class="label">截图回程</span></div><div class="transport-content"><div class="route">4 月 11 日　巴厘岛 → 广州 → 北京</div><div class="schedule">CZ626　00:40 → 05:55 广州 T2<br/>CZ3999　15:00 → 18:15 北京大兴</div></div></div>
+<div class="tip">4 月 11 日 00:40 的回程，要在 4 月 10 日晚上去机场。下文全部是当地时间：雅加达比北京慢 1 小时，巴厘岛与北京同一时间。</div>
+<p><a href="#days">每日行程</a>　<a href="#hotel">住宿</a>　<a href="#food">吃什么</a>　<a href="#book">订票</a>　<a href="#budget">预算</a>　<a href="#practical">入境与打车</a>　<a href="#prep">出发清单</a></p>
+</section>
+<section id="days"><h2>每天怎么玩</h2>
+<p>双端导航以推荐酒店为起终点；里程参考 OpenStreetMap 路网，用时额外计入上下车、路口及拥堵余量。临时礼拜、仪式和展厅调整以场馆当天公告为准。</p>
+<nav aria-label="按日期查看行程"><ul class="day-nav"><li><a href="#apr-3">4/3 抵达</a></li><li><a href="#apr-4">4/4 老城与唐人街</a></li><li><a href="#apr-5">4/5 清真寺与主教座堂</a></li><li><a href="#apr-6">4/6 飞乌布</a></li><li><a href="#apr-7">4/7 乌布周边</a></li><li><a href="#apr-8">4/8 稻田到海边</a></li><li><a href="#apr-9">4/9 沙努尔周边</a></li><li><a href="#apr-10">4/10 海边与送机</a></li><li><a href="#apr-11">4/11 回北京</a></li></ul></nav>
+<article class="day day-block" id="apr-3"><div class="day-header"><h3 class="day-title">抵达雅加达｜午夜入境，先把睡眠放在第一位</h3><span class="day-date">4/3 周六</span></div>
+<div class="time-block"><div class="time">14:00–23:25</div><div class="activity">北京大兴 → 广州白云 T2（CZ3186，14:00–17:15），广州 T2 → 雅加达苏加诺–哈达 T3 <a aria-label="雅加达苏加诺–哈达 T3的地图" href="https://maps.google.com/?q=-6.120494,106.660568" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>（CZ387，19:15–23:25）。两段都是票面当地时间，广州转机只有 2 小时，出发时向南航确认两程登机牌和行李是否直挂。</div></div>
+<div class="time-block"><div class="time">23:25–次日约 02:00</div><div class="activity">入境、取行李后前往 YELLO Hotel Harmoni <a aria-label="YELLO Hotel Harmoni的地图" href="https://maps.google.com/?q=-6.164349,106.820486" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。机场到酒店用正规机场出租车或已确认的酒店接机，不把深夜第一程交给临时揽客车。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Soekarno-Hatta+International+Airport%2C+Terminal+3+International+Arrivals%2C+Tangerang&amp;destination=-6.164349%2C106.820486&amp;travelmode=driving" rel="noopener" target="_blank">CGK T3 → YELLO Hotel Harmoni</a>。T3 到店约 24 公里，上车后留 45–75 分钟；过关、取行李和找车另留约一小时。</small><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://www.grab.com/global/airport-rides/soekarno-hatta-international-airport-cgk/" rel="noopener" target="_blank">Grab · 雅加达机场上客指南</a></small></div></div>
+<div class="time-block"><div class="time">办理入住</div><div class="activity">房间从 4 月 3 日起订，并在订单备注中写明 CZ387、预计过午夜入住和前台留房要求。到酒店只做洗漱和睡觉，第二天不要再安排凌晨景点。</div></div>
+<p><strong>过夜</strong>　雅加达 · 第 1 晚</p></article>
+<article class="day day-block" id="apr-4"><div class="day-header"><h3 class="day-title">雅加达｜Kota Tua 老城线，下午接 Glodok 生活街区</h3><span class="day-date">4/4 周日</span></div>
+<div class="time-block"><div class="time">09:30–10:30</div><div class="activity">早餐后从酒店出发，前往 法塔希拉广场 Taman Fatahillah <a aria-label="法塔希拉广场 Taman Fatahillah的地图" href="https://maps.google.com/?q=-6.134669,106.813204" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.164349%2C106.820486&amp;destination=-6.134669%2C106.813204&amp;travelmode=driving" rel="noopener" target="_blank">YELLO Hotel Harmoni → Taman Fatahillah</a>。约 5.8 公里，给叫车和路况留 30–50 分钟；广场是步行区，请司机停在允许下客的街边，跟 Kota Tua 指示走到广场。</small></div></div>
+<div class="time-block"><div class="time">10:30–11:30</div><div class="activity">法塔希拉广场 <a aria-label="法塔希拉广场的地图" href="https://maps.google.com/?q=-6.134669,106.813204" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>、Kota Tua 游客中心和广场周边建筑。先沿广场北侧看南侧市政厅的正面，再走到建筑前庭。想听讲解可去广场旁游客中心询问当天的短程导览，11:30 前回到博物馆入口。<div class="bg">Kota Tua 是荷属东印度时期巴达维亚的旧城核心，法塔希拉广场原来是行政和贸易空间。广场周边的旧市政厅、仓库和街道格局保留了殖民时期城市的骨架，今天仍是雅加达最适合用步行理解城市历史的一段。</div><figure><img alt="法塔希拉广场" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLe2N2z2-Qfvq-VQi0zJ5X4L4RPvfaJcxzKqPOhqGoADYfzVkit2B1xpNLucwgnF7hZWeB2IamQuiejs0YlMRQvRfeFIPhhXmEPJRQpEbW9l-nNCx6DdjVNU54aroTCHDdaGm7PS=s4800-w800"/><figcaption class="attraction-img-caption">法塔希拉广场 · Google Maps，<a href="https://maps.google.com/maps/contrib/113610165541944650959" rel="noopener" target="_blank">梅山淳平</a></figcaption></figure><br/><small style="color:#27ae60;font-size:12px;">广场地图标注全天开放。导览时长和名额到游客中心当面确认。</small><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://enjoy.jakarta.go.id/article/tourist-information-center-kota-tua" rel="noopener" target="_blank">Kota Tua 游客中心与免费步行导览说明</a></small></div></div>
+<div class="time-block"><div class="time">11:30–13:00</div><div class="activity">雅加达历史博物馆 Museum Sejarah Jakarta <a aria-label="雅加达历史博物馆 Museum Sejarah Jakarta的地图" href="https://maps.google.com/?q=-6.135183,106.813350" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从临广场入口进馆，先找 1710 年市政厅启用的铭文，再看老家具和城市地图。留意柜门上的雕刻与建筑立面：当年的港口也需要议事、征税和审判。给展厅留 60–75 分钟，出口回到午餐所在的广场。票价按现场外籍成人档。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.134669%2C106.813204&amp;destination=-6.135183%2C106.813350&amp;travelmode=walking" rel="noopener" target="_blank">法塔希拉广场 → 雅加达历史博物馆</a>，约 60 m / 1–2 分钟。</small><br/><small style="color:#27ae60;font-size:12px;">🕐 开放时间：Google Maps 当前周日 09:00–15:00；国家博物馆登记另列周末 09:00–20:00，按较早闭馆时间安排。</small><div class="bg">这座建筑原为巴达维亚市政厅，博物馆把雅加达从港口、殖民城市到现代都市的变化放在同一条叙事里。先看建筑本身，再看地图和物件，能把刚才在广场看到的立面与城市管理联系起来。</div><figure><img alt="雅加达历史博物馆" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdoeq3PCpa_vu_n6bTdZ86IshudjCHG5-e1llTRGfyDVUNFR4zjD5sBc8uBhoFOY4gGGFjrEeJiwuA2enVBx0qNWfjqjhSVQizFdvVYlPYZLIV7UF48WiPpDiM2RvQcGRUNgJUe9Q=s4800-w800"/><figcaption class="attraction-img-caption">雅加达历史博物馆 · Google Maps，<a href="https://maps.google.com/maps/contrib/103135362713704991082" rel="noopener" target="_blank">Mirna Sariningsih</a></figcaption></figure><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://museum.kemenbud.go.id/museum/profile/museum%2Bsejarah%2Bjakarta" rel="noopener" target="_blank">印尼国家博物馆登记页</a></small></div></div>
+<div class="time-block"><div class="time">13:00–14:30</div><div class="activity">Café Batavia <a aria-label="Café Batavia的地图" href="https://maps.google.com/?q=-6.134368,106.812735" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>午餐。两人可共享一份 nasi goreng 和一份 sate，先吃主食再决定是否加甜点。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.135183%2C106.813350&amp;destination=-6.134368%2C106.812735&amp;travelmode=walking" rel="noopener" target="_blank">雅加达历史博物馆 → Café Batavia</a>，约 100 m / 1–2 分钟。</small><br/><small style="color:#27ae60;font-size:12px;">🕐 开放时间：Google Maps 当前周日 07:00–24:00；靠窗位需提前联系餐厅。</small><div class="bg">Café Batavia 位于旧市政厅对面的老建筑里，保留了 Kota Tua 作为商贸和社交空间的城市记忆。把它当作午餐和避热的停靠点，下午再回到街区慢慢走，比在正午继续赶景点舒服。</div><figure><img alt="Café Batavia" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdKMjAfASYLP7hAVjxm45HZOoGFe5RKaLUlENdaw2N5I5YHujnI9Nr_OkX1JWcAa8JHYYSdBVgb6EnWBvaER3tSQ6GgR88JvBtzKQRRHi2LWQmBGZs-FOJo1fKvTveiLNct1AfD=s4800-w800"/><figcaption class="attraction-img-caption">Café Batavia · Google Maps，<a href="https://maps.google.com/maps/contrib/106885313359936156987" rel="noopener" target="_blank">Gorilla</a></figcaption></figure><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://www.cafebatavia.com/" rel="noopener" target="_blank">Café Batavia 官网</a></small></div></div>
+<div class="time-block"><div class="time">14:30–16:00</div><div class="activity">Toko Merah 红店与 Kali Besar 河岸 <a aria-label="Toko Merah 红店与 Kali Besar 河岸的地图" href="https://maps.google.com/?q=-6.136001,106.811382" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从咖啡馆步行约 410 米，留 8–10 分钟，到河边看红砖外墙。回望沿河的成排老商号，能看到旧巴达维亚沿水运货、沿街做生意的布局。沿有步道的河岸逛半小时，回来从红店门前接下一段。看外观即可，室内按现营咖啡店的规则入内。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.134368%2C106.812735&amp;destination=-6.136001%2C106.811382&amp;travelmode=walking" rel="noopener" target="_blank">Café Batavia → 河边红店</a></small><figure><img alt="Kali Besar 河边的红店" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdPJQpJAIUjTItCv4bBKazZTSG-vPGiu8DR8NWnc0afKjFJWyzOdjR78YGPyLW976vmrq64D0PtcNLGUZNLCPifL9fwV3p4MqvQXuUxlFdj5TImDSwVldjpmcL6TDnkhAj9yq5L=s4800-w800"/><figcaption class="attraction-img-caption">Kali Besar 河边的红店 · Google Maps，<a href="https://maps.google.com/maps/contrib/110762926327658531511" rel="noopener" target="_blank">Vvianite</a></figcaption></figure><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://enjoy.jakarta.go.id/article/toko-merah-jakarta-spot-ikonik-kota-tua-yang-jadi-kafe" rel="noopener" target="_blank">雅加达旅游局 · 红店</a></small></div></div>
+<div class="time-block"><div class="time">16:00–18:00　河边 → Glodok 唐人街</div><div class="activity">Petak Sembilan 市场 <a aria-label="Petak Sembilan 市场的地图" href="https://maps.google.com/?q=-6.141955,106.813661" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从红店往南走，步行约 830 米，留 15–20 分钟。沿 Jalan Kemenangan 的摊位看香料、干货与华人节庆用品，再到 Pantjoran Tea House 潘芝兰茶馆 <a aria-label="Pantjoran Tea House 潘芝兰茶馆的地图" href="https://maps.google.com/?q=-6.142302,106.814634" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 门前，步行约 220 米。商铺各自营业，周日晚市集渐收摊，想逛市场就从红店提前出发。天气热或已经走累，也可从红店附近叫车直接回酒店。<div class="bg">这里是雅加达历史悠久的华人商业街区。上午广场上的行政建筑与下午的小铺相隔仅几条街，却呈现了昔日港口城市截然不同的日常生活。</div><br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.136001%2C106.811382&amp;destination=-6.141955%2C106.813661&amp;travelmode=walking" rel="noopener" target="_blank">红店 → Petak Sembilan</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.141955%2C106.813661&amp;destination=-6.142302%2C106.814634&amp;travelmode=walking" rel="noopener" target="_blank">市场 → 潘芝兰茶馆</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.136001%2C106.811382&amp;destination=-6.164349%2C106.820486&amp;travelmode=driving" rel="noopener" target="_blank">缩短路线 · 红店回酒店</a></small><figure><img alt="Glodok 的 Petak Sembilan 市场" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLeSEmgXXU90gCSiAoKAZyMLl_pHET70wLczWtprsjLNBx7-IPM2FOIu_oftMGfBtLWA9aQNCEciffL99SXCyZ2CpwHVmX6KUMbvu0LfYCI9vFzThrE8t1A4_dJ18iEAgUBo5KO52w=s4800-w800"/><figcaption class="attraction-img-caption">Glodok 的 Petak Sembilan 市场 · Google Maps，<a href="https://maps.google.com/maps/contrib/101457476505049180515" rel="noopener" target="_blank">Andries Maslim</a></figcaption></figure><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://enjoy.jakarta.go.id/article/jakarta-chinatown-glodok" rel="noopener" target="_blank">雅加达旅游局 · Glodok</a></small></div></div>
+<div class="time-block"><div class="time">18:00–20:00　晚餐 → 酒店</div><div class="activity">在街区用餐后，走回茶馆附近的大路，在允许停车的位置叫车回 YELLO。约 3.4 公里，给晚间叫车和路况留 25–45 分钟；回酒店休息，明早从同一家酒店出发去独立清真寺。<br/><small style="color:#888;"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.142302%2C106.814634&amp;destination=-6.164349%2C106.820486&amp;travelmode=driving" rel="noopener" target="_blank">潘芝兰茶馆一带 → YELLO</a></small></div></div>
+<p><strong>过夜</strong>　雅加达 · 第 2 晚</p></article>
+<article class="day day-block" id="apr-5"><div class="day-header"><h3 class="day-title">雅加达｜从独立清真寺走到白色尖塔</h3><span class="day-date">4/5 周一</span></div>
+<div class="time-block"><div class="time">08:30–09:00　酒店 → 清真寺</div><div class="activity">从 YELLO 大堂叫 GrabCar 到 Masjid Istiqlal 独立清真寺 <a aria-label="Masjid Istiqlal 独立清真寺的地图" href="https://maps.google.com/?q=-6.170017,106.830952" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>，约 2 公里，预留 20–30 分钟。在当日开放给访客的门下车，先找访客登记处。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1643487%2C106.8204855&amp;destination=-6.1700167%2C106.8309518&amp;travelmode=driving" rel="noopener" target="_blank">酒店至清真寺</a></div></div>
+<div class="time-block"><div class="time">09:00–10:20　跟向导看大厅</div><div class="activity">Istiqlal 意为“独立”。先在庭院看穹顶与高塔，再按向导指引到允许访客进入的廊层，俯看大厅里成排的柱子与礼拜方向。衣着遮住肩膝，入内按要求脱鞋。游客参观随讲解与礼拜安排；遇暂停就看外观，提早去街对面的教堂。<figure><img alt="独立清真寺" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdfGiBODXziQLRp7190w-sqsIibZjZF9SBSKH3_Ot75cfK8mzfKQ2qb8o8YMZX6swi87BBKG9NfnMY9kd-Zjlmx1jzxHRQ5BeIdZ-h3RbpzzfOXC_ps0FcdwoRPf1_P67WIwjvJcQ=s4800-w800"/><figcaption class="attraction-img-caption">独立清真寺 · Google Maps，<a href="https://maps.google.com/maps/contrib/117242634422798498520" rel="noopener" target="_blank">Ahmad Sidawi</a></figcaption></figure><a href="https://www.indonesia.travel/us/en/destination/java/jakarta/dki-jakarta---the-grand-istiqlal-mosque" rel="noopener" target="_blank">印尼旅游局 · 建筑与非穆斯林访客导览</a></div></div>
+<div class="time-block"><div class="time">10:20–11:30　清真寺 → 雅加达主教座堂</div><div class="activity">Gereja Katedral Jakarta 圣母升天主教座堂 <a aria-label="Gereja Katedral Jakarta 圣母升天主教座堂的地图" href="https://maps.google.com/?q=-6.169238,106.833376" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从访客出口沿公共人行道和过街设施到教堂；两地标记步行约 650 米，因开放的门不同，留 10–20 分钟。从正面看两座尖塔，再看入口上方的玫瑰窗；允许入内时，从后排安静看拱顶、彩窗与祭台。弥撒或典礼期间留在外侧，不把地下通道或博物馆列作必经点。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1700167%2C106.8309518&amp;destination=-6.1692383%2C106.8333758&amp;travelmode=walking" rel="noopener" target="_blank">清真寺至主教座堂</a><figure><img alt="雅加达主教座堂" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdjArh8wRJk-I1oReoIdFMcn7zUs1ToT0AWPOAYPG7pYrX4ZdZzjjDyLrogNUWCuSQyX047y-uKOc7kPKTofu8242F_RjbCI-g5nSRNFZ7FfUrBDi0J7SwU74pRa1_r650T6dW1OzA7UIUo=s4800-w800"/><figcaption class="attraction-img-caption">雅加达主教座堂 · Google Maps，<a href="https://maps.google.com/maps/contrib/106450010071275855144" rel="noopener" target="_blank">T3rby</a></figcaption></figure><a href="https://kemlu.go.id/files/publikasi/additional_file/1762932706691437e21d3f7__EN__Jakarta___Special_Capital_Region_of_Jakarta___Travel_Guide_Book__2025_.pdf" rel="noopener" target="_blank">印尼官方雅加达旅行指南</a></div></div>
+<div class="time-block"><div class="time">11:30–14:30　旧邮局午饭，避开午后热气</div><div class="activity">Pos Bloc Jakarta 旧邮局 <a aria-label="Pos Bloc Jakarta 旧邮局的地图" href="https://maps.google.com/?q=-6.167148,106.833878" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从教堂向北步行约 600 米，留 10–15 分钟。旧邮政建筑今天容纳了餐饮与小店，可以在同一屋檐下选午餐、喝咖啡。地图列周一 10:00–22:00，摊位各自开店。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1692383%2C106.8333758&amp;destination=-6.1671482%2C106.83387809999999&amp;travelmode=walking" rel="noopener" target="_blank">主教座堂至 Pos Bloc</a><figure><img alt="Pos Bloc 旧邮局公共空间" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLcVVG97x2ONRHCblSw8GJKC_x5QciXgm81kjHbb0fYYw45DKFVNVTF5PlbPBcU_IGH9A0gpR132VuORkUmh2ClQeOO2XH-61XOwZ0BLbb3EEXLlGBCEtk1NGK4rrkf8SLJ2MTlWfA=s4800-w800"/><figcaption class="attraction-img-caption">Pos Bloc 旧邮局公共空间 · Google Maps，<a href="https://maps.google.com/maps/contrib/116822051949072286180" rel="noopener" target="_blank">Dawai Naluri Prasti</a></figcaption></figure></div></div>
+<div class="time-block"><div class="time">14:30–16:30　纪念碑与公园 → 酒店</div><div class="activity">Lapangan Banteng 公园 <a aria-label="Lapangan Banteng 公园的地图" href="https://maps.google.com/?q=-6.170555,106.835038" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从旧邮局步行约 900 米，留 15–20 分钟。沿池边看西伊里安解放纪念碑的人像与挣开的锁链，再到树荫下坐一会儿。下雨就从旧邮局直接回酒店。正常路线从公园临街出口叫车，约 4 公里，留 25–40 分钟。晚餐可在酒店吃，次日早上飞巴厘岛。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1671482%2C106.83387809999999&amp;destination=-6.170554999999999%2C106.8350378&amp;travelmode=walking" rel="noopener" target="_blank">旧邮局至公园</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.170554999999999%2C106.8350378&amp;destination=-6.1643487%2C106.8204855&amp;travelmode=driving" rel="noopener" target="_blank">公园回酒店</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1671482%2C106.83387809999999&amp;destination=-6.1643487%2C106.8204855&amp;travelmode=driving" rel="noopener" target="_blank">雨天从旧邮局回酒店</a><figure><img alt="Lapangan Banteng 公园" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLd6N6ejKIPTCLZTSYQQSJRKwN8jnQPag9w9BziZsc-xbSjnU-L-JpDhcq5QRGjjgcRLqvZbA0WQJPahBsWt-4CBGUIZ8n1-a7JiDkoRBIEZOq-XF1f1_UXzKxGQ1oIeRsFlqyef=s4800-w800"/><figcaption class="attraction-img-caption">Lapangan Banteng 公园 · Google Maps，<a href="https://maps.google.com/maps/contrib/114506923709698938260" rel="noopener" target="_blank">very daendels</a></figcaption></figure><a href="https://pusat.jakarta.go.id/kelurahan/kelurahan-pasar-baru/fasilitas/taman-hutan-kota/taman-lapangan-banteng" rel="noopener" target="_blank">中雅加达市政府 · 公园介绍</a></div></div>
+<p><strong>过夜</strong>　雅加达 · YELLO 第 3 晚</p></article>
+<article class="day day-block" id="apr-6"><div class="day-header"><h3 class="day-title">雅加达 → 巴厘岛｜下午抵达乌布</h3><span class="day-date">4/6 周二</span></div>
+<div class="time-block"><div class="time">05:50–07:30　退房去机场</div><div class="activity">提前一晚请前台约车，从 YELLO 直达 CGK 国内出发。候选狮航 JT034 目前列 T1B，与入境时的 T3 不同；出发前核对当天登机牌。机场与酒店约 25–32 公里，道路和航站楼不同，留约 90 分钟。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-6.1643487%2C106.8204855&amp;destination=Soekarno+Hatta+Terminal+1B+Departures%2C+Jakarta&amp;travelmode=driving" rel="noopener" target="_blank">酒店至 CGK 国内 T1B</a></div></div>
+<div class="time-block"><div class="time">09:40 WIB → 12:35 WITA</div><div class="activity">雅加达直飞巴厘岛，飞行 1 小时 55 分，巴厘岛快 1 小时。取行李后前往 Domestic Arrivals 的 Pick-Up Zone，叫 Grab 或按预订司机发来的接客点碰头。<a href="https://mail.bali-airport.com/en/public-transport/index" rel="noopener" target="_blank">机场接客点</a></div></div>
+<div class="time-block"><div class="time">13:30–15:30　机场 → 乌布酒店</div><div class="activity">去 Alaya Resort Ubud <a aria-label="Alaya Resort Ubud的地图" href="https://maps.google.com/?q=-8.518770,115.263528" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 办入住，约 33–35 公里，接上车后留 1.5–2 小时。航班或公路延误时，直接在酒店晚餐。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=Domestic+Arrivals%2C+Ngurah+Rai+International+Airport%2C+Bali&amp;destination=-8.518769700000002%2C115.263528&amp;travelmode=driving" rel="noopener" target="_blank">巴厘岛国内到达至 Alaya</a></div></div>
+<div class="time-block"><div class="time">16:00–17:45　可选 · 在酒店附近看画</div><div class="activity">若能在 16:15 前离店，从 Alaya 朝南步行约 600 米、10–15 分钟到 ARMA 阿贡拉伊艺术博物馆 <a aria-label="ARMA 阿贡拉伊艺术博物馆的地图" href="https://maps.google.com/?q=-8.522807,115.263862" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。先找 Kamasan 叙事画，顺着人物动作读画里的故事，再看 Batuan 画面里细密的村庄和人物。留 45–60 分钟，地图列每日 09:00–18:00，最晚入馆及票价当日向售票处确认。回程沿原路散步，在 Jalan Hanoman 吃 nasi campur 什锦饭。想休息就留在泳池。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.518769700000002%2C115.263528&amp;destination=-8.5228071%2C115.26386180000002&amp;travelmode=walking" rel="noopener" target="_blank">Alaya 至 ARMA</a><figure><img alt="阿贡拉伊艺术博物馆" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLda0m7OPZb8sxMm2Ld2Wgqq7DZGDIOj1_3lgALm0Omnt1w1q-IlDuiHXLlNq5dJ5TA9fwraoRvSD2lEIWWJyduvVT-h00niYdLTa7HO9HCTwYQueb7oExTvSyBhA4OhbmtdRJnz=s4800-w800"/><figcaption class="attraction-img-caption">阿贡拉伊艺术博物馆 · Google Maps，<a href="https://maps.google.com/maps/contrib/115021832645297036531" rel="noopener" target="_blank">ELŻBIETA SZYNKIEWICZ</a></figcaption></figure><a href="https://www.armabali.com/museum/" rel="noopener" target="_blank">馆方藏品说明</a></div></div>
+<p><strong>过夜</strong>　乌布 · Alaya 第 1 晚</p></article>
+<article class="day day-block" id="apr-7"><div class="day-header"><h3 class="day-title">乌布周边｜圣泉寺与古农卡威石刻寺，沿泉池与河谷看巴厘寺院</h3><span class="day-date">4/7 周三</span></div>
+<div class="time-block"><div class="time">07:20–08:20　酒店 → Tampaksiring</div><div class="activity">Alaya Resort Ubud <a aria-label="Alaya Resort Ubud的地图" href="https://maps.google.com/?q=-8.518770,115.263528" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 出发，乘包车前往 圣泉寺 Pura Tirta Empul <a aria-label="圣泉寺 Pura Tirta Empul的地图" href="https://maps.google.com/?q=-8.4156589,115.3153284" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。路网基准约 18 km / 27 分钟，按清晨村道和停车预留 45–60 分钟。<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.518769700000002%2C115.263528&amp;destination=Pura+Tirta+Empul%2C+Tampaksiring%2C+Bali&amp;travelmode=driving" rel="noopener" target="_blank">Alaya → Tirta Empul</a>　<a href="https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A-8.518769700000002%2C%22lon%22%3A115.263528%7D%2C%7B%22lat%22%3A-8.4156589%2C%22lon%22%3A115.3153284%7D%5D%2C%22costing%22%3A%22auto%22%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%7D%7D" rel="noopener" target="_blank">Valhalla 路线基准</a>。包车 8 小时建议预留 Rp800,000–1,200,000/车，确认是否包含司机、燃油、等待和停车，门票与午餐另计。</div></div>
+<div class="time-block"><div class="time">08:20–09:45　圣泉寺 Pura Tirta Empul</div><div class="activity">这是仍在使用的巴厘印度教圣泉寺，核心体验是看水源、寺院庭院与 Melukat 净化仪式。游览顺序按“售票与换装 → 外院与泉池 → 观察仪式 → 再决定是否参加”走。圣泉寺 Pura Tirta Empul <a aria-label="圣泉寺 Pura Tirta Empul的地图" href="https://maps.google.com/?q=-8.4156589,115.3153284" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。当前公开资料列每日 08:00–18:00，外国成人按 Rp75,000/人预留，停车、仪式更衣等按实际收费，2027 出发前以现场票面为准。若参加 Melukat，先向寺方或官方引导确认指定水池、祈祷顺序和换洗位置；不要把净化池当普通泳池，也不要在祈祷时近距离拍摄。进入寺院穿 sarong 与腰带，保持肩膝得体。<br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://www.indonesia.travel/id/id/travel-ideas/pilgrimage/pura-tirta-empul" rel="noopener" target="_blank">Indonesia Travel · Tirta Empul 票务与 Melukat 说明</a></small><figure><img alt="Pura Tirta Empul 圣泉与净化池" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLe2Sm6ta04N4DHHAuNeuxS4gGnK09bOXauyQEA0UX0AcBMRXqfYjQd1hcnzBpjK-ZdjqQGyROkxVggEEsKh0XXKtn6naz6tFLprpflRAnlhAUleqkqsll9B8HO9T2Et5nXrfaDnMA=s4800-w800"/><figcaption class="attraction-img-caption">Pura Tirta Empul 圣泉与净化池 · Google Maps，<a href="https://maps.google.com/maps/contrib/111958477706304374583" rel="noopener" target="_blank">* Kat *</a></figcaption></figure></div></div>
+<div class="time-block"><div class="time">09:45–10:00　圣泉寺 → 古农卡威石刻寺</div><div class="activity">带水和防滑鞋，乘车到 古农卡威石刻寺 Candi Tebing Gunung Kawi Tampaksiring <a aria-label="古农卡威石刻寺 Candi Tebing Gunung Kawi Tampaksiring的地图" href="https://maps.google.com/?q=-8.4235384,115.3105687" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。两处路网基准约 1.7 km / 5 分钟，连同退场、停车和重新整理衣物按 15 分钟安排。<a href="https://www.google.com/maps/dir/?api=1&amp;origin=Pura+Tirta+Empul%2C+Tampaksiring%2C+Bali&amp;destination=Gunung+Kawi+Tampaksiring%2C+Bali&amp;travelmode=driving" rel="noopener" target="_blank">Tirta Empul → Gunung Kawi</a>　<a href="https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A-8.4156589%2C%22lon%22%3A115.3153284%7D%2C%7B%22lat%22%3A-8.4235384%2C%22lon%22%3A115.3105687%7D%5D%2C%22costing%22%3A%22auto%22%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%7D%7D" rel="noopener" target="_blank">Valhalla 路线基准</a>。</div></div>
+<div class="time-block"><div class="time">10:00–11:45　古农卡威石刻寺 Candi Tebing Gunung Kawi</div><div class="activity">古农卡威石刻寺把 11 世纪王室纪念性石刻放在 Pakerisan 河谷里，水、梯田和岩壁一起构成现场。按“售票与换 sarong → 顺阶梯下到河谷 → 先看两侧岩壁石龛 → 在河谷停留 → 沿原路上行”游览。古农卡威石刻寺 Candi Tebing Gunung Kawi Tampaksiring <a aria-label="古农卡威石刻寺 Candi Tebing Gunung Kawi Tampaksiring的地图" href="https://maps.google.com/?q=-8.4235384,115.3105687" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。当前公开资料列每日 07:00–18:00，外国游客票 Rp50,000，另有停车；从入口下到河谷约 300–400 级台阶，完整来回通常需 1–2 小时。石刻与祭祀空间不触摸、不攀爬，穿 sarong/腰带，礼拜时让出通道。<br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://www.indonesia.travel/id/id/travel-ideas/pilgrimage/gunung-kawi" rel="noopener" target="_blank">Indonesia Travel · Gunung Kawi 开放、票价与台阶说明</a></small><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://diparda.gianyarkab.go.id/destinasi/gunung-kawi-tampaksiring-temple" rel="noopener" target="_blank">Gianyar Regency Tourism · Gunung Kawi 历史</a></small><figure><img alt="Gunung Kawi Tampaksiring 河谷石刻" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLeocIb7Bm-rMCx83UrfhGO4ad4HmAlagbHcYeNbiHH14Opuw0rP0oEtTtIAqyA7KfthCwz9b8blwKSHiE4RG5iyl_JbM0zSO0lsDvQ5NoUHOi0whYrWANvS0weM736YnQUoFYdz=s4800-w800"/><figcaption class="attraction-img-caption">Gunung Kawi Tampaksiring 河谷石刻 · Google Maps，<a href="https://maps.google.com/maps/contrib/108932233133931903525" rel="noopener" target="_blank">Amanda Rey</a></figcaption></figure></div></div>
+<div class="time-block"><div class="time">11:45–12:30　古农卡威石刻寺附近午餐</div><div class="activity">在景区出口附近选当天营业的 warung，先补水再吃饭。不要把午餐安排到下一个远点，下午留给回程和酒店休息。</div></div>
+<div class="time-block"><div class="time">12:30–14:00　古农卡威石刻寺 → Alaya</div><div class="activity">路网基准约 16 km / 23 分钟，实际按乌布回城车流预留 45–60 分钟。<a href="https://www.google.com/maps/dir/?api=1&amp;origin=Gunung+Kawi+Tampaksiring%2C+Bali&amp;destination=-8.518769700000002%2C115.263528&amp;travelmode=driving" rel="noopener" target="_blank">Gunung Kawi → Alaya</a>　<a href="https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A-8.4235384%2C%22lon%22%3A115.3105687%7D%2C%7B%22lat%22%3A-8.518769700000002%2C%22lon%22%3A115.263528%7D%5D%2C%22costing%22%3A%22auto%22%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%7D%7D" rel="noopener" target="_blank">Valhalla 路线基准</a>。下午回到酒店，游泳或 SPA，晚上不再加景点。</div></div>
+<p><strong>过夜</strong>　乌布 · Alaya Resort Ubud 第 2 晚</p></article>
+<article class="day day-block" id="apr-8"><div class="day-header"><h3 class="day-title">乌布 → 沙努尔｜清晨稻田，下午沿海散步</h3><span class="day-date">4/8 周四</span></div>
+<div class="time-block"><div class="time">07:00–07:30　酒店 → 稻田步道入口</div><div class="activity">请酒店叫车到 Jalan Raya Ubud 与 Subak Sok Wayah 步道的路口 <a aria-label="Jalan Raya Ubud 与 Subak Sok Wayah 步道的路口的地图" href="https://maps.google.com/?q=-8.505118,115.257976" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>，约 2–3 公里，给叫车和落客留半小时。在大路边下车，认 Subak Sok Wayah 的公共步道标识进巷；若路口封闭，回主街向东走去王宫，避开住宿院门。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.518770%2C115.263528&amp;destination=-8.505118%2C115.257976&amp;travelmode=driving" rel="noopener" target="_blank">酒店至步道口</a></div></div>
+<div class="time-block"><div class="time">07:30–09:10　Sari Organic Walk 稻田往返</div><div class="activity">Sari Organic Walk <a aria-label="Sari Organic Walk的地图" href="https://maps.google.com/?q=-8.501311,115.258224" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。从大路到地图标记的稻田步道约 600 米。去程沿铺面小径看分水的小沟、不同生长期的田块，有鸭群或农人作业时站在路边看。走到视野开阔处停一会儿，最晚 08:30 左右回头，沿原路回同一个街口。沿途有咖啡小店，留十几分钟喝水。<div class="bg">这些稻田靠水渠灌溉，眼前的田埂也划出了田块的边界。路旁的田是村民正在耕种的地块，留在公共步道上，遇到送货摩托靠边让行。</div><p>公开资料未列统一票务和开放时段，以现场标识为准；雨后湿滑，可缩短到第一片田再折返。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.505118%2C115.257976&amp;destination=-8.501311%2C115.258224&amp;travelmode=walking" rel="noopener" target="_blank">从街口走进稻田</a></p><figure><img alt="乌布 Sari Organic 稻田步道" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLeSt9XN1C7B8Eq4EZZwAl9ln_cUEQeFZ19HiDiuPSWmqUPjSxLx6p_oWNVpLO7khpgwCD19T2In31niwjtaah_4Jzoc5syounj7_vuDJRBHgc1IBPuvI0uchMM8j3pcxVjFEFBAXg=s4800-w800"><figcaption class="attraction-img-caption">乌布 Sari Organic 稻田步道 · Google Maps，<a href="https://maps.google.com/maps/contrib/109863216232375260682" rel="noopener" target="_blank">SEUNGYEON JEONG</a></figcaption></img></figure></div></div>
+<div class="time-block"><div class="time">09:10–10:30　步道口 → 乌布王宫</div><div class="activity">回到主街后向东走，约 550–600 米，预留 10–15 分钟。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.505118%2C115.257976&amp;destination=-8.506598%2C115.262588&amp;travelmode=walking" rel="noopener" target="_blank">步道口至王宫</a><p>Puri Saren Agung 乌布王宫 <a aria-label="Puri Saren Agung 乌布王宫的地图" href="https://maps.google.com/?q=-8.506598,115.262588" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。在主街一侧进开放庭院，先从正面看红砖与雕石门楼，再从侧面看门扇和石刻的层次。只走开放的前院，留 35–50 分钟。日间地图列每日 07:00–17:00，晚间演出另购票。</p><div class="bg">这里是乌布王室的宫苑。前院至今仍用作传统舞蹈的演出场地。白天看门楼与露天庭院，就能理解演出时为何直接把建筑当作舞台布景。</div><figure><img alt="乌布王宫的门楼与庭院" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdnTNlR75r4A9J_YLMLAiezQjWUkbyWIl2hcW1HWwpu6o5vj-Agd5g1QYRY4k8X08cZMsw6G_ktT78toDq2q-ak90JQcOumd8nytRLaGugFTnx_toJ_5abpMTm3-OleGXDEP3GY=s4800-w474"><figcaption class="attraction-img-caption">乌布王宫的门楼与庭院 · Google Maps，<a href="https://maps.google.com/maps/contrib/115084608749905149048" rel="noopener" target="_blank">glx bla</a></figcaption></img></figure></div></div>
+<div class="time-block"><div class="time">10:30–14:00　王宫 → 酒店取行李 → 沙努尔</div><div class="activity">王宫回 Alaya 步行约 1.6 公里，留 25–35 分钟。先回酒店按约定退房、取齐行李，再在附近吃午餐。约 12:15 带行李直接坐车去沙努尔 ARTOTEL，约 23 公里，含拥堵留 90–120 分钟。房间若尚未准备好，先寄存行李。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.5065977%2C115.2625884&amp;destination=-8.518769700000002%2C115.263528&amp;travelmode=walking" rel="noopener" target="_blank">王宫回 Alaya</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.518769700000002%2C115.263528&amp;destination=-8.7053028%2C115.2609079&amp;travelmode=driving" rel="noopener" target="_blank">Alaya 至沙努尔酒店</a></div></div>
+<div class="time-block"><div class="time">15:00–16:00　酒店 → Semawang 海边</div><div class="activity">办好入住、拿水和遮阳帽，沿 Jalan Kusuma Sari 朝海走，到 Semawang 海滩 <a aria-label="Semawang 海滩的地图" href="https://maps.google.com/?q=-8.707129,115.262705" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 全程约 450 米，走 8–12 分钟。从这里踏上海滨步道转向北，海面在右手边。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.705303%2C115.260908&amp;destination=-8.707129%2C115.262705&amp;travelmode=walking" rel="noopener" target="_blank">酒店至海滨入口</a></div></div>
+<div class="time-block"><div class="time">16:00–17:30　沿海走到卡朗海滩</div><div class="activity">Pantai Karang 卡朗海滩 <a aria-label="Pantai Karang 卡朗海滩的地图" href="https://maps.google.com/?q=-8.693660,115.266678" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。两处海滩的步行路网约 1.6 公里，行走约 25 分钟，连停下拍照、坐凉亭共留一小时左右。东向海岸适合看日出；傍晚来看帆船和岸边的光线，潮低时可观察浅水颜色的变化。地图列卡朗海滩全天开放，风浪大就留在岸上。<div class="bg">留意当地称为 jukung 的小船：船身窄，两侧伸出浮杆保持平衡。沙努尔沿海步道把原来分散的海滩连在一起，不必每到一处就折返叫车。</div>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.707129%2C115.262705&amp;destination=-8.693660%2C115.266678&amp;travelmode=walking" rel="noopener" target="_blank">沿海北行至 Pantai Karang</a>　<a href="https://www.indonesia.travel/gb/en/destination/bali-nusa-tenggara/bali/sanur0" rel="noopener" target="_blank">印尼旅游局 · 沙努尔</a><figure><img alt="卡朗海滩与近岸浅海" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLfC7cpX-ULZHBsu-Q4qMJZjZLi5fmfVe4La9HoQATpFR12wGPA55jyGbJgcZIXQnhUxzXwhVLJ9cXZpxJg6gVv9PMhWv5CuSlkHz6HZ1ozvcp-TesgAxLYoPSTy21R43ula5nWACQ=s4800-w800"><figcaption class="attraction-img-caption">卡朗海滩与近岸浅海 · Google Maps，<a href="https://maps.google.com/maps/contrib/105840536645901479578" rel="noopener" target="_blank">Ирина Кириллова</a></figcaption></img></figure></div></div>
+<div class="time-block"><div class="time">17:30–20:00　海滩 → 小餐馆 → 酒店</div><div class="activity">从卡朗海滩离开海滨，步行去 Warung Little Bird <a aria-label="Warung Little Bird的地图" href="https://maps.google.com/?q=-8.686011,115.262292" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>，约 1–1.5 公里，留 20–25 分钟。点沙爹配炒饭，想选座位可提前联系。遇到天黑、下雨或人行道中断，可从海滩大路入口直接打车去吃饭。晚饭后在餐馆旁合规上车处叫车回 ARTOTEL，给候车和行车留 20–30 分钟。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.693660%2C115.266678&amp;destination=-8.686011%2C115.262292&amp;travelmode=walking" rel="noopener" target="_blank">海滩至餐馆</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.686011%2C115.262292&amp;destination=-8.705303%2C115.260908&amp;travelmode=driving" rel="noopener" target="_blank">餐后回酒店</a></div></div>
+<p><strong>过夜</strong>　沙努尔 · ARTOTEL 第 1 晚</p></article>
+<article class="day day-block" id="apr-9"><div class="day-header"><h3 class="day-title">沙努尔 → Denpasar｜巴厘博物馆、贾格特纳塔寺，再回海边酒店</h3><span class="day-date">4/9 周五</span></div><div class="tip"><strong>今天可选海边半日，替换下面的登巴萨行程。</strong> 想一起下水，可约 Sanur Surf School 的 90 分钟双人小班桨板课，官网列每人 Rp600,000。前一晚让教练按潮汐确认时间、集合点、救生衣和天气改期规则；从 ARTOTEL 到 Mertasari 海滩集合区约 1.8 公里，步行留 25–35 分钟。上课后海边午餐，下午回酒店游泳。若早上得知海况不合适，可改走下面的博物馆路线；周五展馆 13:00 关门，若取消课程较晚，就留在沙努尔午餐休息。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.7053028%2C115.2609079&amp;destination=-8.711770%2C115.249699&amp;travelmode=walking" rel="noopener" target="_blank">酒店至桨板学校</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.711770%2C115.249699&amp;destination=-8.7053028%2C115.2609079&amp;travelmode=walking" rel="noopener" target="_blank">学校回酒店</a>　<a href="https://www.sanursurf.com/price-list" rel="noopener" target="_blank">学校课程价目</a></div>
+<div class="time-block"><div class="time">07:45–08:45　ARTOTEL → 巴厘博物馆</div><div class="activity">ARTOTEL Sanur Bali <a aria-label="ARTOTEL Sanur Bali的地图" href="https://maps.google.com/?q=-8.705303,115.260908" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 早餐后出发，前往 巴厘博物馆 Museum Bali <a aria-label="巴厘博物馆 Museum Bali的地图" href="https://maps.google.com/?q=-8.6575741,115.2185908" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。路网基准约 10.9 km / 22 分钟，工作日上午按 45–60 分钟预留。<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.7053028%2C115.2609079&amp;destination=Bali+Museum%2C+Jl.+Mayor+Wisnu+No.1%2C+Denpasar&amp;travelmode=driving" rel="noopener" target="_blank">ARTOTEL → Museum Bali</a>　<a href="https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A-8.7053028%2C%22lon%22%3A115.2609079%7D%2C%7B%22lat%22%3A-8.6575741%2C%22lon%22%3A115.2185908%7D%5D%2C%22costing%22%3A%22auto%22%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%7D%7D" rel="noopener" target="_blank">Valhalla 路线基准</a>。4/9 是周五，必须在中午前完成博物馆段。</div></div>
+<div class="time-block"><div class="time">08:45–10:15　巴厘博物馆 Museum Bali</div><div class="activity">用一座城市博物馆先把巴厘岛的历史、日常器物与宗教礼仪放进同一条时间线。游览顺序建议“入口庭院与建筑 → 东馆的史前/历史展柜 → Buleleng 馆的钱币与交换史 → Karangasem 馆的 Cili 丰产象征 → Tabanan 馆的 keris 传统”，当天关闭或封馆展厅以现场为准。巴厘博物馆 Museum Bali <a aria-label="巴厘博物馆 Museum Bali的地图" href="https://maps.google.com/?q=-8.6575741,115.2185908" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。博物馆虚拟导览当前列周五 07:30–13:00，外国成人 Rp50,000、儿童 Rp25,000，法定节假日关闭；2027 年请以馆方页面和售票窗口为准。展厅内不饮食、不触摸展品，按馆方规定关闭闪光灯。<br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://museumbali.nusaheritage.id/" rel="noopener" target="_blank">Museum Bali 官方虚拟导览 · 开放时间、票价与展厅</a></small><br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://repositori.kemendikdasmen.go.id/30278/2/PETUNJUK%20MUSEUM%20BALI.pdf" rel="noopener" target="_blank">印尼文化部 Museum Bali 参观须知</a></small><figure><img alt="Museum Bali 巴厘博物馆建筑与庭院" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdCPKGEz2Wp8Q7wjdJaeOuLK0PSNS8d3s5I5BeqVyNiYmqcaNajzuSaHAyTPzM0PQUJufEISN0jJVIRt7rSLu0KQW_au_L_Emn95VJXB_Lf4bdlGdhNkkyk58L_MKXjhS1g3CxQkuIcHOvU=s4800-w800"/><figcaption class="attraction-img-caption">Museum Bali 巴厘博物馆建筑与庭院 · Google Maps，<a href="https://maps.google.com/maps/contrib/104230855589484802077" rel="noopener" target="_blank">Museum Bali</a></figcaption></figure></div></div>
+<div class="time-block"><div class="time">10:15–11:15　Museum Bali → Pura Agung Jagatnatha</div><div class="activity"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Bali+Museum%2C+Jl.+Mayor+Wisnu+No.1%2C+Denpasar&amp;destination=Agung+Jagatnatha+Temple%2C+Denpasar&amp;travelmode=walking" rel="noopener" target="_blank">Museum Bali → Jagatnatha</a>。两处相邻，路网不到 200 米，步行按 5–10 分钟安排。到 贾格特纳塔寺 Pura Agung Jagatnatha <a aria-label="贾格特纳塔寺 Pura Agung Jagatnatha的地图" href="https://maps.google.com/?q=-8.656637,115.2187903" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a> 后先站在外院观察门楼、石雕和中庭，再根据寺方当日安排决定是否进入。<br/><small style="color:#27ae60;font-size:12px;">🔎 来源：<a href="https://denpasartourism.com/en/article/pura-agung-jagatnatha" rel="noopener" target="_blank">Denpasar Tourism · Pura Agung Jagatnatha 历史与访客礼仪</a></small></div></div>
+<div class="time-block"><div class="time">11:15–12:00　贾格特纳塔寺参拜礼仪</div><div class="activity">贾格特纳塔寺是 Denpasar 的公共印度教寺院，外来访客可在遵守礼仪的前提下进入。非礼拜者穿 sarong 和 sash，遮住肩膝，安静绕行；遇到祈祷、供奉或仪式时退到边缘，不进入内殿，不把礼拜者当作拍摄对象。公开旅游页未列统一门票和开放时段，是否进入以内场人员、当日祭典和寺门告示为准。<figure><img alt="Pura Agung Jagatnatha 中庭与主殿" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdGZe99HJH6mpIflsg_3yfE4iMzcJAtwnCsntO5r7r6_QPYkXsh2q_vSMZEZrIFtLAnACf9iO5zDM9VyW7Ea7-YdNNp9MqwXy9RMxuJg1kJuMCS8jZgz-Ow5j6XQRn_1S166Fom=s4800-w800"/><figcaption class="attraction-img-caption">Pura Agung Jagatnatha 中庭与主殿 · Google Maps，<a href="https://maps.google.com/maps/contrib/101538359132160149317" rel="noopener" target="_blank">미가발리</a></figcaption></figure></div></div>
+<div class="time-block"><div class="time">12:00–13:00　Puputan Badung 一带午餐</div><div class="activity">在博物馆与寺院附近选当天营业的本地餐馆，午餐以能快速出餐的 nasi campur、sate 或蔬菜饭为主。吃完直接上车回沙努尔，不再绕去早市，和 4/10 的早市安排错开。</div></div>
+<div class="time-block"><div class="time">13:00–14:00　Denpasar → ARTOTEL</div><div class="activity">路网基准约 9.7 km / 20 分钟，午后按 45–60 分钟预留。<a href="https://www.google.com/maps/dir/?api=1&amp;origin=Agung+Jagatnatha+Temple%2C+Denpasar&amp;destination=-8.7053028%2C115.2609079&amp;travelmode=driving" rel="noopener" target="_blank">Jagatnatha → ARTOTEL Sanur</a>　<a href="https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A-8.656637%2C%22lon%22%3A115.2187903%7D%2C%7B%22lat%22%3A-8.7053028%2C%22lon%22%3A115.2609079%7D%5D%2C%22costing%22%3A%22auto%22%2C%22directions_options%22%3A%7B%22units%22%3A%22kilometers%22%7D%7D" rel="noopener" target="_blank">Valhalla 路线基准</a>。下午回酒店睡午觉、游泳或做 SPA，不再与 4/8 的海滨南北步行重复。包车按 6 小时预留 Rp600,000–900,000/车，门票、停车和午餐另计；若与 4/7 合并询价，可要求两天包车总价写明超时单价。</div></div>
+<p><strong>过夜</strong>　巴厘岛 · 沙努尔 · ARTOTEL Sanur Bali 第 2 晚</p></article>
+<article class="day day-block" id="apr-10"><div class="day-header"><h3 class="day-title">沙努尔｜海边日出、早市，晚上去机场</h3><span class="day-date">4/10 周六</span></div>
+<div class="time-block"><div class="time">约 05:45–07:00　可选 · 看日出</div><div class="activity">优先走酒店最近的 Semawang 海滩，约 450 米。前一晚查当日日出，提前 20 分钟到岸边；在沙滩上选一个看得到船影的方向。多云或想补觉，可直接在酒店吃早餐。看完按原路走 10 分钟回去。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.705303%2C115.260908&amp;destination=-8.707129%2C115.262705&amp;travelmode=walking" rel="noopener" target="_blank">酒店至最近海滩</a></div></div>
+<div class="time-block"><div class="time">08:00–10:15　可选 · 逛沙努尔早市</div><div class="activity">从酒店叫车到 Pasar Sindu 辛杜市场 <a aria-label="Pasar Sindu 辛杜市场的地图" href="https://maps.google.com/?q=-8.685235,115.259996" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>，单程约 3 公里，预留 20–30 分钟。找标有 Los B 的摊区，看看当地人买的香料和用香蕉叶包的巴厘糕点，挑两三种分着吃；再到 Los A 逛水果摊，30–45 分钟便够。地图列市场 04:00–23:00，各摊出摊时间不同。趁上午回酒店取随身物品，按原路打车回。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.705303%2C115.260908&amp;destination=-8.685235%2C115.259996&amp;travelmode=driving" rel="noopener" target="_blank">酒店至早市</a>　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.685235%2C115.259996&amp;destination=-8.705303%2C115.260908&amp;travelmode=driving" rel="noopener" target="_blank">早市回酒店</a>　<a href="https://denpasartourism.com/en/article/pasar-shindu" rel="noopener" target="_blank">登巴萨市旅游局 · 摊区介绍</a><figure><img alt="沙努尔辛杜市场" class="attraction-img" loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLd_mKuuH-4fVnq9dlxjuQ9uZzc3tljsCUq9eZhhMTTVW7peNuRjKBGVumyGUzDVhbqtVGS4vhnGgJDX6F9EOWQVnYeQYblveipSEgEdg3wLQBniESE8uBvInpos7T-TCrqbGRZG=s4800-w800"><figcaption class="attraction-img-caption">沙努尔辛杜市场 · Google Maps，<a href="https://maps.google.com/maps/contrib/117736796491380156385" rel="noopener" target="_blank">Nico Fajar</a></figcaption></img></figure></div></div>
+<div class="time-block"><div class="time">11:00–18:45　退房、寄存，留在酒店附近</div><div class="activity">按酒店约定时间退房，把大件寄存，确认下午淋浴或延迟退房条件。若酒店只能寄存，想洗澡可提前约含淋浴的日用房或 SPA，把换洗衣物单独装袋。中午在 Jalan Kusuma Sari 吃饭，下午可步行回最近的海滨或在酒店做 SPA。17:30 左右在这条街吃晚饭，18:45 回前台取行李、叫车，确认护照和登机资料。</div></div>
+<div class="time-block"><div class="time">19:30 最迟出发　沙努尔 → DPS 国际出发</div><div class="activity">让司机送 International Departures（国际出发层），车程按酒店到机场约 14 公里估算。21:30 为到航站楼的目标，若有暴雨或绕行就提前离店。进国际值机厅找南航 CZ626，票面为 4 月 11 日 00:40。　<a href="https://www.google.com/maps/dir/?api=1&amp;origin=-8.705303%2C115.260908&amp;destination=I+Gusti+Ngurah+Rai+International+Airport%2C+International+Departures%2C+Bali&amp;travelmode=driving" rel="noopener" target="_blank">酒店至国际出发层</a>　<a href="https://www.garuda-indonesia.com/static/content/dam/garuda/garuda-indonesia-experience/onground/airport-map/Airport%20Map%20DPS.pdf" rel="noopener" target="_blank">机场航站楼示意图</a></div></div>
+<p><strong>过夜</strong>　4 月 10 日晚前往机场，次日凌晨起飞</p></article>
+<article class="day day-block" id="apr-11"><div class="day-header"><h3 class="day-title">经广州回北京</h3><span class="day-date">4/11 周日</span></div>
+<div class="time-block"><div class="time">00:40–05:55</div><div class="activity">南航 CZ626 巴厘岛 → 广州白云 T2 <a aria-label="广州白云 T2的地图" href="https://maps.google.com/?q=23.395908,113.307970" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。随国内中转指示入境，按南航柜台提示提取或转运行李；保留北京段登机牌。</div></div>
+<div class="time-block"><div class="time">15:00–18:15</div><div class="activity">在广州有 9 小时 05 分中转时间。按当日登机口提前安检、候机，乘 CZ3999 抵达 北京大兴机场 <a aria-label="北京大兴机场的地图" href="https://maps.google.com/?q=39.509805,116.410507" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a>。</div></div>
+<p><strong>过夜</strong>　当日抵京</p></article>
+</section>
+<section id="hotel"><h2>七晚住哪里</h2>
+<p>两人合住一间。4 月 3 日抵达虽晚，首晚仍从 3 日起订。携程问道未返回这三家酒店在目标日期可锁定的精确房价；以下按每间每晚预留。</p>
+<div class="card-grid">
+<article class="place-card"><h3 class="name">雅加达 · YELLO Hotel Harmoni <a aria-label="雅加达 · YELLO Hotel Harmoni的地图" href="https://maps.google.com/?q=-6.164349,106.820486" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a></h3><p class="price">4/3 入住，4/6 退房 · 3 晚 · 按 ¥300/晚</p><p class="desc">离老城和中心城区都方便。请前台书面确认过午夜入住仍保留房间，并在最后一晚约早晨送机。</p></article>
+<article class="place-card"><h3 class="name">乌布 · Alaya Resort Ubud <a aria-label="乌布 · Alaya Resort Ubud的地图" href="https://maps.google.com/?q=-8.518770,115.263528" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a></h3><p class="price">4/6 入住，4/8 退房 · 2 晚 · 按 ¥1,100/晚</p><p class="desc">携程近期参考 ¥1,091 起。优点是可步行去 ARMA，第二天包车能在大堂接送。想减少住宿开销，可在 Jalan Hanoman 一带筛 ¥500–700/晚的可退双人房。</p></article>
+<article class="place-card"><h3 class="name">沙努尔 · ARTOTEL Sanur Bali <a aria-label="沙努尔 · ARTOTEL Sanur Bali的地图" href="https://maps.google.com/?q=-8.705303,115.260908" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a></h3><p class="price">4/8 入住，4/10 退房 · 2 晚 · 按 ¥675/晚</p><p class="desc">携程近期参考 ¥665 起。步行可到 Semawang 海滩；入住时确认 10 日下午的寄存、淋浴或延迟退房选项。</p></article>
+</div>
+</section>
+<section id="food"><h2>两地吃什么</h2>
+<article class="place-card"><h3 class="name">雅加达 · Café Batavia <a aria-label="雅加达 · Café Batavia的地图" href="https://maps.google.com/?q=-6.134368,106.812735" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a></h3><p class="price">老城午餐　·　两人共享点法</p><p class="desc">这家老建筑里的餐厅正对广场。先点一份印尼炒饭 nasi goreng 加一份沙爹 sate 分享，甜酱油的焦甜配炭烤肉香。想要靠窗座位，周日前先电话询位 +62 21 6915534。</p></article>
+<article class="place-card"><h3 class="name">沙努尔 · Warung Little Bird <a aria-label="沙努尔 · Warung Little Bird的地图" href="https://maps.google.com/?q=-8.686011,115.262292" rel="noopener" style="color:#2563a8;text-decoration:none;font-size:13px" target="_blank">📍地图</a></h3><p class="price">海边晚餐　·　适合试几种小份</p><p class="desc">Warung 是当地的小餐馆。两人可以分一份炒饭，再加一盘沙爹和一份当日蔬菜；先尝原味，再蘸辣酱。晚市想选座位，可提前致电 +62 821 4542 8170。</p></article>
+<article class="place-card"><h3 class="name">乌布 · Jalan Hanoman 街区的 warung</h3><p class="price">4/6 入住后 · 步行就近用餐</p><p class="desc">选有标价和当日配菜的家常小馆。两个人可以一份 nasi campur 拼盘配一份蔬菜：先尝原味米饭和香料肉，再试刨椰丝的蔬菜及沙爹，辣酱 sambal 另放。街边小馆以现场入座为主。</p></article>
+</section>
+<section id="book"><h2>国内机票和包车怎么订</h2>
+<p>4 月 6 日仅需一张雅加达 CGK → 巴厘岛 DPS 的单程票。以下为携程问道 2026 年 11 月 5 日检索到的候选航班，时刻为当地时间，票价按单人单程展示，尚未预订。</p>
+<table><thead><tr><th>班次</th><th>起降时间</th><th>两人怎么选</th></tr></thead><tbody><tr><td><a href="https://m.ctrip.com/html5/flight/taro/interMiddle?from=outer&amp;triptype=1&amp;dcode=JKT&amp;acode=DPS&amp;ddate=2027-04-06&amp;dfltno=JT034&amp;dseat=1&amp;adult=1&amp;child=0&amp;baby=0&amp;isshare=true&amp;allianceid=8088494&amp;sid=306086257" rel="noopener" target="_blank">JT034</a></td><td>09:40 → 12:35　¥578/人</td><td>首选。午后进乌布，抵达顺利可步行去 ARMA。</td></tr><tr><td><a href="https://m.ctrip.com/html5/flight/taro/interMiddle?from=outer&amp;triptype=1&amp;dcode=JKT&amp;acode=DPS&amp;ddate=2027-04-06&amp;dfltno=JT024&amp;dseat=1&amp;adult=1&amp;child=0&amp;baby=0&amp;isshare=true&amp;allianceid=8088494&amp;sid=306086257" rel="noopener" target="_blank">JT024</a></td><td>11:10 → 14:05　¥578/人</td><td>想多睡一会儿选这班，乌布当晚留给入住、晚餐与泳池。</td></tr></tbody></table>
+<p>购票时输入两位成人，核对托运行李、出票总价、航站楼及退改。两次接送分别给司机发“国内到达”和“国际出发”；4 月 7 日的乌布包车，确认按车报价是否含停车、等候和超时费。4 月 9 日可用往返网约车代替包全天车。</p>
+</section>
+<section id="budget"><h2>两个人准备多少钱</h2>
+<p>按人民币预留，两人一间。按中档雅加达住宿、乌布度假酒店和沙努尔海边酒店计算。活动可选项从机动金支付。</p>
+<table><thead><tr><th>项目</th><th>两人合计</th><th>人均</th></tr></thead><tbody><tr><td>CGK → DPS 国内直飞</td><td>¥1,156</td><td>¥578</td></tr><tr><td>住宿：3 晚 × 300 + 2 晚 × 1,100 + 2 晚 × 675</td><td>¥4,450</td><td>¥2,225</td></tr><tr><td>两地餐饮和饮水</td><td>¥1,600</td><td>¥800</td></tr><tr><td>两地机场接送、转酒店及市内短程车</td><td>¥1,100</td><td>¥550</td></tr><tr><td>4/7 乌布包车、4/9 登巴萨往返用车</td><td>¥900</td><td>¥450</td></tr><tr><td>签证、巴厘岛旅游费、通信及保险</td><td>¥950</td><td>¥475</td></tr><tr><td>景点门票、选座行李或按摩等机动金</td><td>¥800</td><td>¥400</td></tr><tr><td>当地合计，不含国际往返机票</td><td>¥10,956</td><td>¥5,478</td></tr></tbody></table>
+<p>预算按 4/9 登巴萨文化线计算。若选海边桨板，可扣除当天市区用车与门票，另计两人课程 Rp1,200,000。全程人均约 ¥5,478 加上各自已购南航机票的实付金额。酒店、包车和国内票均以最后的实际订单为准。</p>
+</section>
+<section id="practical"><h2>入境、交通和手机</h2>
+<p>若两人持中国普通护照，按目前公布的 B1 落地签／电子落地签政策，每人 Rp500,000，通常可停留 30 天；入境时护照至少有 6 个月有效期，备好离境机票。出行前一周重查当期政策。<a href="https://jakartapusat.imigrasi.go.id/layanan/warga-negara-asing-wna/visa-republik-indonesia/b1-visa-saat-kedatangan-wisata" rel="noopener" target="_blank">移民局 B1 说明</a> · <a href="https://evisa.imigrasi.go.id/" rel="noopener" target="_blank">电子签证官网</a></p>
+<p>以 4 月 3 日抵达雅加达为准，在入境前 3 天内按页面开放日期填免费 All Indonesia 抵达申报，保存回执。飞巴厘岛属于印尼国内段；持普通旅游签仍需另缴巴厘岛外国游客旅游费，每人 Rp150,000，保存二维码。<a href="https://allindonesia.imigrasi.go.id/" rel="noopener" target="_blank">All Indonesia</a> · <a href="https://lovebali.baliprov.go.id/" rel="noopener" target="_blank">Love Bali 官方缴费</a></p>
+<p>货币为印尼盾（IDR，写作 Rp）。市集和寺庙售票处准备小额现金。出发前装好能在印尼使用的数据 eSIM 或开通漫游，保留国内号码接收短信。四月户外带轻便雨衣；寺院参观准备遮肩衣物，海边带防晒。</p>
+<h3>两个人怎么叫车</h3>
+<p>在 App Store 或 Google Play 装好 Grab，先用可收验证码的手机号尝试注册（中国号码选 +86）。落地后选 GrabCar，把司机车牌与指定上车区截屏，机场按指示牌去接客点。若注册或付款不顺，可用酒店预订车或机场正规出租车柜台。</p>
+<table><thead><tr><th>区间</th><th>两人一车预算，人民币</th><th>操作</th></tr></thead><tbody><tr><td>雅加达机场 ↔ 市区酒店</td><td>单程 ¥90–180</td><td>深夜到达可约酒店接机，问清等候及高速费。</td></tr><tr><td>巴厘岛机场 → 乌布</td><td>¥150–260</td><td>给出酒店全名，留 2 小时车程余量。</td></tr><tr><td>乌布 → 沙努尔</td><td>¥120–230</td><td>4/8 午餐后带行李转酒店。</td></tr><tr><td>沙努尔 → DPS 国际出发</td><td>¥70–150</td><td>4/10 19:30 出发，遇雨或堵车提前。</td></tr></tbody></table>
+<p>车费按每车预留，司机会按上车点、时段、车型和过路费报价。机场接送点可查 <a href="https://ngurahrai.injourneyairports.id/" rel="noopener" target="_blank">巴厘岛机场官网</a>。</p>
+</section>
+<section id="prep"><h2>出发前与返程当天</h2>
+<ul class="checklist"><li>核对护照、签证要求，保存国际和国内机票、住宿确认、保险及离线地图。</li><li>确认 4/3 雅加达深夜入住，4/6 国内机场送机接机，4/7 乌布司机、寺庙开放与着装。</li><li>抵达前按官方窗口提交 All Indonesia 申报，保存回执与 Love Bali 缴费凭证。</li><li>4/8 早上去稻田前整理好行李，预先问酒店最迟退房时间。</li><li>4/10 中午寄存行李，晚餐前查看路况，19:30 最迟从沙努尔出发去 DPS 国际出发层。</li></ul>
+</section>
+<footer>雅加达与巴厘岛双人攻略 · v2　|　交通及景点资料核对于 2026 年 11 月　|　<a href="indonesia-trip-guide-v1.html">原三地路线 v1</a></footer></main></body></html>
